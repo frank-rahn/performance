@@ -14,11 +14,11 @@ import de.rahn.performance.testbeans.DomainTable;
 
 /**
  * Der Mapper für {@link BeanUtils}.
- * @author Frank Rahn
+ * @author Frank W. Rahn
  */
 @Component("Commons-BeanUtils")
 public class CommonsBeanUtilsTestBeansMapperBean extends
-	AbstractTestBeansMapperBean {
+AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}

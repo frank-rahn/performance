@@ -21,7 +21,7 @@ import de.rahn.performance.beanmapper.TestBeansMapperBean;
 
 /**
  * Dieser Manager kennt alle implementierten {@link TestBeansMapperBean}s.
- * @author Frank Rahn
+ * @author Frank W. Rahn
  */
 @Component
 public class MapperManager {
@@ -45,7 +45,7 @@ public class MapperManager {
 	}
 
 	/**
-	 * @return die existierenden Mappers
+	 * @return alle existierenden Mappers
 	 */
 	public TestBeansMapperBean[] getMappers() {
 		return mappers;

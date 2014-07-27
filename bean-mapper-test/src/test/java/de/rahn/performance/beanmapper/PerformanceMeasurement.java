@@ -1,3 +1,7 @@
+/*
+ * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights
+ * reserved.
+ */
 package de.rahn.performance.beanmapper;
 
 import static java.lang.Long.MAX_VALUE;
@@ -15,12 +19,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Diese Klasse erfasst und berechnet die Performanzdaten pro Messpunkt.
- * @author Frank Rahn
+ * @author Frank W. Rahn
  */
 public class PerformanceMeasurement {
 
 	private static final Logger LOGGER = LoggerFactory
-		.getLogger(PerformanceMeasurement.class);
+			.getLogger(PerformanceMeasurement.class);
 
 	/** Die Überschriften und Reihenfolge der einzelnen Messwerte. */
 	public static final String[] TITLES = { "Name des Messpunkt",
@@ -103,7 +107,7 @@ public class PerformanceMeasurement {
 		 */
 		private boolean testPrint() {
 			return counter % 10000 == 0 || counter == 10 || counter == 100
-				|| counter == 1000;
+					|| counter == 1000;
 		}
 
 		/**
@@ -152,7 +156,7 @@ public class PerformanceMeasurement {
 	}
 
 	private final Map<String, Statistics> measurement =
-		new HashMap<String, Statistics>();
+			new HashMap<String, Statistics>();
 
 	/**
 	 * Nehme einen Messwert zum Messpunkt in der Statistik auf.

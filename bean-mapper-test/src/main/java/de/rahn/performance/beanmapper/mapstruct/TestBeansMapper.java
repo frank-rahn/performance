@@ -16,7 +16,7 @@ import de.rahn.performance.testbeans.DomainTable;
 
 /**
  * Das Mapper Interface für MapStruct.
- * @author Frank Rahn
+ * @author Frank W. Rahn
  */
 @Mapper(uses = ObjectFactory.class)
 public interface TestBeansMapper {

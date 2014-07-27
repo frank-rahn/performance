@@ -8,7 +8,8 @@ import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
 import de.rahn.performance.testbeans.DomainTable;
 
 /**
- * @author Frank Rahn
+ * Die Schnittstelle aller Spring-Beans der Test-Mapper.
+ * @author Frank W. Rahn
  */
 public interface TestBeansMapperBean {
 

@@ -19,7 +19,7 @@ import de.rahn.performance.testbeans.DomainTable;
 
 /**
  * Der Mapper für {@link MapperFacade}.
- * @author Frank Rahn
+ * @author Frank W. Rahn
  */
 @Component("Orika")
 public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {

@@ -19,7 +19,7 @@ import de.rahn.performance.testbeans.DomainTable;
 
 /**
  * Der Mapper per "ByHand".
- * @author Frank Rahn
+ * @author Frank W. Rahn
  */
 @Component("ByHand")
 public class ByHandTestBeansMapperBean extends AbstractTestBeansMapperBean {

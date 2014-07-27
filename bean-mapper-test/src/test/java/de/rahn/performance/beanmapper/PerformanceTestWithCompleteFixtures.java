@@ -1,3 +1,7 @@
+/*
+ * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights
+ * reserved.
+ */
 package de.rahn.performance.beanmapper;
 
 /**
@@ -5,7 +9,7 @@ package de.rahn.performance.beanmapper;
  * @author Frank W. Rahn
  */
 public class PerformanceTestWithCompleteFixtures extends
-	AbstractPerformanceTest {
+AbstractPerformanceTest {
 
 	/**
 	 * {@inheritDoc}
@@ -16,7 +20,7 @@ public class PerformanceTestWithCompleteFixtures extends
 		numberOdRows = 100;
 		numberOfColumns = 100;
 		excludedMapper =
-			new String[] { "Commons-BeanUtils", "Spring-BeanUtils" };
+				new String[] { "Commons-BeanUtils", "Spring-BeanUtils" };
 	}
 
 }

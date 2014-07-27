@@ -1,3 +1,7 @@
+/*
+ * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights
+ * reserved.
+ */
 package de.rahn.performance.beanmapper;
 
 import static de.rahn.performance.testbeans.TestBeansUtils.createXmlTable;
@@ -47,7 +51,7 @@ public abstract class AbstractPerformanceTest {
 
 	protected int numberOfColumns;
 
-	protected int runDurationInMinutes = 2;
+	protected int runDurationInMinutes = 10;
 
 	protected String[] excludedMapper = new String[0];
 

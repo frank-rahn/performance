@@ -1,3 +1,7 @@
+/*
+ * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights
+ * reserved.
+ */
 package de.rahn.performance.beanmapper.utils;
 
 import static org.hamcrest.Matchers.greaterThan;
@@ -12,23 +16,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import de.rahn.performance.beanmapper.utils.MapperManager;
-
+/**
+ * Ein Test für die Klasse {@link MapperManager}.
+ * @author Frank W. Rahn
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({ "classpath:spring.xml" })
 public class MapperManagerTest {
-	
+
 	private static final Logger LOGGER = getLogger(MapperManagerTest.class);
 
 	@Autowired(required = false)
 	private MapperManager manager;
 
+	/**
+	 * Test method for {@link MapperManager#getMappers()}.
+	 */
 	@Test
 	public void testGetMappers() {
-		assertThat("MapperManager wurde nicht angelegt", manager, notNullValue());
-		assertThat("keine Mapper vorhanden", manager.getMappers(), notNullValue());
-		assertThat("keine Mapper vorhanden", manager.getMappers().length, greaterThan(0));		
-		
+		assertThat("MapperManager wurde nicht angelegt", manager,
+			notNullValue());
+		assertThat("keine Mapper vorhanden", manager.getMappers(),
+			notNullValue());
+		assertThat("keine Mapper vorhanden", manager.getMappers().length,
+			greaterThan(0));
+
 		LOGGER.info("Mappers {}", (Object) manager.getNames());
 	}
 

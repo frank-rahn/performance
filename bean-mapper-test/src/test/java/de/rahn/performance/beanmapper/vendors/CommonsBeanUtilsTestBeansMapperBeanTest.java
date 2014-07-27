@@ -2,7 +2,6 @@
  * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights
  * reserved.
  */
-
 package de.rahn.performance.beanmapper.vendors;
 
 import static org.junit.Assert.fail;
@@ -23,7 +22,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
 public class CommonsBeanUtilsTestBeansMapperBeanTest extends
-AbstractTestBeansMapperBeanTest {
+	AbstractTestBeansMapperBeanTest {
 
 	@Autowired
 	public void setCommonsBeanUtilsTestBeansMapperBean(
