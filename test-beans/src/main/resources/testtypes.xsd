@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema version="1.0" elementFormDefault="qualified"
+	xmlns="http://xmlns.frank-rahn.de/types/testtypes/1.0"
+	targetNamespace="http://xmlns.frank-rahn.de/types/testtypes/1.0"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:annotation>
+		<xsd:documentation>Das Schema für eine Testdatenstrukturen.</xsd:documentation>
+		<xsd:documentation>Copyright (c) 1999-2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights reserved.</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:element name="xmlTable">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string" />
+				<xsd:element name="date" type="xsd:date" />
+				<xsd:element name="rows" type="xmlRow" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="xmlRow">
+		<xsd:sequence>
+			<xsd:element name="column00" type="xsd:string" />
+			<xsd:element name="column01" type="xsd:string" default="Test String 01" />
+			<xsd:element name="column02" type="xsd:string" minOccurs="0" />
+			<xsd:element name="column03" type="xsd:string" />
+			<xsd:element name="column04" type="xsd:string" />
+			<xsd:element name="column05" type="xsd:string" />
+			<xsd:element name="column06" type="xsd:string" />
+			<xsd:element name="column07" type="xsd:string" />
+			<xsd:element name="column08" type="xsd:string" />
+			<xsd:element name="column09" type="xsd:string" />
+
+			<xsd:element name="column10" type="xsd:int" />
+			<xsd:element name="column11" type="xsd:int" default="11" />
+			<xsd:element name="column12" type="xsd:int" minOccurs="0" />
+			<xsd:element name="column13" type="xsd:int" />
+			<xsd:element name="column14" type="xsd:int" />
+			<xsd:element name="column15" type="xsd:int" />
+			<xsd:element name="column16" type="xsd:int" />
+			<xsd:element name="column17" type="xsd:int" />
+			<xsd:element name="column18" type="xsd:int" />
+			<xsd:element name="column19" type="xsd:int" />
+
+			<xsd:element name="column20" type="xsd:boolean" />
+			<xsd:element name="column21" type="xsd:boolean" default="true" />
+			<xsd:element name="column22" type="xsd:boolean" minOccurs="0" />
+			<xsd:element name="column23" type="xsd:boolean" />
+			<xsd:element name="column24" type="xsd:boolean" />
+			<xsd:element name="column25" type="xsd:boolean" />
+			<xsd:element name="column26" type="xsd:boolean" />
+			<xsd:element name="column27" type="xsd:boolean" />
+			<xsd:element name="column28" type="xsd:boolean" />
+			<xsd:element name="column29" type="xsd:boolean" />
+
+			<xsd:element name="column30" type="xsd:long" />
+			<xsd:element name="column31" type="xsd:long" default="31" />
+			<xsd:element name="column32" type="xsd:long" minOccurs="0" />
+			<xsd:element name="column33" type="xsd:long" />
+			<xsd:element name="column34" type="xsd:long" />
+			<xsd:element name="column35" type="xsd:long" />
+			<xsd:element name="column36" type="xsd:long" />
+			<xsd:element name="column37" type="xsd:long" />
+			<xsd:element name="column38" type="xsd:long" />
+			<xsd:element name="column39" type="xsd:long" />
+
+			<xsd:element name="column40" type="xsd:decimal" />
+			<xsd:element name="column41" type="xsd:decimal" default="41.14" />
+			<xsd:element name="column42" type="xsd:decimal" minOccurs="0" />
+			<xsd:element name="column43" type="xsd:decimal" />
+			<xsd:element name="column44" type="xsd:decimal" />
+			<xsd:element name="column45" type="xsd:decimal" />
+			<xsd:element name="column46" type="xsd:decimal" />
+			<xsd:element name="column47" type="xsd:decimal" />
+			<xsd:element name="column48" type="xsd:decimal" />
+			<xsd:element name="column49" type="xsd:decimal" />
+
+			<xsd:element name="column50" type="xsd:date" />
+			<xsd:element name="column51" type="xsd:date" default="2014-07-01" />
+			<xsd:element name="column52" type="xsd:date" minOccurs="0" />
+			<xsd:element name="column53" type="xsd:date" />
+			<xsd:element name="column54" type="xsd:date" />
+			<xsd:element name="column55" type="xsd:date" />
+			<xsd:element name="column56" type="xsd:date" />
+			<xsd:element name="column57" type="xsd:date" />
+			<xsd:element name="column58" type="xsd:date" />
+			<xsd:element name="column59" type="xsd:date" />
+
+			<xsd:element name="column60" type="xsd:string" />
+			<xsd:element name="column61" type="xsd:string" default="Test String 61" />
+			<xsd:element name="column62" type="xsd:string" minOccurs="0" />
+			<xsd:element name="column63" type="xsd:string" />
+			<xsd:element name="column64" type="xsd:string" />
+			<xsd:element name="column65" type="xsd:string" />
+			<xsd:element name="column66" type="xsd:string" />
+			<xsd:element name="column67" type="xsd:string" />
+			<xsd:element name="column68" type="xsd:string" />
+			<xsd:element name="column69" type="xsd:string" />
+
+			<xsd:element name="column70" type="xsd:int" />
+			<xsd:element name="column71" type="xsd:int" default="71" />
+			<xsd:element name="column72" type="xsd:int" minOccurs="0" />
+			<xsd:element name="column73" type="xsd:int" />
+			<xsd:element name="column74" type="xsd:int" />
+			<xsd:element name="column75" type="xsd:int" />
+			<xsd:element name="column76" type="xsd:int" />
+			<xsd:element name="column77" type="xsd:int" />
+			<xsd:element name="column78" type="xsd:int" />
+			<xsd:element name="column79" type="xsd:int" />
+
+			<xsd:element name="columns" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bindings version="2.1"
+	xmlns="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+>
+
+	<globalBindings choiceContentProperty="true">
+		<xjc:serializable uid="1" />
+
+		<javaType name="java.util.Calendar" xmlType="xsd:date"
+			parseMethod="javax.xml.bind.DatatypeConverter.parseDate"
+			printMethod="javax.xml.bind.DatatypeConverter.printDate" />
+
+		<javaType name="java.util.Calendar" xmlType="xsd:dateTime"
+			parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"
+			printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
+
+		<javaType name="java.util.Calendar" xmlType="xsd:time"
+			parseMethod="javax.xml.bind.DatatypeConverter.parseTime"
+			printMethod="javax.xml.bind.DatatypeConverter.printTime" />
+	</globalBindings>
+
+</bindings>

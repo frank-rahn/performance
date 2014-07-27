@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>de.rahn.performance</groupId>
+		<artifactId>performance</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<!-- The Basics & Project information -->
+	<artifactId>test-beans</artifactId>
+	<name>Test-Beans</name>
+	<description>Ein Reihe von Java-Beans zum Testen</description>
+	<url>https://github.com/frank-rahn/performance</url>
+
+	<!-- Project Settings -->
+	<dependencies>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf.xjc-utils</groupId>
+			<artifactId>cxf-xjc-runtime</artifactId>
+		</dependency>
+		<!--dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+		</dependency-->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-codegen-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>wsdl2java</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>wsdl2java</goal>
+						</goals>
+						<configuration>
+							<fork>once</fork>
+							<encoding>${encoding}</encoding>
+							<additionalJvmArgs>-Dfile.encoding=${encoding}</additionalJvmArgs>
+							<defaultOptions>
+								<extraargs>
+									<extraarg>-xjc-enableIntrospection</extraarg>
+									<extraarg>-xjc-Xsetters</extraarg>
+									<extraarg>-xjc-Xts:style:org.apache.cxf.xjc.runtime.JAXBToStringStyle.MULTI_LINE_STYLE</extraarg>
+									<extraarg>-xjc-Xfluent-api</extraarg>
+								</extraargs>
+								<bindingFiles>
+									<bindingFile>${basedir}/src/main/resources/jaxb_binding.xml</bindingFile>
+									<bindingFile>${basedir}/src/main/resources/jaxws_binding.xml</bindingFile>
+								</bindingFiles>
+							</defaultOptions>
+							<wsdlOptions>
+								<wsdlOption>
+									<wsdl>${basedir}/src/main/resources/testservice.wsdl</wsdl>
+								</wsdlOption>
+							</wsdlOptions>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
