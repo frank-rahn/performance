@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd
+	">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- The Basics & Project information -->
+	<groupId>de.rahn.performance</groupId>
+	<artifactId>performance</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Performance Maven Parent</name>
+	<description>Parent Performance Maven Parent</description>
+	<url>https://github.com/frank-rahn/performance</url>
+	<organization>
+		<name>Frank W. Rahn</name>
+		<url>http://www.frank-rahn.de</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>frank-rahn</id>
+			<name>Frank Rahn</name>
+			<organization>Frank W. Rahn</organization>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/frank-rahn/performance</url>
+		<connection>scm:git:git://github.com/frank-rahn/performance.git</connection>
+		<developerConnection>scm:git:git@github.com:frank-rahn/performance.git</developerConnection>
+	</scm>
+
+	<!-- Project Settings -->
+	<properties>
+		<encoding>UTF-8</encoding>
+		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+
+		<!-- Utilities -->
+		<version.jdk>1.6</version.jdk>
+		<version.commons.lang>2.6</version.commons.lang>
+		<version.cxf.xjcruntime>2.7.0</version.cxf.xjcruntime>
+		<version.jpa>1.0.0.Final</version.jpa>
+		<version.log4j>1.2.17</version.log4j>
+		<version.slf4j>1.7.7</version.slf4j>
+		<version.hamcrest>1.3</version.hamcrest>
+		<version.junit>4.11</version.junit>
+
+		<!-- Mapper -->
+		<version.commons.beanutils>1.9.2</version.commons.beanutils>
+		<version.spring>3.1.1.RELEASE</version.spring><!-- 4.0.6.RELEASE -->
+		<version.dozer>5.5.1</version.dozer>
+		<version.orika>1.4.5</version.orika>
+		<version.mapstruct>1.0.0.Beta2</version.mapstruct>
+	</properties>
+
+	<modules>
+		<module>test-beans</module>
+		<module>bean-mapper-test</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>de.rahn.performance</groupId>
+				<artifactId>test-beans</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.rahn.performance</groupId>
+				<artifactId>test-beans</artifactId>
+				<version>${project.version}</version>
+				<type>test-jar</type>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>de.rahn.performance</groupId>
+				<artifactId>bean-mapper-test</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!-- Utilities -->
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${version.commons.lang}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf.xjc-utils</groupId>
+				<artifactId>cxf-xjc-runtime</artifactId>
+				<version>${version.cxf.xjcruntime}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>javax.xml.bind</groupId>
+						<artifactId>jaxb-api</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate.javax.persistence</groupId>
+				<artifactId>hibernate-jpa-2.1-api</artifactId>
+				<version>${version.jpa}</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${version.log4j}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${version.slf4j}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${version.slf4j}</version>
+			</dependency>
+
+			<!-- Die Mapper -->
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>${version.commons.beanutils}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${version.spring}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.dozer</groupId>
+				<artifactId>dozer</artifactId>
+				<version>${version.dozer}</version>
+			</dependency>
+			<dependency>
+				<groupId>ma.glasnost.orika</groupId>
+				<artifactId>orika-core</artifactId>
+				<version>${version.orika}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct</artifactId>
+				<version>${version.mapstruct}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-jdk8</artifactId>
+				<version>${version.mapstruct}</version>
+			</dependency>
+
+			<!-- Test -->
+			<dependency>
+				<groupId>org.hamcrest</groupId>
+				<artifactId>hamcrest-library</artifactId>
+				<version>${version.hamcrest}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${version.junit}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${version.spring}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>${version.jdk}</source>
+						<target>${version.jdk}</target>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+								<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+							</manifest>
+							<manifestEntries>
+								<Build-Jdk>${version.jdk}</Build-Jdk>
+							</manifestEntries>
+						</archive>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>jar</goal>
+								<goal>test-jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.9</version>
+					<configuration>
+						<downloadSources>true</downloadSources>
+						<downloadJavadocs>true</downloadJavadocs>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.bsc.maven</groupId>
+					<artifactId>maven-processor-plugin</artifactId>
+					<version>2.2.4</version>
+					<executions>
+						<execution>
+							<id>process</id>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>process</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.cxf</groupId>
+					<artifactId>cxf-codegen-plugin</artifactId>
+					<version>2.7.9</version>
+					<executions>
+						<execution>
+							<id>wsdl2java</id>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>wsdl2java</goal>
+							</goals>
+						</execution>
+					</executions>
+					<dependencies>
+						<dependency>
+							<groupId>org.apache.cxf.xjcplugins</groupId>
+							<artifactId>cxf-xjc-ts</artifactId>
+							<version>2.7.0</version>
+						</dependency>
+						<dependency>
+							<groupId>net.java.dev.jaxb2-commons</groupId>
+							<artifactId>jaxb-fluent-api</artifactId>
+							<version>2.1.8</version>
+						</dependency>
+						<dependency>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-basics</artifactId>
+							<version>0.6.4</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>jar</goal>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
