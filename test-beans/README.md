@@ -1,8 +1,13 @@
 # Test-Beans
-Dieses Projekt einige Java-Beans zur Nutzung bei Peformanztests.
+Dieses Projekt stellt einige Testdatenstrukturen zur Nutzung bei den Peformanztests bereit.
 
-* Entity-Beans: `DomainTable`, `DomainRow` 
-* JAXB-Beans: `XmlTable`, `XmlRow`
+## Liste der Testdatenstrukturen
+
+* Entity-Beans: `DomainTable`, `DomainRow`
+* JAXB-Beans: `XmlTable`, `XmlRow` (Werden aus einem XML-Schema generiert.)
+
+## Zusätzliches
+Die Utility-Klasse `de.rahn.performance.testbeans.TestBeansUtil` mit der Instanzen der obengenannten Klassen erzeugt und mit zufällig Testdaten gefüllt werden.
 
 ## Homepage des Autors
 [Frank W. Rahn](http://www.frank-rahn.de)

@@ -2,7 +2,7 @@
 In diesem Repository befinden sich Projekte rund um das Thema Performanz.
 
 ## test-beans
-Dieses Projekt einige Java-Beans zur Nutzung bei Peformanztests.
+Dieses Projekt stellt einige Testdatenstrukturen zur Nutzung bei den Peformanztests bereit.
 
 ## bean-mapper-test
 In diesem Projekt werden einige Bean-Mapper getestet.
