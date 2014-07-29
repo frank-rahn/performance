@@ -24,6 +24,10 @@
 			<groupId>de.rahn.performance</groupId>
 			<artifactId>test-beans</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>de.rahn.performance</groupId>
+			<artifactId>measurement</artifactId>
+		</dependency>
 
 		<!-- Utilities -->
 		<dependency>

@@ -2,7 +2,7 @@
  * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights
  * reserved.
  */
-package de.rahn.performance.beanmapper;
+package de.rahn.performance.measurement;
 
 import static java.lang.Long.MAX_VALUE;
 import static java.lang.Math.max;

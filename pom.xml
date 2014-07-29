@@ -42,6 +42,7 @@
 
 		<!-- Utilities -->
 		<version.jdk>1.6</version.jdk>
+		<version.poi>3.10-FINAL</version.poi>
 		<version.commons.lang>2.6</version.commons.lang>
 		<version.cxf.xjcruntime>2.7.0</version.cxf.xjcruntime>
 		<version.jpa>1.0.0.Final</version.jpa>
@@ -59,12 +60,18 @@
 	</properties>
 
 	<modules>
+		<module>measurement</module>
 		<module>test-beans</module>
 		<module>bean-mapper-test</module>
 	</modules>
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>de.rahn.performance</groupId>
+				<artifactId>measurement</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>de.rahn.performance</groupId>
 				<artifactId>test-beans</artifactId>
@@ -106,9 +113,19 @@
 				<version>${version.jpa}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>${version.poi}</version>
+			</dependency>
+			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>${version.log4j}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${version.slf4j}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
