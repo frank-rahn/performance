@@ -2,7 +2,10 @@
 <projectDescription>
   <name>bean-mapper-test</name>
   <comment>Ein Test mit verschiedenen Mapper. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
-  <projects/>
+  <projects>
+    <project>test-beans</project>
+    <project>measurement</project>
+  </projects>
   <buildSpec>
     <buildCommand>
       <name>org.eclipse.jdt.core.javabuilder</name>

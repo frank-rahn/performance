@@ -23,6 +23,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
 import de.rahn.performance.beanmapper.utils.MapperManager;
 import de.rahn.performance.beanmapper.vendors.ByHandTestBeansMapperBean;
+import de.rahn.performance.measurement.PerformanceMeasurement;
 import de.rahn.performance.testbeans.DomainTable;
 
 /**
@@ -87,16 +88,13 @@ public abstract class AbstractPerformanceTest {
 	 */
 	@Test
 	public void testPerformance() {
-		// Statistiken zurücksetzen
-		measurement.reset("Warmlaufen von " + getClass().getSimpleName());
-
 		// Warmlaufen
 		for (int i = 0; i < 10; i++) {
 			runTestOverAllMappers(i);
 		}
 
 		// Statistiken zurücksetzen
-		measurement.reset("Messung von " + getClass().getSimpleName());
+		measurement.endWarmUp();
 
 		// Den Test eine bestimmte Zeit durchfürhen
 		LOGGER.info("Messung wird für {} Minuten gestartet...",
@@ -114,7 +112,7 @@ public abstract class AbstractPerformanceTest {
 		LOGGER.info("...Messung beendet.");
 
 		// Statistiken zurücksetzen
-		measurement.reset("Messung beendet " + getClass().getSimpleName());
+		measurement.endMeasurement(getClass().getSimpleName());
 	}
 
 	/**
