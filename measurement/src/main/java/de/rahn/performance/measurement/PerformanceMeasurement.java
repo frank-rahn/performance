@@ -4,13 +4,11 @@
  */
 package de.rahn.performance.measurement;
 
-import static de.rahn.performance.measurement.Statistics.TITLES;
-import static org.slf4j.LoggerFactory.getLogger;
-
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
-import org.slf4j.Logger;
 
 /**
  * Diese Klasse erfasst und berechnet die Performanzdaten pro Messpunkt.
@@ -18,11 +16,22 @@ import org.slf4j.Logger;
  */
 public class PerformanceMeasurement {
 
-	private static final Logger LOGGER =
-		getLogger(PerformanceMeasurement.class);
+	private final Map<String, Statistics> measurements;
+	private final List<String> meteringPointNames;
 
-	private final Map<String, Statistics> measurements =
-		new HashMap<String, Statistics>();
+	private MeasurementWriterToExcel writerToExcel;
+
+	/**
+	 * @param name der name der Messung
+	 */
+	public PerformanceMeasurement(String name) {
+		super();
+
+		measurements = new HashMap<String, Statistics>();
+		meteringPointNames = new ArrayList<String>();
+
+		writerToExcel = new MeasurementWriterToExcel(name);
+	}
 
 	/**
 	 * Nehme einen Messwert zum Messpunkt in der Statistik auf.
@@ -33,6 +42,7 @@ public class PerformanceMeasurement {
 		Statistics statistics = measurements.get(meteringPointName);
 
 		if (statistics == null) {
+			meteringPointNames.add(meteringPointName);
 			statistics = new Statistics(meteringPointName);
 			measurements.put(meteringPointName, statistics);
 		}
@@ -44,60 +54,22 @@ public class PerformanceMeasurement {
 	 * Das Warmlaufen ist abgeschloßen.
 	 */
 	public void endWarmUp() {
-		printTitles("Warmlaufen");
-
-		for (Statistics statistics : measurements.values()) {
-			statistics.print(LOGGER);
-		}
-
+		writerToExcel.processWarmUp(meteringPointNames, measurements);
+		meteringPointNames.clear();
 		measurements.clear();
 	}
 
 	/**
 	 * Schliese die Messung ab.
 	 * @param name der Name für den Test
+	 * @throws IOException falls die Datei nicht geschrieben werden kann
 	 */
-	public void endMeasurement(String name) {
-		printTitles(name);
-
+	public void endMeasurement() throws IOException {
 		// Zusammenfassung schreiben
-		for (Statistics statistics : measurements.values()) {
-			statistics.print(LOGGER);
-		}
-
-		// Messreihen schreiben
-		for (Statistics statistics : measurements.values()) {
-			statistics.printSeries(LOGGER);
-		}
-
+		writerToExcel.processMeasurement(meteringPointNames, measurements);
+		meteringPointNames.clear();
 		measurements.clear();
-	}
-
-	/**
-	 * @return die Messungen
-	 */
-	public final Map<String, Statistics> getMeasurements() {
-		return measurements;
-	}
-
-	/**
-	 * Ausgabe der Überschriften.
-	 */
-	private void printTitles(String header) {
-		if (header != null) {
-			LOGGER.info("############ {} ############", header);
-		}
-
-		StringBuilder buffer = new StringBuilder();
-
-		for (String title : TITLES) {
-			if (buffer.length() > 0) {
-				buffer.append(", ");
-			}
-			buffer.append(title);
-		}
-
-		LOGGER.info(buffer.toString());
+		writerToExcel.save();
 	}
 
 }

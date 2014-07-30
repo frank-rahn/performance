@@ -45,13 +45,13 @@ public final class TestBeansUtils {
 	 * @return ein zufällig gefüllte [{@link XmlTable}
 	 */
 	public static XmlTable
-		createXmlTable(int numberOfRows, int numberOfColumns) {
+	createXmlTable(int numberOfRows, int numberOfColumns) {
 		XmlTable table = FACTORY.createXmlTable();
 
 		table.setName("XML_TABLE_" + RANDOM.nextInt());
 		table.setDate(getInstance());
 
-		if (numberOfRows == -1) {
+		if (numberOfRows < 0) {
 			numberOfRows = RANDOM.nextInt();
 		}
 

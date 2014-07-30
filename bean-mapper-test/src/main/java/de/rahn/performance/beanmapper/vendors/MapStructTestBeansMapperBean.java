@@ -5,6 +5,7 @@
 package de.rahn.performance.beanmapper.vendors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
@@ -18,6 +19,7 @@ import de.rahn.performance.testbeans.DomainTable;
  * @author Frank W. Rahn
  */
 @Component("MapStruct")
+@Order(5)
 public class MapStructTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	@Autowired

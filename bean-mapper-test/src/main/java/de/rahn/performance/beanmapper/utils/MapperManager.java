@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import javax.annotation.PostConstruct;
 
@@ -58,9 +57,9 @@ public class MapperManager {
 	public TestBeansMapperBean[] getMappersExcluded(String[] excluded) {
 		List<TestBeansMapperBean> result = new ArrayList<TestBeansMapperBean>();
 
-		for (Entry<String, TestBeansMapperBean> entry : mapperByName.entrySet()) {
-			if (!contains(excluded, entry.getKey())) {
-				result.add(entry.getValue());
+		for (String name : names) {
+			if (!contains(excluded, name)) {
+				result.add(mapperByName.get(name));
 			}
 		}
 		return result.toArray(new TestBeansMapperBean[result.size()]);

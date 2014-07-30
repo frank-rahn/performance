@@ -14,8 +14,6 @@ import java.math.MathContext;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.slf4j.Logger;
-
 /**
  * Die statisticschen Daten zu einem Messpunkt.
  * @author Frank Rahn
@@ -31,18 +29,32 @@ public class Statistics {
 	 * Datenklasse, um Zwischenwerte des Mittelwerte speichern zu können.
 	 * @author Frank W. Rahn
 	 */
-	private class Average {
+	public final class Average {
 
-		long numberofValues;
+		private long numberOfValues;
 
-		BigDecimal average;
+		private BigDecimal average;
 
 		/**
 		 * Konstruktor.
 		 */
 		public Average() {
-			numberofValues = counter;
+			numberOfValues = counter;
 			average = average();
+		}
+
+		/**
+		 * @return die Anzahl von Messwerten die zum Mittelwert führten
+		 */
+		public final long getNumberOfValues() {
+			return numberOfValues;
+		}
+
+		/**
+		 * @return der Mittelwert
+		 */
+		public final BigDecimal getAverage() {
+			return average;
 		}
 	}
 
@@ -101,21 +113,6 @@ public class Statistics {
 	}
 
 	/**
-	 * Schreibe die aktuellen Werte raus.
-	 */
-	public void print(Logger logger) {
-		logger.info("{}, {}, {}, {}, {}, {}, {}", meteringPointName, counter,
-			values, minimum, maximum, average(), last);
-	}
-
-	/**
-	 * Schreibe die Messreihe raus.
-	 */
-	public void printSeries(Logger logger) {
-		// ToDo
-	}
-
-	/**
 	 * @return Liefert den Namen dieses Messpunktes
 	 */
 	public String getMeteringPointName() {
@@ -155,6 +152,14 @@ public class Statistics {
 	 */
 	public long getLast() {
 		return last;
+	}
+
+	/**
+	 * @return die Liste der Mittelwerte mit der Anzahl der zugrundeliegenden
+	 *         Messwerten
+	 */
+	public List<Average> getAverages() {
+		return averages;
 	}
 
 }

@@ -12,6 +12,8 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
 import static org.slf4j.LoggerFactory.getLogger;
 
+import java.io.IOException;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,10 +38,10 @@ import de.rahn.performance.testbeans.DomainTable;
 public abstract class AbstractPerformanceTest {
 
 	protected static final Logger LOGGER =
-		getLogger(AbstractPerformanceTest.class);
+			getLogger(AbstractPerformanceTest.class);
 
-	private static PerformanceMeasurement measurement =
-		new PerformanceMeasurement();
+	private PerformanceMeasurement measurement = new PerformanceMeasurement(
+		getClass().getSimpleName());
 
 	@Autowired
 	private MapperManager manager;
@@ -48,7 +50,7 @@ public abstract class AbstractPerformanceTest {
 
 	protected DomainTable domainTable;
 
-	protected int numberOdRows;
+	protected int numberOfRows;
 
 	protected int numberOfColumns;
 
@@ -64,7 +66,7 @@ public abstract class AbstractPerformanceTest {
 	public void setUp() throws Exception {
 		setUpBefore();
 
-		xmlTable = createXmlTable(numberOdRows, numberOfColumns);
+		xmlTable = createXmlTable(numberOfRows, numberOfColumns);
 
 		domainTable = new ByHandTestBeansMapperBean().map(xmlTable);
 
@@ -87,7 +89,7 @@ public abstract class AbstractPerformanceTest {
 	 * Die Messung durchführen.
 	 */
 	@Test
-	public void testPerformance() {
+	public void testPerformance() throws IOException {
 		// Warmlaufen
 		for (int i = 0; i < 10; i++) {
 			runTestOverAllMappers(i);
@@ -101,7 +103,7 @@ public abstract class AbstractPerformanceTest {
 			runDurationInMinutes);
 		int run = 1;
 		final long timer =
-			MINUTES.toMillis(runDurationInMinutes) + currentTimeMillis();
+				MINUTES.toMillis(runDurationInMinutes) + currentTimeMillis();
 		while (true) {
 			runTestOverAllMappers(run++);
 
@@ -112,7 +114,7 @@ public abstract class AbstractPerformanceTest {
 		LOGGER.info("...Messung beendet.");
 
 		// Statistiken zurücksetzen
-		measurement.endMeasurement(getClass().getSimpleName());
+		measurement.endMeasurement();
 	}
 
 	/**
@@ -121,7 +123,7 @@ public abstract class AbstractPerformanceTest {
 	 */
 	private void runTestOverAllMappers(int run) {
 		for (TestBeansMapperBean mapper : manager
-			.getMappersExcluded(excludedMapper)) {
+				.getMappersExcluded(excludedMapper)) {
 			runTestWithMapper(mapper, run);
 		}
 	}
@@ -132,7 +134,7 @@ public abstract class AbstractPerformanceTest {
 	 */
 	private void runTestWithMapper(TestBeansMapperBean mapper, int run) {
 		final String msg =
-			"FEHLER im " + mapper.getMapperName() + " beim " + run
+				"FEHLER im " + mapper.getMapperName() + " beim " + run
 				+ "ten Durchlauf";
 
 		try {

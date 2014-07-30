@@ -17,7 +17,7 @@ AbstractPerformanceTest {
 	 */
 	@Override
 	protected void setUpBefore() {
-		numberOdRows = 100;
+		numberOfRows = 100;
 		numberOfColumns = 100;
 		excludedMapper =
 				new String[] { "Commons-BeanUtils", "Spring-BeanUtils" };

@@ -10,6 +10,7 @@ import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
@@ -22,6 +23,7 @@ import de.rahn.performance.testbeans.DomainTable;
  * @author Frank W. Rahn
  */
 @Component("Orika")
+@Order(4)
 public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	private MapperFacade orika;

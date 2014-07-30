@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import de.frank_rahn.xmlns.types.testtypes._1.XmlRow;
@@ -22,6 +23,7 @@ import de.rahn.performance.testbeans.DomainTable;
  * @author Frank W. Rahn
  */
 @Component("ByHand")
+@Order(0)
 public class ByHandTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	/**

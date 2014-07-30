@@ -11,6 +11,7 @@ import org.dozer.Mapper;
 import org.dozer.factory.JAXBBeanFactory;
 import org.dozer.loader.api.BeanMappingBuilder;
 import org.dozer.loader.api.TypeDefinition;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import de.frank_rahn.xmlns.types.testtypes._1.XmlRow;
@@ -25,6 +26,7 @@ import de.rahn.performance.testbeans.DomainTable;
  * @author Frank W. Rahn
  */
 @Component("Dozer")
+@Order(3)
 public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	private Mapper dozer;
@@ -46,7 +48,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 			protected void configure() {
 				mapping(new TypeDefinition(DomainTable.class),
 					new TypeDefinition(XmlTable.class)
-				.beanFactory(JAXBBeanFactory.class));
+						.beanFactory(JAXBBeanFactory.class));
 			}
 		});
 		((DozerBeanMapper) dozer).addMapping(new BeanMappingBuilder() {
@@ -59,7 +61,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 			protected void configure() {
 				mapping(new TypeDefinition(DomainRow.class),
 					new TypeDefinition(XmlRow.class)
-				.beanFactory(JAXBBeanFactory.class));
+						.beanFactory(JAXBBeanFactory.class));
 			}
 		});
 	}

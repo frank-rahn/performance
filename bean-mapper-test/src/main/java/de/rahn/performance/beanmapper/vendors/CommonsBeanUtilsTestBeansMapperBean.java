@@ -5,6 +5,7 @@
 package de.rahn.performance.beanmapper.vendors;
 
 import org.apache.commons.beanutils.BeanUtils;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
@@ -17,8 +18,9 @@ import de.rahn.performance.testbeans.DomainTable;
  * @author Frank W. Rahn
  */
 @Component("Commons-BeanUtils")
+@Order(1)
 public class CommonsBeanUtilsTestBeansMapperBean extends
-AbstractTestBeansMapperBean {
+	AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}
