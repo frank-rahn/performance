@@ -19,7 +19,7 @@ import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
  * @author Frank W. Rahn
  */
 public abstract class AbstractTestBeansMapperBean implements
-	TestBeansMapperBean, BeanNameAware {
+TestBeansMapperBean, BeanNameAware {
 
 	@Autowired
 	private ObjectFactory factory;
@@ -60,7 +60,7 @@ public abstract class AbstractTestBeansMapperBean implements
 	 * @return das Zielobjekt
 	 */
 	protected final List<XmlRow> createXmlRows() {
-		return new ArrayList<XmlRow>();
+		return new ArrayList<>();
 	}
 
 }

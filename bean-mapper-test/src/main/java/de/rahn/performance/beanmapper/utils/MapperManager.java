@@ -34,7 +34,7 @@ public class MapperManager {
 
 	@PostConstruct
 	public void initialize() {
-		mapperByName = new HashMap<String, TestBeansMapperBean>(mappers.length);
+		mapperByName = new HashMap<>(mappers.length);
 		names = new String[mappers.length];
 
 		for (int i = 0; i < mappers.length; i++) {
@@ -55,7 +55,7 @@ public class MapperManager {
 	 * @return die existierenden Mappers ohne die angegebenen Mapper
 	 */
 	public TestBeansMapperBean[] getMappersExcluded(String[] excluded) {
-		List<TestBeansMapperBean> result = new ArrayList<TestBeansMapperBean>();
+		List<TestBeansMapperBean> result = new ArrayList<>();
 
 		for (String name : names) {
 			if (!contains(excluded, name)) {

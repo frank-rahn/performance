@@ -154,7 +154,7 @@ public class ByHandTestBeansMapperBean extends AbstractTestBeansMapperBean {
 		if (source.getColumns() == null) {
 			target.setColumns(null);
 		} else {
-			target.setColumns(new ArrayList<String>(source.getColumns()));
+			target.setColumns(new ArrayList<>(source.getColumns()));
 		}
 
 		return target;
@@ -179,7 +179,7 @@ public class ByHandTestBeansMapperBean extends AbstractTestBeansMapperBean {
 		if (source.getRows().isEmpty()) {
 			target.setRows(new ArrayList<DomainRow>());
 		} else {
-			List<DomainRow> rows = new ArrayList<DomainRow>();
+			List<DomainRow> rows = new ArrayList<>();
 			for (XmlRow xmlRow : source.getRows()) {
 				rows.add(map(new DomainRow(), xmlRow));
 			}
@@ -288,7 +288,7 @@ public class ByHandTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 		// Mapping String[]
 		if (source.getColumns() != null) {
-			target.setColumns(new ArrayList<String>(source.getColumns()));
+			target.setColumns(new ArrayList<>(source.getColumns()));
 		}
 
 		return target;

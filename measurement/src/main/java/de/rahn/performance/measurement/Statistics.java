@@ -58,7 +58,7 @@ public class Statistics {
 		}
 	}
 
-	private List<Average> averages = new ArrayList<Average>();
+	private List<Average> averages = new ArrayList<>();
 
 	private String meteringPointName;
 
@@ -99,7 +99,7 @@ public class Statistics {
 	 */
 	private void saveAverageIfNecessary() {
 		if (counter % 10000 == 0 || counter == 10 || counter == 100
-				|| counter == 1000) {
+			|| counter == 1000) {
 			averages.add(new Average());
 		}
 	}

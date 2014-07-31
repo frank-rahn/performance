@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
   <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
@@ -8,9 +9,9 @@
       <attribute value="jar:file:/home/frank/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/joda-time/joda-time/2.3/joda-time-2.3.jar" sourcepath="M2_REPO/joda-time/joda-time/2.3/joda-time-2.3-sources.jar">
+  <classpathentry kind="var" path="M2_REPO/joda-time/joda-time/2.4/joda-time-2.4.jar" sourcepath="M2_REPO/joda-time/joda-time/2.4/joda-time-2.4-sources.jar">
     <attributes>
-      <attribute value="jar:file:/home/frank/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3-javadoc.jar!/" name="javadoc_location"/>
+      <attribute value="jar:file:/home/frank/.m2/repository/joda-time/joda-time/2.4/joda-time-2.4-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi-ooxml/3.10-FINAL/poi-ooxml-3.10-FINAL.jar" sourcepath="M2_REPO/org/apache/poi/poi-ooxml/3.10-FINAL/poi-ooxml-3.10-FINAL-sources.jar"/>

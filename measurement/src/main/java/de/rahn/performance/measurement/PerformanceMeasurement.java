@@ -27,8 +27,8 @@ public class PerformanceMeasurement {
 	public PerformanceMeasurement(String name) {
 		super();
 
-		measurements = new HashMap<String, Statistics>();
-		meteringPointNames = new ArrayList<String>();
+		measurements = new HashMap<>();
+		meteringPointNames = new ArrayList<>();
 
 		writerToExcel = new MeasurementWriterToExcel(name);
 	}

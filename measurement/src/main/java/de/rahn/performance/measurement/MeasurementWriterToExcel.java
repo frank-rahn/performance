@@ -30,7 +30,6 @@ import org.joda.time.format.DateTimeFormatterBuilder;
 
 /**
  * Schreibe die aktuelle Messung in ein Excel-Sheet.
- * 
  * @author Frank W. Rahn
  */
 public class MeasurementWriterToExcel {
@@ -70,20 +69,24 @@ public class MeasurementWriterToExcel {
 		CELLSTYLE_HEADER.setFont(headerFont);
 
 		CELLSTYLE_DOUBLE = workbook.createCellStyle();
-		CELLSTYLE_DOUBLE.setDataFormat(workbook.createDataFormat().getFormat("#,##0.00000"));
+		CELLSTYLE_DOUBLE.setDataFormat(workbook.createDataFormat().getFormat(
+				"#,##0.00000"));
 
-		timeStamp = new DateTimeFormatterBuilder().appendDayOfWeek(2).appendLiteral('.').appendMonthOfYear(2).appendLiteral('.').appendYear(4, 4)
-				.appendLiteral(" um ").appendHourOfDay(2).appendLiteral(':').appendMinuteOfHour(2).appendLiteral(" Uhr").toFormatter()
-				.print(new DateTime());
+		timeStamp =
+				new DateTimeFormatterBuilder().appendDayOfWeek(2)
+				.appendLiteral('.').appendMonthOfYear(2).appendLiteral('.')
+				.appendYear(4, 4).appendLiteral(" um ").appendHourOfDay(2)
+				.appendLiteral(':').appendMinuteOfHour(2).appendLiteral(" Uhr")
+				.toFormatter().print(new DateTime());
 	}
 
 	/**
 	 * Schreibe die Aufwärmphase.
-	 * 
 	 * @param die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 */
-	public void processWarmUp(List<String> meteringPointNames, Map<String, Statistics> measurements) {
+	public void processWarmUp(List<String> meteringPointNames,
+		Map<String, Statistics> measurements) {
 		Sheet sheet = createSheet("Warmlaufen");
 
 		writeSummary(sheet, meteringPointNames, measurements);
@@ -93,11 +96,11 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Schreibe die Messung.
-	 * 
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 */
-	public void processMeasurement(List<String> meteringPointNames, Map<String, Statistics> measurements) {
+	public void processMeasurement(List<String> meteringPointNames,
+		Map<String, Statistics> measurements) {
 		Sheet sheet = createSheet("Performanz Messung");
 
 		int row = writeSummary(sheet, meteringPointNames, measurements);
@@ -106,9 +109,11 @@ public class MeasurementWriterToExcel {
 		// __|_10|_100|1000|...
 		// M1|_W1|____|__W2|...
 		// M2|_W3|__W4|__W5|...
-		Map<Long, BigDecimal[]> table = new HashMap<Long, BigDecimal[]>();
-		List<Long> numberOfValues = new ArrayList<Long>();
-		final int SIZE = createDataTable(meteringPointNames, measurements, table, numberOfValues);
+		Map<Long, BigDecimal[]> table = new HashMap<>();
+		List<Long> numberOfValues = new ArrayList<>();
+		final int SIZE =
+				createDataTable(meteringPointNames, measurements, table,
+					numberOfValues);
 
 		// Y-Zeile sortieren
 		Collections.sort(numberOfValues);
@@ -143,7 +148,6 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Speichere die Datei.
-	 * 
 	 * @throws IOException falls ein IO-Problem aufgetreten ist
 	 */
 	public void save() throws IOException {
@@ -158,13 +162,13 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Schreibe die Zusammanfassung dieser Messung.
-	 * 
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 * @param sheet das aktuelle Sheet
 	 * @return die nächste Zeilennummer
 	 */
-	private int writeSummary(Sheet sheet, List<String> meteringPointNames, Map<String, Statistics> measurements) {
+	private int writeSummary(Sheet sheet, List<String> meteringPointNames,
+		Map<String, Statistics> measurements) {
 		// Laufende Zeilennummer
 		int row = 0;
 
@@ -214,21 +218,24 @@ public class MeasurementWriterToExcel {
 	}
 
 	/**
-	 * Ermittle die Mittelwerte und stelle die Tabelle zusammen. Einzelne Messwert können fehlen...
-	 * 
+	 * Ermittle die Mittelwerte und stelle die Tabelle zusammen. Einzelne
+	 * Messwert können fehlen...
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 * @param table die Tabelle mit den Messwerten
-	 * @param numberOfValues die Zeile mit den Anzahl der Messwerten, aus denen die Mittelwerte gebildet wurden
+	 * @param numberOfValues die Zeile mit den Anzahl der Messwerten, aus denen
+	 *        die Mittelwerte gebildet wurden
 	 * @return die Anzahl der Zeilen
 	 */
-	private int createDataTable(List<String> meteringPointNames, Map<String, Statistics> measurements, Map<Long, BigDecimal[]> table,
-			List<Long> numberOfValues) {
+	private int createDataTable(List<String> meteringPointNames,
+		Map<String, Statistics> measurements, Map<Long, BigDecimal[]> table,
+		List<Long> numberOfValues) {
 		final int size = meteringPointNames.size();
 
 		for (Statistics statistics : measurements.values()) {
 			// Welche Zeile ist dran?
-			int index = meteringPointNames.indexOf(statistics.getMeteringPointName());
+			int index =
+					meteringPointNames.indexOf(statistics.getMeteringPointName());
 
 			if (index < 0) {
 				// Unbekannter Messpunkt ==> Ignorieren
@@ -253,7 +260,6 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Erzeuge ein Sheet und konfiguriere es.
-	 * 
 	 * @param name der Name des Sheets
 	 * @return das Sheet
 	 */
@@ -268,7 +274,7 @@ public class MeasurementWriterToExcel {
 				break;
 			}
 
-			temp = name + "_" + (i++);
+			temp = name + "_" + i++;
 		}
 
 		sheet = workbook.createSheet(temp);

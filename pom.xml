@@ -41,11 +41,11 @@
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
 		<!-- Utilities -->
-		<version.jdk>1.6</version.jdk>
+		<version.jdk>1.7</version.jdk>
 		<version.poi>3.10-FINAL</version.poi>
 		<version.commons.lang>2.6</version.commons.lang>
-		<version.joda.time>2.3</version.joda.time>
-		<version.cxf.xjcruntime>2.7.0</version.cxf.xjcruntime>
+		<version.joda.time>2.4</version.joda.time>
+		<version.cxf.xjcruntime>3.0.1</version.cxf.xjcruntime>
 		<version.jpa>1.0.0.Final</version.jpa>
 		<version.log4j>1.2.17</version.log4j>
 		<version.slf4j>1.7.7</version.slf4j>
@@ -54,7 +54,7 @@
 
 		<!-- Mapper -->
 		<version.commons.beanutils>1.9.2</version.commons.beanutils>
-		<version.spring>3.1.1.RELEASE</version.spring><!-- 4.0.6.RELEASE -->
+		<version.spring>4.0.6.RELEASE</version.spring>
 		<version.dozer>5.5.1</version.dozer>
 		<version.orika>1.4.5</version.orika>
 		<version.mapstruct>1.0.0.Beta2</version.mapstruct>
@@ -115,7 +115,7 @@
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate.javax.persistence</groupId>
-				<artifactId>hibernate-jpa-2.0-api</artifactId>
+				<artifactId>hibernate-jpa-2.1-api</artifactId>
 				<version>${version.jpa}</version>
 			</dependency>
 			<dependency>
@@ -214,7 +214,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>2.4</version>
+					<version>2.5</version>
 					<configuration>
 						<archive>
 							<manifest>
@@ -265,7 +265,7 @@
 				<plugin>
 					<groupId>org.apache.cxf</groupId>
 					<artifactId>cxf-codegen-plugin</artifactId>
-					<version>2.7.9</version>
+					<version>3.0.1</version>
 					<executions>
 						<execution>
 							<id>wsdl2java</id>
@@ -279,17 +279,17 @@
 						<dependency>
 							<groupId>org.apache.cxf.xjcplugins</groupId>
 							<artifactId>cxf-xjc-ts</artifactId>
-							<version>2.7.0</version>
+							<version>3.0.1</version>
 						</dependency>
 						<dependency>
-							<groupId>net.java.dev.jaxb2-commons</groupId>
-							<artifactId>jaxb-fluent-api</artifactId>
-							<version>2.1.8</version>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-fluent-api</artifactId>
+							<version>3.0</version>
 						</dependency>
 						<dependency>
 							<groupId>org.jvnet.jaxb2_commons</groupId>
 							<artifactId>jaxb2-basics</artifactId>
-							<version>0.6.4</version>
+							<version>0.6.5</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -300,7 +300,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>2.1.2</version>
+				<version>2.3</version>
 				<configuration>
 					<attach>true</attach>
 				</configuration>
