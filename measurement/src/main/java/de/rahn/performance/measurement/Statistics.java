@@ -21,7 +21,7 @@ import java.util.List;
 public class Statistics {
 
 	/** Die Überschriften und Reihenfolge der einzelnen Messwerte. */
-	public static final String[] TITLES = { "Name des Messpunkt",
+	public static final String[] TITLES = { "Name des Messpunkts",
 		"Anzahl der Messungen", "Summe aller Messwerte", "Minimaler Messwert",
 		"Maximaler Messwert", "Mittelwert", "Letzter Messwert" };
 
