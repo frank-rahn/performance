@@ -4,22 +4,46 @@
  */
 package de.rahn.performance.testbeans;
 
+import static javax.persistence.AccessType.FIELD;
+import static javax.persistence.CascadeType.ALL;
+import static javax.persistence.GenerationType.SEQUENCE;
+import static javax.persistence.TemporalType.DATE;
 import static org.apache.commons.lang.builder.ToStringBuilder.reflectionToString;
 import static org.apache.commons.lang.builder.ToStringStyle.MULTI_LINE_STYLE;
 
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Access;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+
 /**
  * Ein Java-Bean zum Test, welche eine Tabelle darstellt.
+ * 
  * @author Frank W. Rahn
  */
+@Entity
+@Access(FIELD)
+@Table(schema = "rahn")
 public class DomainTable {
+
+	@Id
+	@GeneratedValue(strategy = SEQUENCE, generator = "TableSEQ")
+	@SequenceGenerator(name = "TableSEQ", sequenceName = "TableSEQ", schema = "rahn")
+	private Long id;
 
 	private String name;
 
+	@Temporal(DATE)
 	private Date date;
 
+	@OneToMany(cascade = ALL)
 	private List<DomainRow> rows;
 
 	/**
@@ -74,6 +98,7 @@ public class DomainTable {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see Object#hashCode()
 	 */
 	@Override
@@ -90,6 +115,7 @@ public class DomainTable {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see Object#equals(Object)
 	 */
 	@Override
