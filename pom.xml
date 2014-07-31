@@ -44,6 +44,7 @@
 		<version.jdk>1.6</version.jdk>
 		<version.poi>3.10-FINAL</version.poi>
 		<version.commons.lang>2.6</version.commons.lang>
+		<version.joda.time>2.3</version.joda.time>
 		<version.cxf.xjcruntime>2.7.0</version.cxf.xjcruntime>
 		<version.jpa>1.0.0.Final</version.jpa>
 		<version.log4j>1.2.17</version.log4j>
@@ -97,6 +98,11 @@
 				<version>${version.commons.lang}</version>
 			</dependency>
 			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${version.joda.time}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.apache.cxf.xjc-utils</groupId>
 				<artifactId>cxf-xjc-runtime</artifactId>
 				<version>${version.cxf.xjcruntime}</version>
@@ -109,7 +115,7 @@
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate.javax.persistence</groupId>
-				<artifactId>hibernate-jpa-2.1-api</artifactId>
+				<artifactId>hibernate-jpa-2.0-api</artifactId>
 				<version>${version.jpa}</version>
 			</dependency>
 			<dependency>
@@ -294,7 +300,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-				<version>2.2.1</version>
+				<version>2.1.2</version>
 				<configuration>
 					<attach>true</attach>
 				</configuration>
