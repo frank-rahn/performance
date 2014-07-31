@@ -25,16 +25,32 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormatterBuilder;
 
 /**
  * Schreibe die aktuelle Messung in ein Excel-Sheet.
+ * 
  * @author Frank W. Rahn
  */
 public class MeasurementWriterToExcel {
 
-	private Workbook workbook = new XSSFWorkbook();
+	/** Spaltenbreite 23mm */
+	private static final int COLUMN_WIDTH = 23;
 
-	private File file;
+	/** Der {@link CellStyle} für die Überschriften. */
+	private final CellStyle CELLSTYLE_HEADER;
+
+	/** Der {@link CellStyle} für die Fließkommazahlen. */
+	private final CellStyle CELLSTYLE_DOUBLE;
+
+	/** Das Arbeitsblatt. */
+	private final Workbook workbook;
+
+	/** Die Datei für das Sheet. */
+	private final File file;
+
+	private final String timeStamp;
 
 	/**
 	 * @param fileName Der Name der Ausgabedatei
@@ -43,16 +59,32 @@ public class MeasurementWriterToExcel {
 		super();
 
 		file = new File(fileName + ".xlsx");
+
+		workbook = new XSSFWorkbook();
+
+		Font headerFont = workbook.createFont();
+		headerFont.setBoldweight(BOLDWEIGHT_BOLD);
+
+		CELLSTYLE_HEADER = workbook.createCellStyle();
+		CELLSTYLE_HEADER.setAlignment(ALIGN_CENTER);
+		CELLSTYLE_HEADER.setFont(headerFont);
+
+		CELLSTYLE_DOUBLE = workbook.createCellStyle();
+		CELLSTYLE_DOUBLE.setDataFormat(workbook.createDataFormat().getFormat("#,##0.00000"));
+
+		timeStamp = new DateTimeFormatterBuilder().appendDayOfWeek(2).appendLiteral('.').appendMonthOfYear(2).appendLiteral('.').appendYear(4, 4)
+				.appendLiteral(" um ").appendHourOfDay(2).appendLiteral(':').appendMinuteOfHour(2).appendLiteral(" Uhr").toFormatter()
+				.print(new DateTime());
 	}
 
 	/**
 	 * Schreibe die Aufwärmphase.
+	 * 
 	 * @param die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 */
-	public void processWarmUp(List<String> meteringPointNames,
-		Map<String, Statistics> measurements) {
-		Sheet sheet = workbook.createSheet("Warmlaufen");
+	public void processWarmUp(List<String> meteringPointNames, Map<String, Statistics> measurements) {
+		Sheet sheet = createSheet("Warmlaufen");
 
 		writeSummary(sheet, meteringPointNames, measurements);
 
@@ -61,17 +93,14 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Schreibe die Messung.
+	 * 
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 */
-	public void processMeasurement(List<String> meteringPointNames,
-		Map<String, Statistics> measurements) {
-		Sheet sheet = workbook.createSheet("Messung");
+	public void processMeasurement(List<String> meteringPointNames, Map<String, Statistics> measurements) {
+		Sheet sheet = createSheet("Performanz Messung");
 
 		int row = writeSummary(sheet, meteringPointNames, measurements);
-
-		// Anzahl der Zeilen
-		final int size = meteringPointNames.size();
 
 		// Tabelle:
 		// __|_10|_100|1000|...
@@ -79,54 +108,21 @@ public class MeasurementWriterToExcel {
 		// M2|_W3|__W4|__W5|...
 		Map<Long, BigDecimal[]> table = new HashMap<Long, BigDecimal[]>();
 		List<Long> numberOfValues = new ArrayList<Long>();
-
-		// Ermittle die Mittelwerte. Einzelne Messwert können fehlen...
-		for (Statistics statistics : measurements.values()) {
-			// Welche Zeile ist dran?
-			int index =
-				meteringPointNames.indexOf(statistics.getMeteringPointName());
-
-			if (index < 0) {
-				// Unbekannter Messpunkt ==> Ignorieren
-				continue;
-			}
-
-			for (Statistics.Average avg : statistics.getAverages()) {
-				BigDecimal[] column = table.get(avg.getNumberOfValues());
-
-				if (column == null) {
-					column = new BigDecimal[size];
-					table.put(avg.getNumberOfValues(), column);
-					numberOfValues.add(avg.getNumberOfValues());
-				}
-
-				column[index] = avg.getAverage();
-			}
-		}
+		final int SIZE = createDataTable(meteringPointNames, measurements, table, numberOfValues);
 
 		// Y-Zeile sortieren
 		Collections.sort(numberOfValues);
 
-		// Y-Überschrift
-		Font headerFont = workbook.createFont();
-		headerFont.setBoldweight(BOLDWEIGHT_BOLD);
-
-		CellStyle headerStyle = workbook.createCellStyle();
-		headerStyle.setAlignment(ALIGN_CENTER);
-		headerStyle.setFont(headerFont);
-
+		// Schreibe die Y-Zeile
 		Row headerRow = sheet.createRow(++row);
 		for (int column = 0; column < numberOfValues.size(); column++) {
 			Cell cell = headerRow.createCell(column + 1);
 			cell.setCellValue(numberOfValues.get(column));
-			cell.setCellStyle(headerStyle);
-
-			// Spaltenbreite 18
-			sheet.setColumnWidth(cell.getColumnIndex(), 18 * 256);
+			cell.setCellStyle(CELLSTYLE_HEADER);
 		}
 
-		// Schreibe die Messreihe
-		for (int i = 0; i < size; i++) {
+		// Schreibe die Messreihen
+		for (int i = 0; i < SIZE; i++) {
 			Row contentRow = sheet.createRow(++row);
 			Cell xcell = contentRow.createCell(0);
 			xcell.setCellValue(meteringPointNames.get(i));
@@ -137,6 +133,7 @@ public class MeasurementWriterToExcel {
 				if (d != null) {
 					Cell cell = contentRow.createCell(column + 1);
 					cell.setCellValue(d.doubleValue());
+					cell.setCellStyle(CELLSTYLE_DOUBLE);
 				}
 			}
 		}
@@ -146,6 +143,7 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Speichere die Datei.
+	 * 
 	 * @throws IOException falls ein IO-Problem aufgetreten ist
 	 */
 	public void save() throws IOException {
@@ -154,36 +152,34 @@ public class MeasurementWriterToExcel {
 		try {
 			workbook.write(fileOutputStream);
 		} finally {
-			workbook = null;
 			fileOutputStream.close();
 		}
 	}
 
 	/**
 	 * Schreibe die Zusammanfassung dieser Messung.
+	 * 
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 * @param sheet das aktuelle Sheet
 	 * @return die nächste Zeilennummer
 	 */
-	private int writeSummary(Sheet sheet, List<String> meteringPointNames,
-		Map<String, Statistics> measurements) {
-		Font headerFont = workbook.createFont();
-		headerFont.setBoldweight(BOLDWEIGHT_BOLD);
-
-		CellStyle headerStyle = workbook.createCellStyle();
-		headerStyle.setAlignment(ALIGN_CENTER);
-		headerStyle.setFont(headerFont);
-
+	private int writeSummary(Sheet sheet, List<String> meteringPointNames, Map<String, Statistics> measurements) {
 		// Laufende Zeilennummer
 		int row = 0;
 
-		// Überschrift
+		// Datum schreiben
 		Row headerRow = sheet.createRow(row++);
+		Cell hcell = headerRow.createCell(0);
+		hcell.setCellValue(timeStamp);
+		hcell.setCellStyle(CELLSTYLE_HEADER);
+
+		// Überschrift
+		headerRow = sheet.createRow(row++);
 		for (int column = 0; column < TITLES.length; column++) {
 			Cell cell = headerRow.createCell(column);
 			cell.setCellValue(TITLES[column]);
-			cell.setCellStyle(headerStyle);
+			cell.setCellStyle(CELLSTYLE_HEADER);
 		}
 
 		// Auswertung
@@ -208,12 +204,76 @@ public class MeasurementWriterToExcel {
 
 			cell = contentRow.createCell(cell.getColumnIndex() + 1);
 			cell.setCellValue(statistics.average().doubleValue());
+			cell.setCellStyle(CELLSTYLE_DOUBLE);
 
 			cell = contentRow.createCell(cell.getColumnIndex() + 1);
 			cell.setCellValue(statistics.getLast());
 		}
 
 		return ++row;
+	}
+
+	/**
+	 * Ermittle die Mittelwerte und stelle die Tabelle zusammen. Einzelne Messwert können fehlen...
+	 * 
+	 * @param meteringPointNames die Liste der Namen der Messpunkte
+	 * @param measurements die Messung
+	 * @param table die Tabelle mit den Messwerten
+	 * @param numberOfValues die Zeile mit den Anzahl der Messwerten, aus denen die Mittelwerte gebildet wurden
+	 * @return die Anzahl der Zeilen
+	 */
+	private int createDataTable(List<String> meteringPointNames, Map<String, Statistics> measurements, Map<Long, BigDecimal[]> table,
+			List<Long> numberOfValues) {
+		final int size = meteringPointNames.size();
+
+		for (Statistics statistics : measurements.values()) {
+			// Welche Zeile ist dran?
+			int index = meteringPointNames.indexOf(statistics.getMeteringPointName());
+
+			if (index < 0) {
+				// Unbekannter Messpunkt ==> Ignorieren
+				continue;
+			}
+
+			for (Statistics.Average avg : statistics.getAverages()) {
+				BigDecimal[] column = table.get(avg.getNumberOfValues());
+
+				if (column == null) {
+					column = new BigDecimal[size];
+					table.put(avg.getNumberOfValues(), column);
+					numberOfValues.add(avg.getNumberOfValues());
+				}
+
+				column[index] = avg.getAverage();
+			}
+		}
+
+		return size;
+	}
+
+	/**
+	 * Erzeuge ein Sheet und konfiguriere es.
+	 * 
+	 * @param name der Name des Sheets
+	 * @return das Sheet
+	 */
+	private Sheet createSheet(String name) {
+		int i = 0;
+		String temp = name;
+		Sheet sheet;
+		while (true) {
+			sheet = workbook.getSheet(temp);
+
+			if (sheet == null) {
+				break;
+			}
+
+			temp = name + "_" + (i++);
+		}
+
+		sheet = workbook.createSheet(temp);
+		sheet.setDefaultColumnWidth(COLUMN_WIDTH);
+		return sheet;
 	}
 
 }
