@@ -35,8 +35,6 @@ public class PerformanceTestWithIncompleteFixtures extends
 		// können
 		domainTable.setDate(null);
 		domainTable.getRows().clear();
-
-		runDurationInMinutes = 1;
 	}
 
 }
