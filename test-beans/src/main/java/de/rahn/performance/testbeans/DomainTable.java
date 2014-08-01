@@ -25,7 +25,6 @@ import javax.persistence.Temporal;
 
 /**
  * Ein Java-Bean zum Test, welche eine Tabelle darstellt.
- * 
  * @author Frank W. Rahn
  */
 @Entity
@@ -35,7 +34,8 @@ public class DomainTable {
 
 	@Id
 	@GeneratedValue(strategy = SEQUENCE, generator = "TableSEQ")
-	@SequenceGenerator(name = "TableSEQ", sequenceName = "TableSEQ", schema = "rahn")
+	@SequenceGenerator(name = "TableSEQ", sequenceName = "TableSEQ",
+		schema = "rahn")
 	private Long id;
 
 	private String name;
@@ -47,75 +47,7 @@ public class DomainTable {
 	private List<DomainRow> rows;
 
 	/**
-	 * @return Gets the value of the name property
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param value Sets the value of the name property
-	 */
-	public void setName(String value) {
-		name = value;
-	}
-
-	/**
-	 * @return Gets the value of the date property
-	 */
-	public Date getDate() {
-		return date;
-	}
-
-	/**
-	 * @param value Sets the value of the date property
-	 */
-	public void setDate(Date value) {
-		date = value;
-	}
-
-	/**
-	 * @return Gets the value of the rows property
-	 */
-	public List<DomainRow> getRows() {
-		return rows;
-	}
-
-	/**
-	 * @param value Sets the value of the rows property
-	 */
-	public void setRows(List<DomainRow> value) {
-		rows = value;
-	}
-
-	/**
 	 * {@inheritDoc}
-	 */
-	@Override
-	public String toString() {
-		return reflectionToString(this, MULTI_LINE_STYLE);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		final int p = 31;
-		int r = 1;
-
-		r = p * r + (date == null ? 0 : date.hashCode());
-		r = p * r + (rows == null ? 0 : rows.hashCode());
-		r = p * r + (name == null ? 0 : name.hashCode());
-
-		return r;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * 
 	 * @see Object#equals(Object)
 	 */
 	@Override
@@ -153,6 +85,72 @@ public class DomainTable {
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * @return Gets the value of the date property
+	 */
+	public Date getDate() {
+		return date;
+	}
+
+	/**
+	 * @return Gets the value of the name property
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @return Gets the value of the rows property
+	 */
+	public List<DomainRow> getRows() {
+		return rows;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @see Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int p = 31;
+		int r = 1;
+
+		r = p * r + (date == null ? 0 : date.hashCode());
+		r = p * r + (rows == null ? 0 : rows.hashCode());
+		r = p * r + (name == null ? 0 : name.hashCode());
+
+		return r;
+	}
+
+	/**
+	 * @param value Sets the value of the date property
+	 */
+	public void setDate(Date value) {
+		date = value;
+	}
+
+	/**
+	 * @param value Sets the value of the name property
+	 */
+	public void setName(String value) {
+		name = value;
+	}
+
+	/**
+	 * @param value Sets the value of the rows property
+	 */
+	public void setRows(List<DomainRow> value) {
+		rows = value;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String toString() {
+		return reflectionToString(this, MULTI_LINE_STYLE);
 	}
 
 }

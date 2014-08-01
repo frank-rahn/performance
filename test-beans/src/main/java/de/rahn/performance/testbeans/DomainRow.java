@@ -21,7 +21,6 @@ import javax.persistence.Temporal;
 
 /**
  * Ein Java-Bean zum Test, welche eine Zeile darstellt.
- * 
  * @author Frank W. Rahn
  */
 @Entity
@@ -133,1417 +132,7 @@ public class DomainRow {
 	private List<String> columns;
 
 	/**
-	 * @return Gets the value of the column00 property.
-	 */
-	public String getColumn00() {
-		return column00;
-	}
-
-	/**
-	 * @param value Sets the value of the column00 property.
-	 */
-	public void setColumn00(String value) {
-		column00 = value;
-	}
-
-	/**
-	 * Gets the value of the column01 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn01() {
-		return column01;
-	}
-
-	/**
-	 * Sets the value of the column01 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn01(String value) {
-		column01 = value;
-	}
-
-	/**
-	 * Gets the value of the column02 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn02() {
-		return column02;
-	}
-
-	/**
-	 * Sets the value of the column02 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn02(String value) {
-		column02 = value;
-	}
-
-	/**
-	 * Gets the value of the column03 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn03() {
-		return column03;
-	}
-
-	/**
-	 * Sets the value of the column03 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn03(String value) {
-		column03 = value;
-	}
-
-	/**
-	 * Gets the value of the column04 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn04() {
-		return column04;
-	}
-
-	/**
-	 * Sets the value of the column04 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn04(String value) {
-		column04 = value;
-	}
-
-	/**
-	 * Gets the value of the column05 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn05() {
-		return column05;
-	}
-
-	/**
-	 * Sets the value of the column05 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn05(String value) {
-		column05 = value;
-	}
-
-	/**
-	 * Gets the value of the column06 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn06() {
-		return column06;
-	}
-
-	/**
-	 * Sets the value of the column06 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn06(String value) {
-		column06 = value;
-	}
-
-	/**
-	 * Gets the value of the column07 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn07() {
-		return column07;
-	}
-
-	/**
-	 * Sets the value of the column07 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn07(String value) {
-		column07 = value;
-	}
-
-	/**
-	 * Gets the value of the column08 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn08() {
-		return column08;
-	}
-
-	/**
-	 * Sets the value of the column08 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn08(String value) {
-		column08 = value;
-	}
-
-	/**
-	 * Gets the value of the column09 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn09() {
-		return column09;
-	}
-
-	/**
-	 * Sets the value of the column09 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn09(String value) {
-		column09 = value;
-	}
-
-	/**
-	 * Gets the value of the column10 property.
-	 */
-	public int getColumn10() {
-		return column10;
-	}
-
-	/**
-	 * Sets the value of the column10 property.
-	 */
-	public void setColumn10(int value) {
-		column10 = value;
-	}
-
-	/**
-	 * Gets the value of the column11 property.
-	 */
-	public int getColumn11() {
-		return column11;
-	}
-
-	/**
-	 * Sets the value of the column11 property.
-	 */
-	public void setColumn11(int value) {
-		column11 = value;
-	}
-
-	/**
-	 * Gets the value of the column12 property.
-	 * 
-	 * @return possible object is {@link Integer }
-	 */
-	public Integer getColumn12() {
-		return column12;
-	}
-
-	/**
-	 * Sets the value of the column12 property.
-	 * 
-	 * @param value allowed object is {@link Integer }
-	 */
-	public void setColumn12(Integer value) {
-		column12 = value;
-	}
-
-	/**
-	 * Gets the value of the column13 property.
-	 */
-	public int getColumn13() {
-		return column13;
-	}
-
-	/**
-	 * Sets the value of the column13 property.
-	 */
-	public void setColumn13(int value) {
-		column13 = value;
-	}
-
-	/**
-	 * Gets the value of the column14 property.
-	 */
-	public int getColumn14() {
-		return column14;
-	}
-
-	/**
-	 * Sets the value of the column14 property.
-	 */
-	public void setColumn14(int value) {
-		column14 = value;
-	}
-
-	/**
-	 * Gets the value of the column15 property.
-	 */
-	public int getColumn15() {
-		return column15;
-	}
-
-	/**
-	 * Sets the value of the column15 property.
-	 */
-	public void setColumn15(int value) {
-		column15 = value;
-	}
-
-	/**
-	 * Gets the value of the column16 property.
-	 */
-	public int getColumn16() {
-		return column16;
-	}
-
-	/**
-	 * Sets the value of the column16 property.
-	 */
-	public void setColumn16(int value) {
-		column16 = value;
-	}
-
-	/**
-	 * Gets the value of the column17 property.
-	 */
-	public int getColumn17() {
-		return column17;
-	}
-
-	/**
-	 * Sets the value of the column17 property.
-	 */
-	public void setColumn17(int value) {
-		column17 = value;
-	}
-
-	/**
-	 * Gets the value of the column18 property.
-	 */
-	public int getColumn18() {
-		return column18;
-	}
-
-	/**
-	 * Sets the value of the column18 property.
-	 */
-	public void setColumn18(int value) {
-		column18 = value;
-	}
-
-	/**
-	 * Gets the value of the column19 property.
-	 */
-	public int getColumn19() {
-		return column19;
-	}
-
-	/**
-	 * Sets the value of the column19 property.
-	 */
-	public void setColumn19(int value) {
-		column19 = value;
-	}
-
-	/**
-	 * Gets the value of the column20 property.
-	 */
-	public boolean isColumn20() {
-		return column20;
-	}
-
-	/**
-	 * Sets the value of the column20 property.
-	 */
-	public void setColumn20(boolean value) {
-		column20 = value;
-	}
-
-	/**
-	 * Gets the value of the column21 property.
-	 */
-	public boolean isColumn21() {
-		return column21;
-	}
-
-	/**
-	 * Sets the value of the column21 property.
-	 */
-	public void setColumn21(boolean value) {
-		column21 = value;
-	}
-
-	/**
-	 * Gets the value of the column22 property.
-	 * 
-	 * @return possible object is {@link Boolean }
-	 */
-	public Boolean getColumn22() {
-		return column22;
-	}
-
-	/**
-	 * Sets the value of the column22 property.
-	 * 
-	 * @param value allowed object is {@link Boolean }
-	 */
-	public void setColumn22(Boolean value) {
-		column22 = value;
-	}
-
-	/**
-	 * Gets the value of the column23 property.
-	 */
-	public boolean isColumn23() {
-		return column23;
-	}
-
-	/**
-	 * Sets the value of the column23 property.
-	 */
-	public void setColumn23(boolean value) {
-		column23 = value;
-	}
-
-	/**
-	 * Gets the value of the column24 property.
-	 */
-	public boolean isColumn24() {
-		return column24;
-	}
-
-	/**
-	 * Sets the value of the column24 property.
-	 */
-	public void setColumn24(boolean value) {
-		column24 = value;
-	}
-
-	/**
-	 * Gets the value of the column25 property.
-	 */
-	public boolean isColumn25() {
-		return column25;
-	}
-
-	/**
-	 * Sets the value of the column25 property.
-	 */
-	public void setColumn25(boolean value) {
-		column25 = value;
-	}
-
-	/**
-	 * Gets the value of the column26 property.
-	 */
-	public boolean isColumn26() {
-		return column26;
-	}
-
-	/**
-	 * Sets the value of the column26 property.
-	 */
-	public void setColumn26(boolean value) {
-		column26 = value;
-	}
-
-	/**
-	 * Gets the value of the column27 property.
-	 */
-	public boolean isColumn27() {
-		return column27;
-	}
-
-	/**
-	 * Sets the value of the column27 property.
-	 */
-	public void setColumn27(boolean value) {
-		column27 = value;
-	}
-
-	/**
-	 * Gets the value of the column28 property.
-	 */
-	public boolean isColumn28() {
-		return column28;
-	}
-
-	/**
-	 * Sets the value of the column28 property.
-	 */
-	public void setColumn28(boolean value) {
-		column28 = value;
-	}
-
-	/**
-	 * Gets the value of the column29 property.
-	 */
-	public boolean isColumn29() {
-		return column29;
-	}
-
-	/**
-	 * Sets the value of the column29 property.
-	 */
-	public void setColumn29(boolean value) {
-		column29 = value;
-	}
-
-	/**
-	 * Gets the value of the column30 property.
-	 */
-	public long getColumn30() {
-		return column30;
-	}
-
-	/**
-	 * Sets the value of the column30 property.
-	 */
-	public void setColumn30(long value) {
-		column30 = value;
-	}
-
-	/**
-	 * Gets the value of the column31 property.
-	 */
-	public long getColumn31() {
-		return column31;
-	}
-
-	/**
-	 * Sets the value of the column31 property.
-	 */
-	public void setColumn31(long value) {
-		column31 = value;
-	}
-
-	/**
-	 * Gets the value of the column32 property.
-	 * 
-	 * @return possible object is {@link Long }
-	 */
-	public Long getColumn32() {
-		return column32;
-	}
-
-	/**
-	 * Sets the value of the column32 property.
-	 * 
-	 * @param value allowed object is {@link Long }
-	 */
-	public void setColumn32(Long value) {
-		column32 = value;
-	}
-
-	/**
-	 * Gets the value of the column33 property.
-	 */
-	public long getColumn33() {
-		return column33;
-	}
-
-	/**
-	 * Sets the value of the column33 property.
-	 */
-	public void setColumn33(long value) {
-		column33 = value;
-	}
-
-	/**
-	 * Gets the value of the column34 property.
-	 */
-	public long getColumn34() {
-		return column34;
-	}
-
-	/**
-	 * Sets the value of the column34 property.
-	 */
-	public void setColumn34(long value) {
-		column34 = value;
-	}
-
-	/**
-	 * Gets the value of the column35 property.
-	 */
-	public long getColumn35() {
-		return column35;
-	}
-
-	/**
-	 * Sets the value of the column35 property.
-	 */
-	public void setColumn35(long value) {
-		column35 = value;
-	}
-
-	/**
-	 * Gets the value of the column36 property.
-	 */
-	public long getColumn36() {
-		return column36;
-	}
-
-	/**
-	 * Sets the value of the column36 property.
-	 */
-	public void setColumn36(long value) {
-		column36 = value;
-	}
-
-	/**
-	 * Gets the value of the column37 property.
-	 */
-	public long getColumn37() {
-		return column37;
-	}
-
-	/**
-	 * Sets the value of the column37 property.
-	 */
-	public void setColumn37(long value) {
-		column37 = value;
-	}
-
-	/**
-	 * Gets the value of the column38 property.
-	 */
-	public long getColumn38() {
-		return column38;
-	}
-
-	/**
-	 * Sets the value of the column38 property.
-	 */
-	public void setColumn38(long value) {
-		column38 = value;
-	}
-
-	/**
-	 * Gets the value of the column39 property.
-	 */
-	public long getColumn39() {
-		return column39;
-	}
-
-	/**
-	 * Sets the value of the column39 property.
-	 */
-	public void setColumn39(long value) {
-		column39 = value;
-	}
-
-	/**
-	 * Gets the value of the column40 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn40() {
-		return column40;
-	}
-
-	/**
-	 * Sets the value of the column40 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn40(BigDecimal value) {
-		column40 = value;
-	}
-
-	/**
-	 * Gets the value of the column41 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn41() {
-		return column41;
-	}
-
-	/**
-	 * Sets the value of the column41 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn41(BigDecimal value) {
-		column41 = value;
-	}
-
-	/**
-	 * Gets the value of the column42 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn42() {
-		return column42;
-	}
-
-	/**
-	 * Sets the value of the column42 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn42(BigDecimal value) {
-		column42 = value;
-	}
-
-	/**
-	 * Gets the value of the column43 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn43() {
-		return column43;
-	}
-
-	/**
-	 * Sets the value of the column43 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn43(BigDecimal value) {
-		column43 = value;
-	}
-
-	/**
-	 * Gets the value of the column44 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn44() {
-		return column44;
-	}
-
-	/**
-	 * Sets the value of the column44 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn44(BigDecimal value) {
-		column44 = value;
-	}
-
-	/**
-	 * Gets the value of the column45 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn45() {
-		return column45;
-	}
-
-	/**
-	 * Sets the value of the column45 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn45(BigDecimal value) {
-		column45 = value;
-	}
-
-	/**
-	 * Gets the value of the column46 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn46() {
-		return column46;
-	}
-
-	/**
-	 * Sets the value of the column46 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn46(BigDecimal value) {
-		column46 = value;
-	}
-
-	/**
-	 * Gets the value of the column47 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn47() {
-		return column47;
-	}
-
-	/**
-	 * Sets the value of the column47 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn47(BigDecimal value) {
-		column47 = value;
-	}
-
-	/**
-	 * Gets the value of the column48 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn48() {
-		return column48;
-	}
-
-	/**
-	 * Sets the value of the column48 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn48(BigDecimal value) {
-		column48 = value;
-	}
-
-	/**
-	 * Gets the value of the column49 property.
-	 * 
-	 * @return possible object is {@link BigDecimal }
-	 */
-	public BigDecimal getColumn49() {
-		return column49;
-	}
-
-	/**
-	 * Sets the value of the column49 property.
-	 * 
-	 * @param value allowed object is {@link BigDecimal }
-	 */
-	public void setColumn49(BigDecimal value) {
-		column49 = value;
-	}
-
-	/**
-	 * Gets the value of the column50 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn50() {
-		return column50;
-	}
-
-	/**
-	 * Sets the value of the column50 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn50(Calendar value) {
-		column50 = value;
-	}
-
-	/**
-	 * Gets the value of the column51 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn51() {
-		return column51;
-	}
-
-	/**
-	 * Sets the value of the column51 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn51(Calendar value) {
-		column51 = value;
-	}
-
-	/**
-	 * Gets the value of the column52 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn52() {
-		return column52;
-	}
-
-	/**
-	 * Sets the value of the column52 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn52(Calendar value) {
-		column52 = value;
-	}
-
-	/**
-	 * Gets the value of the column53 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn53() {
-		return column53;
-	}
-
-	/**
-	 * Sets the value of the column53 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn53(Calendar value) {
-		column53 = value;
-	}
-
-	/**
-	 * Gets the value of the column54 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn54() {
-		return column54;
-	}
-
-	/**
-	 * Sets the value of the column54 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn54(Calendar value) {
-		column54 = value;
-	}
-
-	/**
-	 * Gets the value of the column55 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn55() {
-		return column55;
-	}
-
-	/**
-	 * Sets the value of the column55 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn55(Calendar value) {
-		column55 = value;
-	}
-
-	/**
-	 * Gets the value of the column56 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn56() {
-		return column56;
-	}
-
-	/**
-	 * Sets the value of the column56 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn56(Calendar value) {
-		column56 = value;
-	}
-
-	/**
-	 * Gets the value of the column57 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn57() {
-		return column57;
-	}
-
-	/**
-	 * Sets the value of the column57 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn57(Calendar value) {
-		column57 = value;
-	}
-
-	/**
-	 * Gets the value of the column58 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn58() {
-		return column58;
-	}
-
-	/**
-	 * Sets the value of the column58 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn58(Calendar value) {
-		column58 = value;
-	}
-
-	/**
-	 * Gets the value of the column59 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public Calendar getColumn59() {
-		return column59;
-	}
-
-	/**
-	 * Sets the value of the column59 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn59(Calendar value) {
-		column59 = value;
-	}
-
-	/**
-	 * Gets the value of the column60 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn60() {
-		return column60;
-	}
-
-	/**
-	 * Sets the value of the column60 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn60(String value) {
-		column60 = value;
-	}
-
-	/**
-	 * Gets the value of the column61 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn61() {
-		return column61;
-	}
-
-	/**
-	 * Sets the value of the column61 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn61(String value) {
-		column61 = value;
-	}
-
-	/**
-	 * Gets the value of the column62 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn62() {
-		return column62;
-	}
-
-	/**
-	 * Sets the value of the column62 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn62(String value) {
-		column62 = value;
-	}
-
-	/**
-	 * Gets the value of the column63 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn63() {
-		return column63;
-	}
-
-	/**
-	 * Sets the value of the column63 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn63(String value) {
-		column63 = value;
-	}
-
-	/**
-	 * Gets the value of the column64 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn64() {
-		return column64;
-	}
-
-	/**
-	 * Sets the value of the column64 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn64(String value) {
-		column64 = value;
-	}
-
-	/**
-	 * Gets the value of the column65 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn65() {
-		return column65;
-	}
-
-	/**
-	 * Sets the value of the column65 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn65(String value) {
-		column65 = value;
-	}
-
-	/**
-	 * Gets the value of the column66 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn66() {
-		return column66;
-	}
-
-	/**
-	 * Sets the value of the column66 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn66(String value) {
-		column66 = value;
-	}
-
-	/**
-	 * Gets the value of the column67 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn67() {
-		return column67;
-	}
-
-	/**
-	 * Sets the value of the column67 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn67(String value) {
-		column67 = value;
-	}
-
-	/**
-	 * Gets the value of the column68 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn68() {
-		return column68;
-	}
-
-	/**
-	 * Sets the value of the column68 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn68(String value) {
-		column68 = value;
-	}
-
-	/**
-	 * Gets the value of the column69 property.
-	 * 
-	 * @return possible object is {@link String }
-	 */
-	public String getColumn69() {
-		return column69;
-	}
-
-	/**
-	 * Sets the value of the column69 property.
-	 * 
-	 * @param value allowed object is {@link String }
-	 */
-	public void setColumn69(String value) {
-		column69 = value;
-	}
-
-	/**
-	 * Gets the value of the column70 property.
-	 */
-	public int getColumn70() {
-		return column70;
-	}
-
-	/**
-	 * Sets the value of the column70 property.
-	 */
-	public void setColumn70(int value) {
-		column70 = value;
-	}
-
-	/**
-	 * Gets the value of the column71 property.
-	 */
-	public int getColumn71() {
-		return column71;
-	}
-
-	/**
-	 * Sets the value of the column71 property.
-	 */
-	public void setColumn71(int value) {
-		column71 = value;
-	}
-
-	/**
-	 * Gets the value of the column72 property.
-	 * 
-	 * @return possible object is {@link Integer }
-	 */
-	public Integer getColumn72() {
-		return column72;
-	}
-
-	/**
-	 * Sets the value of the column72 property.
-	 * 
-	 * @param value allowed object is {@link Integer }
-	 */
-	public void setColumn72(Integer value) {
-		column72 = value;
-	}
-
-	/**
-	 * Gets the value of the column73 property.
-	 */
-	public int getColumn73() {
-		return column73;
-	}
-
-	/**
-	 * Sets the value of the column73 property.
-	 */
-	public void setColumn73(int value) {
-		column73 = value;
-	}
-
-	/**
-	 * Gets the value of the column74 property.
-	 */
-	public int getColumn74() {
-		return column74;
-	}
-
-	/**
-	 * Sets the value of the column74 property.
-	 */
-	public void setColumn74(int value) {
-		column74 = value;
-	}
-
-	/**
-	 * Gets the value of the column75 property.
-	 */
-	public int getColumn75() {
-		return column75;
-	}
-
-	/**
-	 * Sets the value of the column75 property.
-	 */
-	public void setColumn75(int value) {
-		column75 = value;
-	}
-
-	/**
-	 * Gets the value of the column76 property.
-	 */
-	public int getColumn76() {
-		return column76;
-	}
-
-	/**
-	 * Sets the value of the column76 property.
-	 */
-	public void setColumn76(int value) {
-		column76 = value;
-	}
-
-	/**
-	 * Gets the value of the column77 property.
-	 */
-	public int getColumn77() {
-		return column77;
-	}
-
-	/**
-	 * Sets the value of the column77 property.
-	 */
-	public void setColumn77(int value) {
-		column77 = value;
-	}
-
-	/**
-	 * Gets the value of the column78 property.
-	 */
-	public int getColumn78() {
-		return column78;
-	}
-
-	/**
-	 * Sets the value of the column78 property.
-	 */
-	public void setColumn78(int value) {
-		column78 = value;
-	}
-
-	/**
-	 * Gets the value of the column79 property.
-	 */
-	public int getColumn79() {
-		return column79;
-	}
-
-	/**
-	 * Sets the value of the column79 property.
-	 */
-	public void setColumn79(int value) {
-		column79 = value;
-	}
-
-	/**
-	 * @return Gets the value of the columns property
-	 */
-	public List<String> getColumns() {
-		return columns;
-	}
-
-	/**
-	 * @param value Sets the value of the columns property
-	 */
-	public void setColumns(List<String> value) {
-		columns = value;
-	}
-
-	/**
 	 * {@inheritDoc}
-	 */
-	@Override
-	public String toString() {
-		return reflectionToString(this, MULTI_LINE_STYLE);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		final int p = 31;
-		int r = 1;
-
-		r = p * r + (column00 == null ? 0 : column00.hashCode());
-		r = p * r + (column01 == null ? 0 : column01.hashCode());
-		r = p * r + (column02 == null ? 0 : column02.hashCode());
-		r = p * r + (column03 == null ? 0 : column03.hashCode());
-		r = p * r + (column04 == null ? 0 : column04.hashCode());
-		r = p * r + (column05 == null ? 0 : column05.hashCode());
-		r = p * r + (column06 == null ? 0 : column06.hashCode());
-		r = p * r + (column07 == null ? 0 : column07.hashCode());
-		r = p * r + (column08 == null ? 0 : column08.hashCode());
-		r = p * r + (column09 == null ? 0 : column09.hashCode());
-		r = p * r + column10;
-		r = p * r + column11;
-		r = p * r + (column12 == null ? 0 : column12.hashCode());
-		r = p * r + column13;
-		r = p * r + column14;
-		r = p * r + column15;
-		r = p * r + column16;
-		r = p * r + column17;
-		r = p * r + column18;
-		r = p * r + column19;
-		r = p * r + (column20 ? 1231 : 1237);
-		r = p * r + (column21 ? 1231 : 1237);
-		r = p * r + (column22 == null ? 0 : column22.hashCode());
-		r = p * r + (column23 ? 1231 : 1237);
-		r = p * r + (column24 ? 1231 : 1237);
-		r = p * r + (column25 ? 1231 : 1237);
-		r = p * r + (column26 ? 1231 : 1237);
-		r = p * r + (column27 ? 1231 : 1237);
-		r = p * r + (column28 ? 1231 : 1237);
-		r = p * r + (column29 ? 1231 : 1237);
-		r = p * r + (int) (column30 ^ column30 >>> 32);
-		r = p * r + (int) (column31 ^ column31 >>> 32);
-		r = p * r + (column32 == null ? 0 : column32.hashCode());
-		r = p * r + (int) (column33 ^ column33 >>> 32);
-		r = p * r + (int) (column34 ^ column34 >>> 32);
-		r = p * r + (int) (column35 ^ column35 >>> 32);
-		r = p * r + (int) (column36 ^ column36 >>> 32);
-		r = p * r + (int) (column37 ^ column37 >>> 32);
-		r = p * r + (int) (column38 ^ column38 >>> 32);
-		r = p * r + (int) (column39 ^ column39 >>> 32);
-		r = p * r + (column40 == null ? 0 : column40.hashCode());
-		r = p * r + (column41 == null ? 0 : column41.hashCode());
-		r = p * r + (column42 == null ? 0 : column42.hashCode());
-		r = p * r + (column43 == null ? 0 : column43.hashCode());
-		r = p * r + (column44 == null ? 0 : column44.hashCode());
-		r = p * r + (column45 == null ? 0 : column45.hashCode());
-		r = p * r + (column46 == null ? 0 : column46.hashCode());
-		r = p * r + (column47 == null ? 0 : column47.hashCode());
-		r = p * r + (column48 == null ? 0 : column48.hashCode());
-		r = p * r + (column49 == null ? 0 : column49.hashCode());
-		r = p * r + (column50 == null ? 0 : column50.hashCode());
-		r = p * r + (column51 == null ? 0 : column51.hashCode());
-		r = p * r + (column52 == null ? 0 : column52.hashCode());
-		r = p * r + (column53 == null ? 0 : column53.hashCode());
-		r = p * r + (column54 == null ? 0 : column54.hashCode());
-		r = p * r + (column55 == null ? 0 : column55.hashCode());
-		r = p * r + (column56 == null ? 0 : column56.hashCode());
-		r = p * r + (column57 == null ? 0 : column57.hashCode());
-		r = p * r + (column58 == null ? 0 : column58.hashCode());
-		r = p * r + (column59 == null ? 0 : column59.hashCode());
-		r = p * r + (column60 == null ? 0 : column60.hashCode());
-		r = p * r + (column61 == null ? 0 : column61.hashCode());
-		r = p * r + (column62 == null ? 0 : column62.hashCode());
-		r = p * r + (column63 == null ? 0 : column63.hashCode());
-		r = p * r + (column64 == null ? 0 : column64.hashCode());
-		r = p * r + (column65 == null ? 0 : column65.hashCode());
-		r = p * r + (column66 == null ? 0 : column66.hashCode());
-		r = p * r + (column67 == null ? 0 : column67.hashCode());
-		r = p * r + (column68 == null ? 0 : column68.hashCode());
-		r = p * r + (column69 == null ? 0 : column69.hashCode());
-		r = p * r + column70;
-		r = p * r + column71;
-		r = p * r + (column72 == null ? 0 : column72.hashCode());
-		r = p * r + column73;
-		r = p * r + column74;
-		r = p * r + column75;
-		r = p * r + column76;
-		r = p * r + column77;
-		r = p * r + column78;
-		r = p * r + column79;
-		r = p * r + (columns == null ? 0 : columns.hashCode());
-
-		return r;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * 
 	 * @see Object#equals(Object)
 	 */
 	@Override
@@ -1982,6 +571,1328 @@ public class DomainRow {
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * @return Gets the value of the column00 property.
+	 */
+	public String getColumn00() {
+		return column00;
+	}
+
+	/**
+	 * Gets the value of the column01 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn01() {
+		return column01;
+	}
+
+	/**
+	 * Gets the value of the column02 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn02() {
+		return column02;
+	}
+
+	/**
+	 * Gets the value of the column03 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn03() {
+		return column03;
+	}
+
+	/**
+	 * Gets the value of the column04 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn04() {
+		return column04;
+	}
+
+	/**
+	 * Gets the value of the column05 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn05() {
+		return column05;
+	}
+
+	/**
+	 * Gets the value of the column06 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn06() {
+		return column06;
+	}
+
+	/**
+	 * Gets the value of the column07 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn07() {
+		return column07;
+	}
+
+	/**
+	 * Gets the value of the column08 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn08() {
+		return column08;
+	}
+
+	/**
+	 * Gets the value of the column09 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn09() {
+		return column09;
+	}
+
+	/**
+	 * Gets the value of the column10 property.
+	 */
+	public int getColumn10() {
+		return column10;
+	}
+
+	/**
+	 * Gets the value of the column11 property.
+	 */
+	public int getColumn11() {
+		return column11;
+	}
+
+	/**
+	 * Gets the value of the column12 property.
+	 * @return possible object is {@link Integer }
+	 */
+	public Integer getColumn12() {
+		return column12;
+	}
+
+	/**
+	 * Gets the value of the column13 property.
+	 */
+	public int getColumn13() {
+		return column13;
+	}
+
+	/**
+	 * Gets the value of the column14 property.
+	 */
+	public int getColumn14() {
+		return column14;
+	}
+
+	/**
+	 * Gets the value of the column15 property.
+	 */
+	public int getColumn15() {
+		return column15;
+	}
+
+	/**
+	 * Gets the value of the column16 property.
+	 */
+	public int getColumn16() {
+		return column16;
+	}
+
+	/**
+	 * Gets the value of the column17 property.
+	 */
+	public int getColumn17() {
+		return column17;
+	}
+
+	/**
+	 * Gets the value of the column18 property.
+	 */
+	public int getColumn18() {
+		return column18;
+	}
+
+	/**
+	 * Gets the value of the column19 property.
+	 */
+	public int getColumn19() {
+		return column19;
+	}
+
+	/**
+	 * Gets the value of the column22 property.
+	 * @return possible object is {@link Boolean }
+	 */
+	public Boolean getColumn22() {
+		return column22;
+	}
+
+	/**
+	 * Gets the value of the column30 property.
+	 */
+	public long getColumn30() {
+		return column30;
+	}
+
+	/**
+	 * Gets the value of the column31 property.
+	 */
+	public long getColumn31() {
+		return column31;
+	}
+
+	/**
+	 * Gets the value of the column32 property.
+	 * @return possible object is {@link Long }
+	 */
+	public Long getColumn32() {
+		return column32;
+	}
+
+	/**
+	 * Gets the value of the column33 property.
+	 */
+	public long getColumn33() {
+		return column33;
+	}
+
+	/**
+	 * Gets the value of the column34 property.
+	 */
+	public long getColumn34() {
+		return column34;
+	}
+
+	/**
+	 * Gets the value of the column35 property.
+	 */
+	public long getColumn35() {
+		return column35;
+	}
+
+	/**
+	 * Gets the value of the column36 property.
+	 */
+	public long getColumn36() {
+		return column36;
+	}
+
+	/**
+	 * Gets the value of the column37 property.
+	 */
+	public long getColumn37() {
+		return column37;
+	}
+
+	/**
+	 * Gets the value of the column38 property.
+	 */
+	public long getColumn38() {
+		return column38;
+	}
+
+	/**
+	 * Gets the value of the column39 property.
+	 */
+	public long getColumn39() {
+		return column39;
+	}
+
+	/**
+	 * Gets the value of the column40 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn40() {
+		return column40;
+	}
+
+	/**
+	 * Gets the value of the column41 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn41() {
+		return column41;
+	}
+
+	/**
+	 * Gets the value of the column42 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn42() {
+		return column42;
+	}
+
+	/**
+	 * Gets the value of the column43 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn43() {
+		return column43;
+	}
+
+	/**
+	 * Gets the value of the column44 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn44() {
+		return column44;
+	}
+
+	/**
+	 * Gets the value of the column45 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn45() {
+		return column45;
+	}
+
+	/**
+	 * Gets the value of the column46 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn46() {
+		return column46;
+	}
+
+	/**
+	 * Gets the value of the column47 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn47() {
+		return column47;
+	}
+
+	/**
+	 * Gets the value of the column48 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn48() {
+		return column48;
+	}
+
+	/**
+	 * Gets the value of the column49 property.
+	 * @return possible object is {@link BigDecimal }
+	 */
+	public BigDecimal getColumn49() {
+		return column49;
+	}
+
+	/**
+	 * Gets the value of the column50 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn50() {
+		return column50;
+	}
+
+	/**
+	 * Gets the value of the column51 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn51() {
+		return column51;
+	}
+
+	/**
+	 * Gets the value of the column52 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn52() {
+		return column52;
+	}
+
+	/**
+	 * Gets the value of the column53 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn53() {
+		return column53;
+	}
+
+	/**
+	 * Gets the value of the column54 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn54() {
+		return column54;
+	}
+
+	/**
+	 * Gets the value of the column55 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn55() {
+		return column55;
+	}
+
+	/**
+	 * Gets the value of the column56 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn56() {
+		return column56;
+	}
+
+	/**
+	 * Gets the value of the column57 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn57() {
+		return column57;
+	}
+
+	/**
+	 * Gets the value of the column58 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn58() {
+		return column58;
+	}
+
+	/**
+	 * Gets the value of the column59 property.
+	 * @return possible object is {@link String }
+	 */
+	public Calendar getColumn59() {
+		return column59;
+	}
+
+	/**
+	 * Gets the value of the column60 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn60() {
+		return column60;
+	}
+
+	/**
+	 * Gets the value of the column61 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn61() {
+		return column61;
+	}
+
+	/**
+	 * Gets the value of the column62 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn62() {
+		return column62;
+	}
+
+	/**
+	 * Gets the value of the column63 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn63() {
+		return column63;
+	}
+
+	/**
+	 * Gets the value of the column64 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn64() {
+		return column64;
+	}
+
+	/**
+	 * Gets the value of the column65 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn65() {
+		return column65;
+	}
+
+	/**
+	 * Gets the value of the column66 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn66() {
+		return column66;
+	}
+
+	/**
+	 * Gets the value of the column67 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn67() {
+		return column67;
+	}
+
+	/**
+	 * Gets the value of the column68 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn68() {
+		return column68;
+	}
+
+	/**
+	 * Gets the value of the column69 property.
+	 * @return possible object is {@link String }
+	 */
+	public String getColumn69() {
+		return column69;
+	}
+
+	/**
+	 * Gets the value of the column70 property.
+	 */
+	public int getColumn70() {
+		return column70;
+	}
+
+	/**
+	 * Gets the value of the column71 property.
+	 */
+	public int getColumn71() {
+		return column71;
+	}
+
+	/**
+	 * Gets the value of the column72 property.
+	 * @return possible object is {@link Integer }
+	 */
+	public Integer getColumn72() {
+		return column72;
+	}
+
+	/**
+	 * Gets the value of the column73 property.
+	 */
+	public int getColumn73() {
+		return column73;
+	}
+
+	/**
+	 * Gets the value of the column74 property.
+	 */
+	public int getColumn74() {
+		return column74;
+	}
+
+	/**
+	 * Gets the value of the column75 property.
+	 */
+	public int getColumn75() {
+		return column75;
+	}
+
+	/**
+	 * Gets the value of the column76 property.
+	 */
+	public int getColumn76() {
+		return column76;
+	}
+
+	/**
+	 * Gets the value of the column77 property.
+	 */
+	public int getColumn77() {
+		return column77;
+	}
+
+	/**
+	 * Gets the value of the column78 property.
+	 */
+	public int getColumn78() {
+		return column78;
+	}
+
+	/**
+	 * Gets the value of the column79 property.
+	 */
+	public int getColumn79() {
+		return column79;
+	}
+
+	/**
+	 * @return Gets the value of the columns property
+	 */
+	public List<String> getColumns() {
+		return columns;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @see Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int p = 31;
+		int r = 1;
+
+		r = p * r + (column00 == null ? 0 : column00.hashCode());
+		r = p * r + (column01 == null ? 0 : column01.hashCode());
+		r = p * r + (column02 == null ? 0 : column02.hashCode());
+		r = p * r + (column03 == null ? 0 : column03.hashCode());
+		r = p * r + (column04 == null ? 0 : column04.hashCode());
+		r = p * r + (column05 == null ? 0 : column05.hashCode());
+		r = p * r + (column06 == null ? 0 : column06.hashCode());
+		r = p * r + (column07 == null ? 0 : column07.hashCode());
+		r = p * r + (column08 == null ? 0 : column08.hashCode());
+		r = p * r + (column09 == null ? 0 : column09.hashCode());
+		r = p * r + column10;
+		r = p * r + column11;
+		r = p * r + (column12 == null ? 0 : column12.hashCode());
+		r = p * r + column13;
+		r = p * r + column14;
+		r = p * r + column15;
+		r = p * r + column16;
+		r = p * r + column17;
+		r = p * r + column18;
+		r = p * r + column19;
+		r = p * r + (column20 ? 1231 : 1237);
+		r = p * r + (column21 ? 1231 : 1237);
+		r = p * r + (column22 == null ? 0 : column22.hashCode());
+		r = p * r + (column23 ? 1231 : 1237);
+		r = p * r + (column24 ? 1231 : 1237);
+		r = p * r + (column25 ? 1231 : 1237);
+		r = p * r + (column26 ? 1231 : 1237);
+		r = p * r + (column27 ? 1231 : 1237);
+		r = p * r + (column28 ? 1231 : 1237);
+		r = p * r + (column29 ? 1231 : 1237);
+		r = p * r + (int) (column30 ^ column30 >>> 32);
+		r = p * r + (int) (column31 ^ column31 >>> 32);
+		r = p * r + (column32 == null ? 0 : column32.hashCode());
+		r = p * r + (int) (column33 ^ column33 >>> 32);
+		r = p * r + (int) (column34 ^ column34 >>> 32);
+		r = p * r + (int) (column35 ^ column35 >>> 32);
+		r = p * r + (int) (column36 ^ column36 >>> 32);
+		r = p * r + (int) (column37 ^ column37 >>> 32);
+		r = p * r + (int) (column38 ^ column38 >>> 32);
+		r = p * r + (int) (column39 ^ column39 >>> 32);
+		r = p * r + (column40 == null ? 0 : column40.hashCode());
+		r = p * r + (column41 == null ? 0 : column41.hashCode());
+		r = p * r + (column42 == null ? 0 : column42.hashCode());
+		r = p * r + (column43 == null ? 0 : column43.hashCode());
+		r = p * r + (column44 == null ? 0 : column44.hashCode());
+		r = p * r + (column45 == null ? 0 : column45.hashCode());
+		r = p * r + (column46 == null ? 0 : column46.hashCode());
+		r = p * r + (column47 == null ? 0 : column47.hashCode());
+		r = p * r + (column48 == null ? 0 : column48.hashCode());
+		r = p * r + (column49 == null ? 0 : column49.hashCode());
+		r = p * r + (column50 == null ? 0 : column50.hashCode());
+		r = p * r + (column51 == null ? 0 : column51.hashCode());
+		r = p * r + (column52 == null ? 0 : column52.hashCode());
+		r = p * r + (column53 == null ? 0 : column53.hashCode());
+		r = p * r + (column54 == null ? 0 : column54.hashCode());
+		r = p * r + (column55 == null ? 0 : column55.hashCode());
+		r = p * r + (column56 == null ? 0 : column56.hashCode());
+		r = p * r + (column57 == null ? 0 : column57.hashCode());
+		r = p * r + (column58 == null ? 0 : column58.hashCode());
+		r = p * r + (column59 == null ? 0 : column59.hashCode());
+		r = p * r + (column60 == null ? 0 : column60.hashCode());
+		r = p * r + (column61 == null ? 0 : column61.hashCode());
+		r = p * r + (column62 == null ? 0 : column62.hashCode());
+		r = p * r + (column63 == null ? 0 : column63.hashCode());
+		r = p * r + (column64 == null ? 0 : column64.hashCode());
+		r = p * r + (column65 == null ? 0 : column65.hashCode());
+		r = p * r + (column66 == null ? 0 : column66.hashCode());
+		r = p * r + (column67 == null ? 0 : column67.hashCode());
+		r = p * r + (column68 == null ? 0 : column68.hashCode());
+		r = p * r + (column69 == null ? 0 : column69.hashCode());
+		r = p * r + column70;
+		r = p * r + column71;
+		r = p * r + (column72 == null ? 0 : column72.hashCode());
+		r = p * r + column73;
+		r = p * r + column74;
+		r = p * r + column75;
+		r = p * r + column76;
+		r = p * r + column77;
+		r = p * r + column78;
+		r = p * r + column79;
+		r = p * r + (columns == null ? 0 : columns.hashCode());
+
+		return r;
+	}
+
+	/**
+	 * Gets the value of the column20 property.
+	 */
+	public boolean isColumn20() {
+		return column20;
+	}
+
+	/**
+	 * Gets the value of the column21 property.
+	 */
+	public boolean isColumn21() {
+		return column21;
+	}
+
+	/**
+	 * Gets the value of the column23 property.
+	 */
+	public boolean isColumn23() {
+		return column23;
+	}
+
+	/**
+	 * Gets the value of the column24 property.
+	 */
+	public boolean isColumn24() {
+		return column24;
+	}
+
+	/**
+	 * Gets the value of the column25 property.
+	 */
+	public boolean isColumn25() {
+		return column25;
+	}
+
+	/**
+	 * Gets the value of the column26 property.
+	 */
+	public boolean isColumn26() {
+		return column26;
+	}
+
+	/**
+	 * Gets the value of the column27 property.
+	 */
+	public boolean isColumn27() {
+		return column27;
+	}
+
+	/**
+	 * Gets the value of the column28 property.
+	 */
+	public boolean isColumn28() {
+		return column28;
+	}
+
+	/**
+	 * Gets the value of the column29 property.
+	 */
+	public boolean isColumn29() {
+		return column29;
+	}
+
+	/**
+	 * @param value Sets the value of the column00 property.
+	 */
+	public void setColumn00(String value) {
+		column00 = value;
+	}
+
+	/**
+	 * Sets the value of the column01 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn01(String value) {
+		column01 = value;
+	}
+
+	/**
+	 * Sets the value of the column02 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn02(String value) {
+		column02 = value;
+	}
+
+	/**
+	 * Sets the value of the column03 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn03(String value) {
+		column03 = value;
+	}
+
+	/**
+	 * Sets the value of the column04 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn04(String value) {
+		column04 = value;
+	}
+
+	/**
+	 * Sets the value of the column05 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn05(String value) {
+		column05 = value;
+	}
+
+	/**
+	 * Sets the value of the column06 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn06(String value) {
+		column06 = value;
+	}
+
+	/**
+	 * Sets the value of the column07 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn07(String value) {
+		column07 = value;
+	}
+
+	/**
+	 * Sets the value of the column08 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn08(String value) {
+		column08 = value;
+	}
+
+	/**
+	 * Sets the value of the column09 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn09(String value) {
+		column09 = value;
+	}
+
+	/**
+	 * Sets the value of the column10 property.
+	 */
+	public void setColumn10(int value) {
+		column10 = value;
+	}
+
+	/**
+	 * Sets the value of the column11 property.
+	 */
+	public void setColumn11(int value) {
+		column11 = value;
+	}
+
+	/**
+	 * Sets the value of the column12 property.
+	 * @param value allowed object is {@link Integer }
+	 */
+	public void setColumn12(Integer value) {
+		column12 = value;
+	}
+
+	/**
+	 * Sets the value of the column13 property.
+	 */
+	public void setColumn13(int value) {
+		column13 = value;
+	}
+
+	/**
+	 * Sets the value of the column14 property.
+	 */
+	public void setColumn14(int value) {
+		column14 = value;
+	}
+
+	/**
+	 * Sets the value of the column15 property.
+	 */
+	public void setColumn15(int value) {
+		column15 = value;
+	}
+
+	/**
+	 * Sets the value of the column16 property.
+	 */
+	public void setColumn16(int value) {
+		column16 = value;
+	}
+
+	/**
+	 * Sets the value of the column17 property.
+	 */
+	public void setColumn17(int value) {
+		column17 = value;
+	}
+
+	/**
+	 * Sets the value of the column18 property.
+	 */
+	public void setColumn18(int value) {
+		column18 = value;
+	}
+
+	/**
+	 * Sets the value of the column19 property.
+	 */
+	public void setColumn19(int value) {
+		column19 = value;
+	}
+
+	/**
+	 * Sets the value of the column20 property.
+	 */
+	public void setColumn20(boolean value) {
+		column20 = value;
+	}
+
+	/**
+	 * Sets the value of the column21 property.
+	 */
+	public void setColumn21(boolean value) {
+		column21 = value;
+	}
+
+	/**
+	 * Sets the value of the column22 property.
+	 * @param value allowed object is {@link Boolean }
+	 */
+	public void setColumn22(Boolean value) {
+		column22 = value;
+	}
+
+	/**
+	 * Sets the value of the column23 property.
+	 */
+	public void setColumn23(boolean value) {
+		column23 = value;
+	}
+
+	/**
+	 * Sets the value of the column24 property.
+	 */
+	public void setColumn24(boolean value) {
+		column24 = value;
+	}
+
+	/**
+	 * Sets the value of the column25 property.
+	 */
+	public void setColumn25(boolean value) {
+		column25 = value;
+	}
+
+	/**
+	 * Sets the value of the column26 property.
+	 */
+	public void setColumn26(boolean value) {
+		column26 = value;
+	}
+
+	/**
+	 * Sets the value of the column27 property.
+	 */
+	public void setColumn27(boolean value) {
+		column27 = value;
+	}
+
+	/**
+	 * Sets the value of the column28 property.
+	 */
+	public void setColumn28(boolean value) {
+		column28 = value;
+	}
+
+	/**
+	 * Sets the value of the column29 property.
+	 */
+	public void setColumn29(boolean value) {
+		column29 = value;
+	}
+
+	/**
+	 * Sets the value of the column30 property.
+	 */
+	public void setColumn30(long value) {
+		column30 = value;
+	}
+
+	/**
+	 * Sets the value of the column31 property.
+	 */
+	public void setColumn31(long value) {
+		column31 = value;
+	}
+
+	/**
+	 * Sets the value of the column32 property.
+	 * @param value allowed object is {@link Long }
+	 */
+	public void setColumn32(Long value) {
+		column32 = value;
+	}
+
+	/**
+	 * Sets the value of the column33 property.
+	 */
+	public void setColumn33(long value) {
+		column33 = value;
+	}
+
+	/**
+	 * Sets the value of the column34 property.
+	 */
+	public void setColumn34(long value) {
+		column34 = value;
+	}
+
+	/**
+	 * Sets the value of the column35 property.
+	 */
+	public void setColumn35(long value) {
+		column35 = value;
+	}
+
+	/**
+	 * Sets the value of the column36 property.
+	 */
+	public void setColumn36(long value) {
+		column36 = value;
+	}
+
+	/**
+	 * Sets the value of the column37 property.
+	 */
+	public void setColumn37(long value) {
+		column37 = value;
+	}
+
+	/**
+	 * Sets the value of the column38 property.
+	 */
+	public void setColumn38(long value) {
+		column38 = value;
+	}
+
+	/**
+	 * Sets the value of the column39 property.
+	 */
+	public void setColumn39(long value) {
+		column39 = value;
+	}
+
+	/**
+	 * Sets the value of the column40 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn40(BigDecimal value) {
+		column40 = value;
+	}
+
+	/**
+	 * Sets the value of the column41 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn41(BigDecimal value) {
+		column41 = value;
+	}
+
+	/**
+	 * Sets the value of the column42 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn42(BigDecimal value) {
+		column42 = value;
+	}
+
+	/**
+	 * Sets the value of the column43 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn43(BigDecimal value) {
+		column43 = value;
+	}
+
+	/**
+	 * Sets the value of the column44 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn44(BigDecimal value) {
+		column44 = value;
+	}
+
+	/**
+	 * Sets the value of the column45 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn45(BigDecimal value) {
+		column45 = value;
+	}
+
+	/**
+	 * Sets the value of the column46 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn46(BigDecimal value) {
+		column46 = value;
+	}
+
+	/**
+	 * Sets the value of the column47 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn47(BigDecimal value) {
+		column47 = value;
+	}
+
+	/**
+	 * Sets the value of the column48 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn48(BigDecimal value) {
+		column48 = value;
+	}
+
+	/**
+	 * Sets the value of the column49 property.
+	 * @param value allowed object is {@link BigDecimal }
+	 */
+	public void setColumn49(BigDecimal value) {
+		column49 = value;
+	}
+
+	/**
+	 * Sets the value of the column50 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn50(Calendar value) {
+		column50 = value;
+	}
+
+	/**
+	 * Sets the value of the column51 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn51(Calendar value) {
+		column51 = value;
+	}
+
+	/**
+	 * Sets the value of the column52 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn52(Calendar value) {
+		column52 = value;
+	}
+
+	/**
+	 * Sets the value of the column53 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn53(Calendar value) {
+		column53 = value;
+	}
+
+	/**
+	 * Sets the value of the column54 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn54(Calendar value) {
+		column54 = value;
+	}
+
+	/**
+	 * Sets the value of the column55 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn55(Calendar value) {
+		column55 = value;
+	}
+
+	/**
+	 * Sets the value of the column56 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn56(Calendar value) {
+		column56 = value;
+	}
+
+	/**
+	 * Sets the value of the column57 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn57(Calendar value) {
+		column57 = value;
+	}
+
+	/**
+	 * Sets the value of the column58 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn58(Calendar value) {
+		column58 = value;
+	}
+
+	/**
+	 * Sets the value of the column59 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn59(Calendar value) {
+		column59 = value;
+	}
+
+	/**
+	 * Sets the value of the column60 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn60(String value) {
+		column60 = value;
+	}
+
+	/**
+	 * Sets the value of the column61 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn61(String value) {
+		column61 = value;
+	}
+
+	/**
+	 * Sets the value of the column62 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn62(String value) {
+		column62 = value;
+	}
+
+	/**
+	 * Sets the value of the column63 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn63(String value) {
+		column63 = value;
+	}
+
+	/**
+	 * Sets the value of the column64 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn64(String value) {
+		column64 = value;
+	}
+
+	/**
+	 * Sets the value of the column65 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn65(String value) {
+		column65 = value;
+	}
+
+	/**
+	 * Sets the value of the column66 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn66(String value) {
+		column66 = value;
+	}
+
+	/**
+	 * Sets the value of the column67 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn67(String value) {
+		column67 = value;
+	}
+
+	/**
+	 * Sets the value of the column68 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn68(String value) {
+		column68 = value;
+	}
+
+	/**
+	 * Sets the value of the column69 property.
+	 * @param value allowed object is {@link String }
+	 */
+	public void setColumn69(String value) {
+		column69 = value;
+	}
+
+	/**
+	 * Sets the value of the column70 property.
+	 */
+	public void setColumn70(int value) {
+		column70 = value;
+	}
+
+	/**
+	 * Sets the value of the column71 property.
+	 */
+	public void setColumn71(int value) {
+		column71 = value;
+	}
+
+	/**
+	 * Sets the value of the column72 property.
+	 * @param value allowed object is {@link Integer }
+	 */
+	public void setColumn72(Integer value) {
+		column72 = value;
+	}
+
+	/**
+	 * Sets the value of the column73 property.
+	 */
+	public void setColumn73(int value) {
+		column73 = value;
+	}
+
+	/**
+	 * Sets the value of the column74 property.
+	 */
+	public void setColumn74(int value) {
+		column74 = value;
+	}
+
+	/**
+	 * Sets the value of the column75 property.
+	 */
+	public void setColumn75(int value) {
+		column75 = value;
+	}
+
+	/**
+	 * Sets the value of the column76 property.
+	 */
+	public void setColumn76(int value) {
+		column76 = value;
+	}
+
+	/**
+	 * Sets the value of the column77 property.
+	 */
+	public void setColumn77(int value) {
+		column77 = value;
+	}
+
+	/**
+	 * Sets the value of the column78 property.
+	 */
+	public void setColumn78(int value) {
+		column78 = value;
+	}
+
+	/**
+	 * Sets the value of the column79 property.
+	 */
+	public void setColumn79(int value) {
+		column79 = value;
+	}
+
+	/**
+	 * @param value Sets the value of the columns property
+	 */
+	public void setColumns(List<String> value) {
+		columns = value;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String toString() {
+		return reflectionToString(this, MULTI_LINE_STYLE);
 	}
 
 }
