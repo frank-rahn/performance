@@ -20,11 +20,6 @@ import java.util.List;
  */
 public class Statistics {
 
-	/** Die Überschriften und Reihenfolge der einzelnen Messwerte. */
-	public static final String[] TITLES = { "Name des Messpunkts",
-		"Anzahl der Messungen", "Summe aller Messwerte", "Minimaler Messwert",
-		"Maximaler Messwert", "Mittelwert", "Letzter Messwert" };
-
 	/**
 	 * Datenklasse, um Zwischenwerte des Mittelwerte speichern zu können.
 	 * @author Frank W. Rahn
@@ -44,19 +39,24 @@ public class Statistics {
 		}
 
 		/**
-		 * @return die Anzahl von Messwerten die zum Mittelwert führten
-		 */
-		public final long getNumberOfValues() {
-			return numberOfValues;
-		}
-
-		/**
 		 * @return der Mittelwert
 		 */
 		public final BigDecimal getAverage() {
 			return average;
 		}
+
+		/**
+		 * @return die Anzahl von Messwerten die zum Mittelwert führten
+		 */
+		public final long getNumberOfValues() {
+			return numberOfValues;
+		}
 	}
+
+	/** Die Überschriften und Reihenfolge der einzelnen Messwerte. */
+	public static final String[] TITLES = { "Name des Messpunkts",
+		"Anzahl der Messungen", "Summe aller Messwerte", "Minimaler Messwert",
+		"Maximaler Messwert", "Mittelwert", "Letzter Messwert" };
 
 	private List<Average> averages = new ArrayList<>();
 
@@ -95,16 +95,6 @@ public class Statistics {
 	}
 
 	/**
-	 * Speichere den aktuelle Mittelwert, wenn notwendig.
-	 */
-	private void saveAverageIfNecessary() {
-		if (counter % 10000 == 0 || counter == 10 || counter == 100
-			|| counter == 1000) {
-			averages.add(new Average());
-		}
-	}
-
-	/**
 	 * @return der aktuelle Mittelwert
 	 */
 	public BigDecimal average() {
@@ -113,10 +103,11 @@ public class Statistics {
 	}
 
 	/**
-	 * @return Liefert den Namen dieses Messpunktes
+	 * @return die Liste der Mittelwerte mit der Anzahl der zugrundeliegenden
+	 *         Messwerten
 	 */
-	public String getMeteringPointName() {
-		return meteringPointName;
+	public List<Average> getAverages() {
+		return averages;
 	}
 
 	/**
@@ -127,10 +118,10 @@ public class Statistics {
 	}
 
 	/**
-	 * @return die Summe aller Messwerte
+	 * @return der letzte Messwert
 	 */
-	public long getValues() {
-		return values;
+	public long getLast() {
+		return last;
 	}
 
 	/**
@@ -141,6 +132,13 @@ public class Statistics {
 	}
 
 	/**
+	 * @return Liefert den Namen dieses Messpunktes
+	 */
+	public String getMeteringPointName() {
+		return meteringPointName;
+	}
+
+	/**
 	 * @return der kleinste Messwert
 	 */
 	public long getMinimum() {
@@ -148,18 +146,20 @@ public class Statistics {
 	}
 
 	/**
-	 * @return der letzte Messwert
+	 * @return die Summe aller Messwerte
 	 */
-	public long getLast() {
-		return last;
+	public long getValues() {
+		return values;
 	}
 
 	/**
-	 * @return die Liste der Mittelwerte mit der Anzahl der zugrundeliegenden
-	 *         Messwerten
+	 * Speichere den aktuelle Mittelwert, wenn notwendig.
 	 */
-	public List<Average> getAverages() {
-		return averages;
+	private void saveAverageIfNecessary() {
+		if (counter % 10000 == 0 || counter == 10 || counter == 100
+				|| counter == 1000) {
+			averages.add(new Average());
+		}
 	}
 
 }

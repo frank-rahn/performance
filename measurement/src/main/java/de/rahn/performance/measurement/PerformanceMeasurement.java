@@ -51,15 +51,6 @@ public class PerformanceMeasurement {
 	}
 
 	/**
-	 * Das Warmlaufen ist abgeschloßen.
-	 */
-	public void endWarmUp() {
-		writerToExcel.processWarmUp(meteringPointNames, measurements);
-		meteringPointNames.clear();
-		measurements.clear();
-	}
-
-	/**
 	 * Schliese die Messung ab.
 	 * @param name der Name für den Test
 	 * @throws IOException falls die Datei nicht geschrieben werden kann
@@ -70,6 +61,15 @@ public class PerformanceMeasurement {
 		meteringPointNames.clear();
 		measurements.clear();
 		writerToExcel.save();
+	}
+
+	/**
+	 * Das Warmlaufen ist abgeschloßen.
+	 */
+	public void endWarmUp() {
+		writerToExcel.processWarmUp(meteringPointNames, measurements);
+		meteringPointNames.clear();
+		measurements.clear();
 	}
 
 }
