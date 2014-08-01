@@ -20,7 +20,7 @@ import de.rahn.performance.testbeans.DomainTable;
 @Component("Spring-BeanUtils")
 @Order(2)
 public class SpringBeanUtilsTestBeansMapperBean extends
-	AbstractTestBeansMapperBean {
+AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}

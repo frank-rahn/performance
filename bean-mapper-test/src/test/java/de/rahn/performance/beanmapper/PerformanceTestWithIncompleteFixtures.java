@@ -9,17 +9,7 @@ package de.rahn.performance.beanmapper;
  * @author Frank W. Rahn
  */
 public class PerformanceTestWithIncompleteFixtures extends
-	AbstractPerformanceTest {
-
-	/**
-	 * {@inheritDoc}
-	 * @see AbstractPerformanceTest#setUpBefore()
-	 */
-	@Override
-	protected void setUpBefore() {
-		numberOfRows = 0;
-		numberOfColumns = 0;
-	}
+AbstractPerformanceTest {
 
 	/**
 	 * {@inheritDoc}
@@ -35,6 +25,16 @@ public class PerformanceTestWithIncompleteFixtures extends
 		// können
 		domainTable.setDate(null);
 		domainTable.getRows().clear();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @see AbstractPerformanceTest#setUpBefore()
+	 */
+	@Override
+	protected void setUpBefore() {
+		numberOfRows = 0;
+		numberOfColumns = 0;
 	}
 
 }

@@ -32,15 +32,12 @@ public class MapperManager {
 
 	private String[] names;
 
-	@PostConstruct
-	public void initialize() {
-		mapperByName = new HashMap<>(mappers.length);
-		names = new String[mappers.length];
-
-		for (int i = 0; i < mappers.length; i++) {
-			names[i] = mappers[i].getMapperName();
-			mapperByName.put(mappers[i].getMapperName(), mappers[i]);
-		}
+	/**
+	 * @param der Names des gewünschten Mappers
+	 * @return der Mapper zum Namen
+	 */
+	public TestBeansMapperBean getMapper(String name) {
+		return mapperByName.get(name);
 	}
 
 	/**
@@ -66,18 +63,21 @@ public class MapperManager {
 	}
 
 	/**
-	 * @param der Names des gewünschten Mappers
-	 * @return der Mapper zum Namen
-	 */
-	public TestBeansMapperBean getMapper(String name) {
-		return mapperByName.get(name);
-	}
-
-	/**
 	 * @return die Liste der Namen der Mappers
 	 */
 	public String[] getNames() {
 		return names;
+	}
+
+	@PostConstruct
+	public void initialize() {
+		mapperByName = new HashMap<>(mappers.length);
+		names = new String[mappers.length];
+
+		for (int i = 0; i < mappers.length; i++) {
+			names[i] = mappers[i].getMapperName();
+			mapperByName.put(mappers[i].getMapperName(), mappers[i]);
+		}
 	}
 
 }

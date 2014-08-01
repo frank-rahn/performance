@@ -20,7 +20,7 @@ import de.rahn.performance.testbeans.DomainTable;
 @Component("Commons-BeanUtils")
 @Order(1)
 public class CommonsBeanUtilsTestBeansMapperBean extends
-	AbstractTestBeansMapperBean {
+AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}

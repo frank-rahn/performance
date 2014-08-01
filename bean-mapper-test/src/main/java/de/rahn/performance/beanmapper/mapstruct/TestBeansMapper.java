@@ -21,15 +21,15 @@ import de.rahn.performance.testbeans.DomainTable;
 @Mapper(uses = ObjectFactory.class)
 public interface TestBeansMapper {
 
+	List<XmlRow> domainRowsToXmlRows(List<DomainRow> domainRows);
+
 	XmlRow domainRowToXmlRow(DomainRow domainRow);
 
-	DomainRow xmlRowToDomainRow(XmlRow xmlRow);
-
-	List<XmlRow> domainRowsToXmlRows(List<DomainRow> domainRows);
+	XmlTable domainTableToXmlTable(DomainTable domainTable);
 
 	List<DomainRow> xmlRowsToDomainRows(List<XmlRow> xmlRows);
 
-	XmlTable domainTableToXmlTable(DomainTable domainTable);
+	DomainRow xmlRowToDomainRow(XmlRow xmlRow);
 
 	DomainTable xmlTableToDomainTable(XmlTable xmlTable);
 }

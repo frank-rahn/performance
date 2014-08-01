@@ -29,15 +29,16 @@ import de.rahn.performance.measurement.PerformanceMeasurement;
 import de.rahn.performance.testbeans.DomainTable;
 
 /**
- * Ein Performanz Test der Mapper. Dabei wird ein {@link XmlTable} auf ein {@link DomainTable} gemappt.
- * 
+ * Ein Performanz Test der Mapper. Dabei wird ein {@link XmlTable} auf ein
+ * {@link DomainTable} gemappt.
  * @author Frank W. Rahn
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({ "classpath:spring.xml" })
 public abstract class AbstractPerformanceTest {
 
-	protected static final Logger LOGGER = getLogger(AbstractPerformanceTest.class);
+	protected static final Logger LOGGER =
+		getLogger(AbstractPerformanceTest.class);
 
 	private PerformanceMeasurement measurement;
 
@@ -58,7 +59,6 @@ public abstract class AbstractPerformanceTest {
 
 	/**
 	 * Die Messung vorbereiten.
-	 * 
 	 * @throws Exception wenn die Testdaten nicht erzeugt werden können
 	 */
 	@Before
@@ -75,18 +75,6 @@ public abstract class AbstractPerformanceTest {
 	}
 
 	/**
-	 * Initialisiere die Einstellgrößen für diesen Test.
-	 */
-	protected abstract void setUpBefore();
-
-	/**
-	 * Ermöglicht das Verändern der Parametern für diesen Test.
-	 */
-	protected void setUpAfter() {
-		// Kann überschrieben werden
-	}
-
-	/**
 	 * Die Messung durchführen.
 	 */
 	@Test
@@ -100,9 +88,11 @@ public abstract class AbstractPerformanceTest {
 		measurement.endWarmUp();
 
 		// Den Test eine bestimmte Zeit durchfürhen
-		LOGGER.info("Messung wird für {} Minuten gestartet...", runDurationInMinutes);
+		LOGGER.info("Messung wird für {} Minuten gestartet...",
+			runDurationInMinutes);
 		int run = 1;
-		final long timer = MINUTES.toMillis(runDurationInMinutes) + currentTimeMillis();
+		final long timer =
+			MINUTES.toMillis(runDurationInMinutes) + currentTimeMillis();
 		while (true) {
 			runTestOverAllMappers(run++);
 
@@ -118,11 +108,11 @@ public abstract class AbstractPerformanceTest {
 
 	/**
 	 * Rufe mal alle Mapper auf.
-	 * 
 	 * @param run der aktuelle Durchlauf
 	 */
 	private void runTestOverAllMappers(int run) {
-		for (TestBeansMapperBean mapper : manager.getMappersExcluded(excludedMapper)) {
+		for (TestBeansMapperBean mapper : manager
+			.getMappersExcluded(excludedMapper)) {
 			runTestWithMapper(mapper, run);
 		}
 	}
@@ -132,7 +122,9 @@ public abstract class AbstractPerformanceTest {
 	 * @param run der aktuelle Durchlauf
 	 */
 	private void runTestWithMapper(TestBeansMapperBean mapper, int run) {
-		final String msg = "FEHLER im " + mapper.getMapperName() + " beim " + run + "ten Durchlauf";
+		final String msg =
+			"FEHLER im " + mapper.getMapperName() + " beim " + run
+				+ "ten Durchlauf";
 
 		try {
 			// Messung
@@ -152,5 +144,17 @@ public abstract class AbstractPerformanceTest {
 			throw new AssertionError(msg);
 		}
 	}
+
+	/**
+	 * Ermöglicht das Verändern der Parametern für diesen Test.
+	 */
+	protected void setUpAfter() {
+		// Kann überschrieben werden
+	}
+
+	/**
+	 * Initialisiere die Einstellgrößen für diesen Test.
+	 */
+	protected abstract void setUpBefore();
 
 }

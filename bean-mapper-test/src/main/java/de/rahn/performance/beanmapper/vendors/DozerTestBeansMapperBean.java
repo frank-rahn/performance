@@ -48,7 +48,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 			protected void configure() {
 				mapping(new TypeDefinition(DomainTable.class),
 					new TypeDefinition(XmlTable.class)
-						.beanFactory(JAXBBeanFactory.class));
+				.beanFactory(JAXBBeanFactory.class));
 			}
 		});
 		((DozerBeanMapper) dozer).addMapping(new BeanMappingBuilder() {
@@ -61,7 +61,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 			protected void configure() {
 				mapping(new TypeDefinition(DomainRow.class),
 					new TypeDefinition(XmlRow.class)
-						.beanFactory(JAXBBeanFactory.class));
+				.beanFactory(JAXBBeanFactory.class));
 			}
 		});
 	}

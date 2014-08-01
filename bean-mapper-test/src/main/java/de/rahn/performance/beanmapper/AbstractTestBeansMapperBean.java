@@ -19,7 +19,7 @@ import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
  * @author Frank W. Rahn
  */
 public abstract class AbstractTestBeansMapperBean implements
-TestBeansMapperBean, BeanNameAware {
+	TestBeansMapperBean, BeanNameAware {
 
 	@Autowired
 	private ObjectFactory factory;
@@ -30,23 +30,16 @@ TestBeansMapperBean, BeanNameAware {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void setBeanName(String name) {
-		beanName = name;
+	public String getMapperName() {
+		return beanName;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
-	public String getMapperName() {
-		return beanName;
-	}
-
-	/**
-	 * @return das Zielobjekt
-	 */
-	protected final XmlTable createXmlTable() {
-		return factory.createXmlTable();
+	public void setBeanName(String name) {
+		beanName = name;
 	}
 
 	/**
@@ -61,6 +54,13 @@ TestBeansMapperBean, BeanNameAware {
 	 */
 	protected final List<XmlRow> createXmlRows() {
 		return new ArrayList<>();
+	}
+
+	/**
+	 * @return das Zielobjekt
+	 */
+	protected final XmlTable createXmlTable() {
+		return factory.createXmlTable();
 	}
 
 }

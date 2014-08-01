@@ -34,15 +34,6 @@ public abstract class AbstractTestBeansMapperBeanTest {
 	 * Test method for {@link AbstractTestBeansMapperBean#map(DomainTable)}.
 	 */
 	@Test
-	public void testMapEmptyDomainTableWithNullRows() throws Exception {
-		XmlTable target = mapperBean.map(new DomainTable());
-		assertThat("Kein Ergebnis geliefert", target, notNullValue());
-	}
-
-	/**
-	 * Test method for {@link AbstractTestBeansMapperBean#map(DomainTable)}.
-	 */
-	@Test
 	public void testMapEmptyDomainTableWithEmptyRows() throws Exception {
 		DomainTable source = new DomainTable();
 		source.setRows(new ArrayList<DomainRow>());
@@ -52,11 +43,11 @@ public abstract class AbstractTestBeansMapperBeanTest {
 	}
 
 	/**
-	 * Test method for {@link AbstractTestBeansMapperBean#map(XmlTable)}.
+	 * Test method for {@link AbstractTestBeansMapperBean#map(DomainTable)}.
 	 */
 	@Test
-	public void testMapEmptyXmlTableWithNullRows() throws Exception {
-		DomainTable target = mapperBean.map(new XmlTable());
+	public void testMapEmptyDomainTableWithNullRows() throws Exception {
+		XmlTable target = mapperBean.map(new DomainTable());
 		assertThat("Kein Ergebnis geliefert", target, notNullValue());
 	}
 
@@ -69,6 +60,15 @@ public abstract class AbstractTestBeansMapperBeanTest {
 		source.setRows(new ArrayList<XmlRow>());
 
 		DomainTable target = mapperBean.map(source);
+		assertThat("Kein Ergebnis geliefert", target, notNullValue());
+	}
+
+	/**
+	 * Test method for {@link AbstractTestBeansMapperBean#map(XmlTable)}.
+	 */
+	@Test
+	public void testMapEmptyXmlTableWithNullRows() throws Exception {
+		DomainTable target = mapperBean.map(new XmlTable());
 		assertThat("Kein Ergebnis geliefert", target, notNullValue());
 	}
 

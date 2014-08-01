@@ -14,7 +14,7 @@ import org.junit.Before;
  * @author Frank W. Rahn
  */
 public class DozerTestBeansMapperBeanTest extends
-AbstractTestBeansMapperBeanTest {
+	AbstractTestBeansMapperBeanTest {
 
 	/**
 	 * @throws java.lang.Exception

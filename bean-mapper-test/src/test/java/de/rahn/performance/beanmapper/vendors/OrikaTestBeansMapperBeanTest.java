@@ -13,7 +13,7 @@ import org.junit.Before;
  * @author Frank W. Rahn
  */
 public class OrikaTestBeansMapperBeanTest extends
-	AbstractTestBeansMapperBeanTest {
+AbstractTestBeansMapperBeanTest {
 
 	/**
 	 * @throws java.lang.Exception
