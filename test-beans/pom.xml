@@ -42,29 +42,10 @@
 				<executions>
 					<execution>
 						<id>wsdl2java</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>wsdl2java</goal>
-						</goals>
 						<configuration>
-							<fork>once</fork>
-							<encoding>${encoding}</encoding>
-							<additionalJvmArgs>-Dfile.encoding=${encoding}</additionalJvmArgs>
-							<defaultOptions>
-								<extraargs>
-									<extraarg>-xjc-enableIntrospection</extraarg>
-									<extraarg>-xjc-Xsetters</extraarg>
-									<extraarg>-xjc-Xts:style:org.apache.cxf.xjc.runtime.JAXBToStringStyle.MULTI_LINE_STYLE</extraarg>
-									<extraarg>-xjc-Xfluent-api</extraarg>
-								</extraargs>
-								<bindingFiles>
-									<bindingFile>${basedir}/src/main/resources/jaxb_binding.xml</bindingFile>
-									<bindingFile>${basedir}/src/main/resources/jaxws_binding.xml</bindingFile>
-								</bindingFiles>
-							</defaultOptions>
 							<wsdlOptions>
 								<wsdlOption>
-									<wsdl>${basedir}/src/main/resources/testservice.wsdl</wsdl>
+									<wsdl>http://xmlns.frank-rahn.de/ws/test/1.0</wsdl>
 								</wsdlOption>
 							</wsdlOptions>
 						</configuration>
