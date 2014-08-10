@@ -106,6 +106,9 @@ public class MeasurementWriterToExcel {
 
 		// Schreibe die X-Zeile
 		Row headerRow = sheet.createRow(++row);
+		Cell headerCell = headerRow.createCell(0);
+		headerCell.setCellValue("Messreihen");
+		headerCell.setCellStyle(CELLSTYLE_HEADER);
 		for (int column = 0; column < numberOfValues.size(); column++) {
 			Cell cell = headerRow.createCell(column + 1);
 			cell.setCellValue(numberOfValues.get(column));
