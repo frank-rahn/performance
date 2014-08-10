@@ -56,7 +56,7 @@ public class Statistics {
 	/** Die Überschriften und Reihenfolge der einzelnen Messwerte. */
 	public static final String[] TITLES = { "Name des Messpunkts",
 		"Anzahl der Messungen", "Summe aller Messwerte", "Minimaler Messwert",
-		"Maximaler Messwert", "Mittelwert", "Letzter Messwert" };
+		"Maximaler Messwert", "Arth. Mittelwert", "Letzter Messwert" };
 
 	private List<Average> averages = new ArrayList<>();
 
