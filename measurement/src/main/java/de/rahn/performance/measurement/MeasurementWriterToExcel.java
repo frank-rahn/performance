@@ -144,7 +144,7 @@ public class MeasurementWriterToExcel {
 
 		writeSummary(sheet, meteringPointNames, measurements);
 
-		sheet.createFreezePane(1, 1);
+		sheet.createFreezePane(1, 2);
 	}
 
 	/**
