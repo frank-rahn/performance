@@ -70,10 +70,10 @@ public class MeasurementWriterToExcel {
 
 		CELLSTYLE_DOUBLE = workbook.createCellStyle();
 		CELLSTYLE_DOUBLE.setDataFormat(workbook.createDataFormat().getFormat(
-			"#,##0.00000"));
+				"#,##0.00000"));
 
 		timeStamp =
-			new DateTimeFormatterBuilder().appendDayOfWeek(2)
+				new DateTimeFormatterBuilder().appendDayOfWeek(2)
 				.appendLiteral('.').appendMonthOfYear(2).appendLiteral('.')
 				.appendYear(4, 4).appendLiteral(" um ").appendHourOfDay(2)
 				.appendLiteral(':').appendMinuteOfHour(2).appendLiteral(" Uhr")
@@ -98,13 +98,13 @@ public class MeasurementWriterToExcel {
 		Map<Long, BigDecimal[]> table = new HashMap<>();
 		List<Long> numberOfValues = new ArrayList<>();
 		final int SIZE =
-			createDataTable(meteringPointNames, measurements, table,
-				numberOfValues);
+				createDataTable(meteringPointNames, measurements, table,
+					numberOfValues);
 
-		// Y-Zeile sortieren
+		// X-Zeile sortieren
 		Collections.sort(numberOfValues);
 
-		// Schreibe die Y-Zeile
+		// Schreibe die X-Zeile
 		Row headerRow = sheet.createRow(++row);
 		for (int column = 0; column < numberOfValues.size(); column++) {
 			Cell cell = headerRow.createCell(column + 1);
@@ -121,6 +121,7 @@ public class MeasurementWriterToExcel {
 			for (int column = 0; column < numberOfValues.size(); column++) {
 				BigDecimal d = table.get(numberOfValues.get(column))[i];
 
+				// Einzelne Messwerte können leer sein
 				if (d != null) {
 					Cell cell = contentRow.createCell(column + 1);
 					cell.setCellValue(d.doubleValue());
@@ -178,7 +179,7 @@ public class MeasurementWriterToExcel {
 		for (Statistics statistics : measurements.values()) {
 			// Welche Zeile ist dran?
 			int index =
-				meteringPointNames.indexOf(statistics.getMeteringPointName());
+					meteringPointNames.indexOf(statistics.getMeteringPointName());
 
 			if (index < 0) {
 				// Unbekannter Messpunkt ==> Ignorieren
