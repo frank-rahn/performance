@@ -4,6 +4,7 @@
  */
 package de.rahn.performance.measurement;
 
+import static com.jidesoft.utils.BigDecimalMathUtils.sqrt;
 import static java.lang.Long.MAX_VALUE;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -21,6 +22,13 @@ import java.util.Map;
  * @author Frank Rahn
  */
 public class Statistics {
+
+	/** Die Präzision. */
+	private static final MathContext PRECISION = new MathContext(6, HALF_UP);
+
+	/** Die Präzision. */
+	private static final MathContext PRECISION_INTERNAL = new MathContext(20,
+		HALF_UP);
 
 	/**
 	 * Datenklasse, um Zwischenwerte des Mittelwerte speichern zu können.
@@ -41,7 +49,7 @@ public class Statistics {
 		}
 
 		/**
-		 * @return der Mittelwert
+		 * @return der arithmetische Mittelwert
 		 */
 		public final BigDecimal getAverage() {
 			return average;
@@ -58,7 +66,8 @@ public class Statistics {
 	/** Die Überschriften und Reihenfolge der einzelnen Messwerte. */
 	public static final String[] TITLES = { "Name des Messpunkts",
 		"Anzahl der Messungen", "Summe aller Messwerte", "Minimaler Messwert",
-		"Maximaler Messwert", "Arth. Mittelwert", "Letzter Messwert" };
+		"Maximaler Messwert", "Arth. Mittelwert", "Standardabweichung",
+		"Letzter Messwert" };
 
 	private List<Average> averages = new ArrayList<>();
 
@@ -69,6 +78,8 @@ public class Statistics {
 	private long counter = 0;
 
 	private long values = 0;
+
+	private long square = 0;
 
 	private long minimum = MAX_VALUE;
 
@@ -89,6 +100,7 @@ public class Statistics {
 	public void addValue(long actual) {
 		counter++;
 		values += actual;
+		square += actual * actual;
 		last = actual;
 
 		minimum = min(minimum, actual);
@@ -104,8 +116,26 @@ public class Statistics {
 	 * @return der aktuelle Mittelwert
 	 */
 	public BigDecimal average() {
-		return new BigDecimal(values).divide(new BigDecimal(counter),
-			new MathContext(5, HALF_UP));
+		// = sum(x)/n
+		return new BigDecimal(values)
+			.divide(new BigDecimal(counter), PRECISION);
+	}
+
+	/**
+	 * @return die aktuelle Standardabweichung
+	 */
+	public BigDecimal standardDeviation() {
+		// z = sum(x)^2/n
+		BigDecimal z =
+			new BigDecimal(values).multiply(new BigDecimal(values)).divide(
+				new BigDecimal(counter), PRECISION_INTERNAL);
+
+		// variance = (sum(x^2)-z)/(n-1)
+		BigDecimal variance =
+				new BigDecimal(square).subtract(z).divide(
+				new BigDecimal(counter - 1), PRECISION_INTERNAL);
+
+		return sqrt(variance).round(PRECISION);
 	}
 
 	/**
@@ -170,7 +200,7 @@ public class Statistics {
 	 */
 	private void saveAverageIfNecessary() {
 		if (counter % 10000 == 0 || counter == 10 || counter == 100
-				|| counter == 1000) {
+			|| counter == 1000) {
 			averages.add(new Average());
 		}
 	}
