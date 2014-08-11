@@ -30,10 +30,14 @@
 			<artifactId>joda-time</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>com.jidesoft</groupId>
+			<artifactId>jide-oss</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 		</dependency>
-		
+
 		<!-- Tests -->
 		<dependency>
 			<groupId>junit</groupId>

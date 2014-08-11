@@ -44,6 +44,7 @@
 		<version.jdk>1.7</version.jdk>
 		<version.poi>3.10-FINAL</version.poi>
 		<version.commons.lang>2.6</version.commons.lang>
+		<version.jide>3.6.0</version.jide>
 		<version.joda.time>2.4</version.joda.time>
 		<version.cxf.xjcruntime>3.0.1</version.cxf.xjcruntime>
 		<version.jpa>1.0.0.Final</version.jpa>
@@ -96,6 +97,11 @@
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
 				<version>${version.commons.lang}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.jidesoft</groupId>
+				<artifactId>jide-oss</artifactId>
+				<version>${version.jide}</version>
 			</dependency>
 			<dependency>
 				<groupId>joda-time</groupId>
