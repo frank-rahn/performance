@@ -14,9 +14,7 @@ import static java.math.RoundingMode.HALF_UP;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Die statisticschen Daten zu einem Messpunkt.
@@ -72,8 +70,6 @@ public class Statistics {
 
 	private List<Average> averages = new ArrayList<>();
 
-	private Map<Long, Long> series = new HashMap<>();
-
 	private String meteringPointName;
 
 	private long counter = 0;
@@ -106,8 +102,6 @@ public class Statistics {
 
 		minimum = min(minimum, actual);
 		maximum = max(maximum, actual);
-
-		series.put(counter, actual);
 
 		// Mittelwert speichern?
 		saveAverageIfNecessary();
@@ -187,13 +181,6 @@ public class Statistics {
 	 */
 	public long getValues() {
 		return values;
-	}
-
-	/**
-	 * @return die komplette Messreihe
-	 */
-	public Map<Long, Long> getSeries() {
-		return series;
 	}
 
 	/**

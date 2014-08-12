@@ -15,10 +15,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -72,10 +70,10 @@ public class MeasurementWriterToExcel {
 
 		CELLSTYLE_DOUBLE = workbook.createCellStyle();
 		CELLSTYLE_DOUBLE.setDataFormat(workbook.createDataFormat().getFormat(
-				"#,##0.00000"));
+			"#,##0.00000"));
 
 		timeStamp =
-				new DateTimeFormatterBuilder().appendDayOfWeek(2)
+			new DateTimeFormatterBuilder().appendDayOfWeek(2)
 				.appendLiteral('.').appendMonthOfYear(2).appendLiteral('.')
 				.appendYear(4, 4).appendLiteral(" um ").appendHourOfDay(2)
 				.appendLiteral(':').appendMinuteOfHour(2).appendLiteral(" Uhr")
@@ -97,11 +95,6 @@ public class MeasurementWriterToExcel {
 		row = writeAverages(sheet, row, meteringPointNames, measurements);
 
 		sheet.createFreezePane(1, 0);
-
-		// Die Rohdaten
-		sheet = createSheet("Rohdaten");
-
-		writeRawData(sheet, meteringPointNames, measurements);
 	}
 
 	/**
@@ -234,8 +227,8 @@ public class MeasurementWriterToExcel {
 		Map<Long, BigDecimal[]> table = new HashMap<>();
 		List<Long> numberOfValues = new ArrayList<>();
 		final int SIZE =
-				createDataTable(meteringPointNames, measurements, table,
-					numberOfValues);
+			createDataTable(meteringPointNames, measurements, table,
+				numberOfValues);
 
 		// X-Zeile sortieren
 		Collections.sort(numberOfValues);
@@ -290,7 +283,7 @@ public class MeasurementWriterToExcel {
 		for (Statistics statistics : measurements.values()) {
 			// Welche Zeile ist dran?
 			int index =
-					meteringPointNames.indexOf(statistics.getMeteringPointName());
+				meteringPointNames.indexOf(statistics.getMeteringPointName());
 
 			if (index < 0) {
 				// Unbekannter Messpunkt ==> Ignorieren
@@ -311,56 +304,6 @@ public class MeasurementWriterToExcel {
 		}
 
 		return size;
-	}
-
-	/**
-	 * Schreibe die Rowdaten.
-	 * @param sheet das aktuelle Sheet
-	 * @param meteringPointNames die Liste der Namen der Messpunkte
-	 * @param measurements die Messung
-	 * @return die nächste Zeilennummer
-	 */
-	private int writeRawData(Sheet sheet, List<String> meteringPointNames,
-		Map<String, Statistics> measurements) {
-
-		// Erstelle eine Liste der X-Achse
-		Set<Long> temp = new LinkedHashSet<>();
-		for (String meteringPointName : meteringPointNames) {
-			Statistics statistics = measurements.get(meteringPointName);
-			temp.addAll(statistics.getSeries().keySet());
-		}
-		List<Long> x = new ArrayList<>(temp);
-		Collections.sort(x);
-
-		int row = 0;
-		Row headerRow = sheet.createRow(row++);
-		Cell headerCell = headerRow.createCell(0);
-		headerCell.setCellValue("Counter");
-		headerCell.setCellStyle(CELLSTYLE_HEADER);
-		for (int column = 0; column < meteringPointNames.size(); column++) {
-			Cell cell = headerRow.createCell(column + 1);
-			cell.setCellValue(meteringPointNames.get(column));
-			cell.setCellStyle(CELLSTYLE_HEADER);
-		}
-
-		for (long counter : x) {
-			Row contentRow = sheet.createRow(row++);
-			Cell cell = contentRow.createCell(0);
-			cell.setCellValue(counter);
-			for (int column = 0; column < meteringPointNames.size(); column++) {
-				Statistics statistics =
-					measurements.get(meteringPointNames.get(column));
-
-				// Einzele Messwerte können null sein
-				Long value = statistics.getSeries().get(counter);
-				if (value != null) {
-					cell = contentRow.createCell(column + 1);
-					cell.setCellValue(value.longValue());
-				}
-			}
-		}
-
-		return ++row;
 	}
 
 }
