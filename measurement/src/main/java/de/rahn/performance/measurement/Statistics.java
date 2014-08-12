@@ -8,6 +8,7 @@ import static com.jidesoft.utils.BigDecimalMathUtils.sqrt;
 import static java.lang.Long.MAX_VALUE;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
+import static java.math.MathContext.DECIMAL128;
 import static java.math.RoundingMode.HALF_UP;
 
 import java.math.BigDecimal;
@@ -27,8 +28,8 @@ public class Statistics {
 	private static final MathContext PRECISION = new MathContext(6, HALF_UP);
 
 	/** Die Präzision. */
-	private static final MathContext PRECISION_INTERNAL = new MathContext(20,
-		HALF_UP);
+	private static final MathContext PRECISION_INTERNAL = new MathContext(
+		DECIMAL128.getPrecision(), HALF_UP);
 
 	/**
 	 * Datenklasse, um Zwischenwerte des Mittelwerte speichern zu können.
@@ -67,7 +68,7 @@ public class Statistics {
 	public static final String[] TITLES = { "Name des Messpunkts",
 		"Anzahl der Messungen", "Summe aller Messwerte", "Minimaler Messwert",
 		"Maximaler Messwert", "Arth. Mittelwert", "Standardabweichung",
-		"Letzter Messwert" };
+	"Letzter Messwert" };
 
 	private List<Average> averages = new ArrayList<>();
 
@@ -118,7 +119,7 @@ public class Statistics {
 	public BigDecimal average() {
 		// = sum(x)/n
 		return new BigDecimal(values)
-			.divide(new BigDecimal(counter), PRECISION);
+		.divide(new BigDecimal(counter), PRECISION);
 	}
 
 	/**
@@ -127,13 +128,13 @@ public class Statistics {
 	public BigDecimal standardDeviation() {
 		// z = sum(x)^2/n
 		BigDecimal z =
-			new BigDecimal(values).multiply(new BigDecimal(values)).divide(
-				new BigDecimal(counter), PRECISION_INTERNAL);
+				new BigDecimal(values).multiply(new BigDecimal(values)).divide(
+					new BigDecimal(counter), PRECISION_INTERNAL);
 
 		// variance = (sum(x^2)-z)/(n-1)
 		BigDecimal variance =
-				new BigDecimal(square).subtract(z).divide(
-				new BigDecimal(counter - 1), PRECISION_INTERNAL);
+			new BigDecimal(square).subtract(z).divide(
+					new BigDecimal(counter - 1), PRECISION_INTERNAL);
 
 		return sqrt(variance).round(PRECISION);
 	}
@@ -200,7 +201,7 @@ public class Statistics {
 	 */
 	private void saveAverageIfNecessary() {
 		if (counter % 10000 == 0 || counter == 10 || counter == 100
-			|| counter == 1000) {
+				|| counter == 1000) {
 			averages.add(new Average());
 		}
 	}
