@@ -41,7 +41,7 @@
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
 		<!-- Utilities -->
-		<version.jdk>1.7</version.jdk>
+		<version.jdk>1.8</version.jdk>
 		<version.poi>3.10-FINAL</version.poi>
 		<version.commons.lang>2.6</version.commons.lang>
 		<version.jide>3.6.0</version.jide>

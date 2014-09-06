@@ -135,9 +135,9 @@
       <attribute value="jar:file:/home/frank/.m2/repository/com/carrotsearch/java-sizeof/0.0.4/java-sizeof-0.0.4-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/mapstruct/mapstruct/1.0.0.Beta2/mapstruct-1.0.0.Beta2.jar" sourcepath="M2_REPO/org/mapstruct/mapstruct/1.0.0.Beta2/mapstruct-1.0.0.Beta2-sources.jar">
+  <classpathentry kind="var" path="M2_REPO/org/mapstruct/mapstruct-jdk8/1.0.0.Beta2/mapstruct-jdk8-1.0.0.Beta2.jar" sourcepath="M2_REPO/org/mapstruct/mapstruct-jdk8/1.0.0.Beta2/mapstruct-jdk8-1.0.0.Beta2-sources.jar">
     <attributes>
-      <attribute value="jar:file:/home/frank/.m2/repository/org/mapstruct/mapstruct/1.0.0.Beta2/mapstruct-1.0.0.Beta2-javadoc.jar!/" name="javadoc_location"/>
+      <attribute value="jar:file:/home/frank/.m2/repository/org/mapstruct/mapstruct-jdk8/1.0.0.Beta2/mapstruct-jdk8-1.0.0.Beta2-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/junit/junit/4.11/junit-4.11.jar" sourcepath="M2_REPO/junit/junit/4.11/junit-4.11-sources.jar">
