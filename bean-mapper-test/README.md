@@ -4,7 +4,7 @@ In diesem Projekt werden einige Bean-Mapper getestet.
 Weitere Mapper werden gerne hinzugefügt. Anregungen gerne über
 
 * [Pull Requests bei GitHub](https://github.com/frank-rahn/performance/pulls) oder
-* [Kontakt-Formular auf meiner Homepage](http://www.frank-rahn.de/contact.html)
+* [Kontakt-Formular auf meiner Homepage](http://www.frank-rahn.de/contact/)
 
 ## ByHand
 Eine Implementierung eines Mapper von Hand. Dort wird jedes einzelne Attribut von einem Objekt in ein anderes Objekt, ggf. mit Typkonvertierung, kopiert.
