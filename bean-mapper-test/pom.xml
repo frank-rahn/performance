@@ -95,7 +95,7 @@
 						<processor>org.mapstruct.ap.MappingProcessor</processor>
 					</processors>
 					<options>
-						<defaultComponentModel>spring</defaultComponentModel>
+						<mapstruct.defaultComponentModel>spring</mapstruct.defaultComponentModel>
 					</options>
 				</configuration>
 				<dependencies>
