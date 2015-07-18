@@ -1,6 +1,5 @@
 /*
- * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights
- * reserved.
+ * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights reserved.
  */
 package de.rahn.performance.beanmapper.vendors;
 
@@ -47,8 +46,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 			@Override
 			protected void configure() {
 				mapping(new TypeDefinition(DomainTable.class),
-					new TypeDefinition(XmlTable.class)
-				.beanFactory(JAXBBeanFactory.class));
+					new TypeDefinition(XmlTable.class).beanFactory(JAXBBeanFactory.class));
 			}
 		});
 		((DozerBeanMapper) dozer).addMapping(new BeanMappingBuilder() {
@@ -60,8 +58,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 			@Override
 			protected void configure() {
 				mapping(new TypeDefinition(DomainRow.class),
-					new TypeDefinition(XmlRow.class)
-				.beanFactory(JAXBBeanFactory.class));
+					new TypeDefinition(XmlRow.class).beanFactory(JAXBBeanFactory.class));
 			}
 		});
 	}

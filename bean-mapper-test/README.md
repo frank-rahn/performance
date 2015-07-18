@@ -19,7 +19,7 @@ Ein Test mit der Klasse `org.springframework.beans.BeanUtils` aus dem Projekt [S
 Ein Test mit dem Mapping Framework [Dozer](http://dozer.sf.net/). Dieser Mapper verwendet [Reflection](http://docs.oracle.com/javase/6/docs/technotes/guides/reflection/index.html) zum Mappen der Daten.
 
 ## Orika-Mapper
-Ein Test mit dem Mapping Framework [Orica-Mapper](https://code.google.com/p/orika/). Dieser Mapper verwendet Byte Code Generierung mit [Javassist](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/) zum Erzeugung von Mappern.
+Ein Test mit dem Mapping Framework [Orica-Mapper](https://code.google.com/p/orika/). Dieser Mapper verwendet Bytecode Generierung mit [Javassist](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/) zum Erzeugung von Mappern.
 
 ## MapStruct
 Ein Test mit dem Mapping Framework [MapStruct](http://mapstruct.org/). Dieser Mapper verwendet einen [Annotation Prozessor (APT)](http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html) zum Erzeugung (Java-Klassen) von Mappern.

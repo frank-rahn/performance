@@ -1,6 +1,5 @@
 /*
- * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights
- * reserved.
+ * Copyright © 2014 by Frank W. Rahn. Alle Rechte vorbehalten. All rights reserved.
  */
 package de.rahn.performance.beanmapper.vendors;
 
@@ -19,8 +18,7 @@ import de.rahn.performance.testbeans.DomainTable;
  */
 @Component("Spring-BeanUtils")
 @Order(2)
-public class SpringBeanUtilsTestBeansMapperBean extends
-AbstractTestBeansMapperBean {
+public class SpringBeanUtilsTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}
