@@ -1,10 +1,10 @@
-# Bean-Mapper Test
-In diesem Projekt werden einige Bean-Mapper getestet.
+# Java Bean Mapper Test
+In diesem Projekt werden einige Java Bean Mapper getestet.
 
 Weitere Mapper werden gerne hinzugefügt. Anregungen gerne über
 
 * [Pull Requests bei GitHub](https://github.com/frank-rahn/performance/pulls) oder
-* [Kontakt-Formular auf meiner Homepage](http://www.frank-rahn.de/contact/)
+* [Kontakt-Formular auf meiner Homepage](http://www.frank-rahn.de/contact/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)
 
 ## ByHand
 Eine Implementierung eines Mapper von Hand. Dort wird jedes einzelne Attribut von einem Objekt in ein anderes Objekt, ggf. mit Typkonvertierung, kopiert.
@@ -24,5 +24,8 @@ Ein Test mit dem Mapping Framework [Orica-Mapper](https://code.google.com/p/orik
 ## MapStruct
 Ein Test mit dem Mapping Framework [MapStruct](http://mapstruct.org/). Dieser Mapper verwendet einen [Annotation Prozessor (APT)](http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html) zum Erzeugung (Java-Klassen) von Mappern.
 
-## Homepage des Autors
-[Frank W. Rahn](http://www.frank-rahn.de)
+# Zugehörige Artikel
+[Wer ist der optimale Java Bean Mapper?](http://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)
+
+# Homepage des Autors
+[Frank W. Rahn](http://www.frank-rahn.de/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)

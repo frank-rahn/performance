@@ -5,3 +5,9 @@
 * VDI (virtueller Desktop)
 * Speicher 4 GB
 * Prozessor Intel Xeon CPU ES-2670 @ 2.60 GHz 2.59 GHz
+
+## Zugehörige Artikel
+[Wer ist der optimale Java Bean Mapper?](http://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test-docs-jdk6)
+
+## Homepage des Autors
+[Frank W. Rahn](http://www.frank-rahn.de/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test-docs-jdk6)

@@ -8,12 +8,15 @@ Ein Reihe von Utilities zum Messen und Auswerten von Messungen.
 Dieses Projekt stellt einige Testdatenstrukturen zur Nutzung bei den Peformanztests bereit.
 
 ## bean-mapper-test
-In diesem Projekt werden einige Bean-Mapper getestet.
+In diesem Projekt werden einige Java Bean Mapper getestet.
 
-## Build mit Maven 
+### Zugehörige Artikel
+[Wer ist der optimale Java Bean Mapper?](http://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=top)
+
+## Build mit Maven
 Eclipse Konfiguration neu erzeugen: `$ mvn eclipse:clean eclipse:eclipse`
 
 Anwendung bauen: `$ mvn clean install`
 
-## Homepage des Autors
-[Frank W. Rahn](http://www.frank-rahn.de)
+# Homepage des Autors
+[Frank W. Rahn](http://www.frank-rahn.de/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=top)
