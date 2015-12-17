@@ -16,6 +16,7 @@
 	<name>Performance Maven Parent</name>
 	<description>Parent Performance Maven Parent</description>
 	<url>https://github.com/frank-rahn/performance</url>
+
 	<organization>
 		<name>Frank W. Rahn</name>
 		<url>http://www.frank-rahn.de</url>
