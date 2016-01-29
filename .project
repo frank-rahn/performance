@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-  <name>test-beans</name>
-  <comment>Ein Reihe von Java-Beans zum Testen. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <name>performance</name>
+  <comment>Parent Performance Maven Parent. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
   <projects/>
   <buildSpec>
-    <buildCommand>
-      <name>org.eclipse.jdt.core.javabuilder</name>
-    </buildCommand>
     <buildCommand>
       <name>org.eclipse.m2e.core.maven2Builder</name>
     </buildCommand>
@@ -15,7 +12,6 @@
     </buildCommand>
   </buildSpec>
   <natures>
-    <nature>org.eclipse.jdt.core.javanature</nature>
     <nature>org.eclipse.m2e.core.maven2Nature</nature>
     <nature>org.springframework.ide.eclipse.core.springnature</nature>
   </natures>
