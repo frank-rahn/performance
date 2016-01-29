@@ -301,14 +301,10 @@
 						<downloadSources>true</downloadSources>
 						<additionalProjectnatures>
 							<projectnature>org.eclipse.m2e.core.maven2Nature</projectnature>
-							<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
 						</additionalProjectnatures>
 						<additionalBuildcommands>
 							<buildCommand>
 								<name>org.eclipse.m2e.core.maven2Builder</name>
-							</buildCommand>
-							<buildCommand>
-								<name>org.springframework.ide.eclipse.core.springbuilder</name>
 							</buildCommand>
 						</additionalBuildcommands>
 					</configuration>
