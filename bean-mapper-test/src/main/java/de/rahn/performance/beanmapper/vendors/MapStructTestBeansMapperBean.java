@@ -15,6 +15,7 @@ import de.rahn.performance.testbeans.DomainTable;
 
 /**
  * Der Mapper für MapStruct.
+ * 
  * @author Frank W. Rahn
  */
 @Component("MapStruct")
@@ -26,6 +27,7 @@ public class MapStructTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see TestBeansMapperBean#map(DomainTable)
 	 */
 	@Override
@@ -35,6 +37,7 @@ public class MapStructTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see TestBeansMapperBean#map(XmlTable)
 	 */
 	@Override

@@ -5,10 +5,6 @@ package de.rahn.performance.beanmapper.vendors;
 
 import javax.annotation.PostConstruct;
 
-import ma.glasnost.orika.MapperFacade;
-import ma.glasnost.orika.MapperFactory;
-import ma.glasnost.orika.impl.DefaultMapperFactory;
-
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -17,8 +13,13 @@ import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.beanmapper.TestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainTable;
 
+import ma.glasnost.orika.MapperFacade;
+import ma.glasnost.orika.MapperFactory;
+import ma.glasnost.orika.impl.DefaultMapperFactory;
+
 /**
  * Der Mapper für {@link MapperFacade}.
+ * 
  * @author Frank W. Rahn
  */
 @Component("Orika")
@@ -38,6 +39,7 @@ public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see TestBeansMapperBean#map(DomainTable)
 	 */
 	@Override
@@ -47,6 +49,7 @@ public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see TestBeansMapperBean#map(XmlTable)
 	 */
 	@Override

@@ -14,6 +14,7 @@ import de.rahn.performance.testbeans.DomainTable;
 
 /**
  * Der Mapper für {@link BeanUtils}.
+ * 
  * @author Frank W. Rahn
  */
 @Component("Commons-BeanUtils")
@@ -22,6 +23,7 @@ public class CommonsBeanUtilsTestBeansMapperBean extends AbstractTestBeansMapper
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see TestBeansMapperBean#map(DomainTable)
 	 */
 	@Override
@@ -33,6 +35,7 @@ public class CommonsBeanUtilsTestBeansMapperBean extends AbstractTestBeansMapper
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see TestBeansMapperBean#map(XmlTable)
 	 */
 	@Override

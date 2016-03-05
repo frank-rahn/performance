@@ -16,10 +16,10 @@ import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
 
 /**
  * Allgemeine Basisklasse für den {@link TestBeansMapperBean}.
+ * 
  * @author Frank W. Rahn
  */
-public abstract class AbstractTestBeansMapperBean implements
-	TestBeansMapperBean, BeanNameAware {
+public abstract class AbstractTestBeansMapperBean implements TestBeansMapperBean, BeanNameAware {
 
 	@Autowired
 	private ObjectFactory factory;

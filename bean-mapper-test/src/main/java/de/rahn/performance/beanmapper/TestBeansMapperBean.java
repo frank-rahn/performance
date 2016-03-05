@@ -9,6 +9,7 @@ import de.rahn.performance.testbeans.DomainTable;
 
 /**
  * Die Schnittstelle aller Spring-Beans der Test-Mapper.
+ * 
  * @author Frank W. Rahn
  */
 public interface TestBeansMapperBean {

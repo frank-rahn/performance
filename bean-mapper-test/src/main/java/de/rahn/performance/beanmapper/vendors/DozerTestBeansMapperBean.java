@@ -22,6 +22,7 @@ import de.rahn.performance.testbeans.DomainTable;
 
 /**
  * Der Mapper für {@link DozerBeanMapper}.
+ * 
  * @author Frank W. Rahn
  */
 @Component("Dozer")
@@ -41,6 +42,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 			/**
 			 * {@inheritDoc}
+			 * 
 			 * @see BeanMappingBuilder#configure()
 			 */
 			@Override
@@ -53,6 +55,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 			/**
 			 * {@inheritDoc}
+			 * 
 			 * @see BeanMappingBuilder#configure()
 			 */
 			@Override
@@ -65,6 +68,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see TestBeansMapperBean#map(DomainTable)
 	 */
 	@Override
@@ -74,6 +78,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see TestBeansMapperBean#map(XmlTable)
 	 */
 	@Override

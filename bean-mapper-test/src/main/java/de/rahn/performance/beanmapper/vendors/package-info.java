@@ -4,6 +4,7 @@
  */
 /**
  * In diesem Package befinden sich die Implementierungen der Bean-Mapper.
+ * 
  * @author Frank W. Rahn
  */
 package de.rahn.performance.beanmapper.vendors;

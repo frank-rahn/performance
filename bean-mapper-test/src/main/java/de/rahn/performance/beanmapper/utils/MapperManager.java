@@ -20,6 +20,7 @@ import de.rahn.performance.beanmapper.TestBeansMapperBean;
 
 /**
  * Dieser Manager kennt alle implementierten {@link TestBeansMapperBean}s.
+ * 
  * @author Frank W. Rahn
  */
 @Component
