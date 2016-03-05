@@ -69,7 +69,7 @@
 
 		<!-- Mapper -->
 		<commons-beanutils.version>1.9.2</commons-beanutils.version>
-		<spring.version>4.2.4.RELEASE</spring.version>
+		<spring.version>4.2.5.RELEASE</spring.version>
 		<dozer.version>5.5.1</dozer.version>
 		<orika.version>1.4.6</orika.version>
 		<mapstruct.version>1.0.0.Final</mapstruct.version>
