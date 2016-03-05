@@ -11,10 +11,10 @@ import org.junit.Before;
 
 /**
  * Test des Mappers für Dozer.
+ *
  * @author Frank W. Rahn
  */
-public class DozerTestBeansMapperBeanTest extends
-	AbstractTestBeansMapperBeanTest {
+public class DozerTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
 	/**
 	 * @throws java.lang.Exception
@@ -27,6 +27,7 @@ public class DozerTestBeansMapperBeanTest extends
 
 	/**
 	 * {@inheritDoc}
+	 *
 	 * @see AbstractTestBeansMapperBeanTest#testMapEmptyDomainTableWithNullRows()
 	 */
 	@Override

@@ -16,21 +16,21 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Test des Mappers für Spring-BeanUtils.
+ *
  * @author Frank W. Rahn
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
-public class SpringBeanUtilsTestBeansMapperBeanTest extends
-	AbstractTestBeansMapperBeanTest {
+public class SpringBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
 	@Autowired
-	public void setSpringBeanUtilsTestBeansMapperBean(
-		SpringBeanUtilsTestBeansMapperBean mapperBean) {
+	public void setSpringBeanUtilsTestBeansMapperBean(SpringBeanUtilsTestBeansMapperBean mapperBean) {
 		this.mapperBean = mapperBean;
 	}
 
 	/**
 	 * {@inheritDoc}
+	 *
 	 * @see AbstractTestBeansMapperBeanTest#testMapEmptyDomainTableWithNullRows()
 	 */
 	@Override
@@ -47,6 +47,7 @@ public class SpringBeanUtilsTestBeansMapperBeanTest extends
 
 	/**
 	 * {@inheritDoc}
+	 *
 	 * @see AbstractTestBeansMapperBeanTest#testMapTable()
 	 */
 	@Test

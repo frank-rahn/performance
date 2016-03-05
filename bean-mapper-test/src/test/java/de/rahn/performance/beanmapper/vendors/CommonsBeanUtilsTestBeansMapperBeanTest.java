@@ -17,21 +17,21 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Test des Mappers für Commons-BeanUtils.
+ *
  * @author Frank W. Rahn
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
-public class CommonsBeanUtilsTestBeansMapperBeanTest extends
-AbstractTestBeansMapperBeanTest {
+public class CommonsBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
 	@Autowired
-	public void setCommonsBeanUtilsTestBeansMapperBean(
-		CommonsBeanUtilsTestBeansMapperBean mapperBean) {
+	public void setCommonsBeanUtilsTestBeansMapperBean(CommonsBeanUtilsTestBeansMapperBean mapperBean) {
 		this.mapperBean = mapperBean;
 	}
 
 	/**
 	 * {@inheritDoc}
+	 *
 	 * @see AbstractTestBeansMapperBeanTest#testMapEmptyDomainTableWithNullRows()
 	 */
 	@Override
@@ -48,6 +48,7 @@ AbstractTestBeansMapperBeanTest {
 
 	/**
 	 * {@inheritDoc}
+	 *
 	 * @see AbstractTestBeansMapperBeanTest#testMapTable()
 	 */
 	@Test

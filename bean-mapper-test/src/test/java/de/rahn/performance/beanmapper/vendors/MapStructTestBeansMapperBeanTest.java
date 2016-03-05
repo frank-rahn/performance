@@ -13,21 +13,21 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Test des Mappers für MapStruct.
+ *
  * @author Frank W. Rahn
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
-public class MapStructTestBeansMapperBeanTest extends
-AbstractTestBeansMapperBeanTest {
+public class MapStructTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
 	@Autowired
-	public void setMapStructTestBeansMapperBean(
-		MapStructTestBeansMapperBean mapperBean) {
+	public void setMapStructTestBeansMapperBean(MapStructTestBeansMapperBean mapperBean) {
 		this.mapperBean = mapperBean;
 	}
 
 	/**
 	 * {@inheritDoc}
+	 *
 	 * @see AbstractTestBeansMapperBeanTest#testMapEmptyDomainTableWithNullRows()
 	 */
 	@Override

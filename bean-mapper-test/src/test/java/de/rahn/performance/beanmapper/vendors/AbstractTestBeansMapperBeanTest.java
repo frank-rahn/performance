@@ -24,6 +24,7 @@ import de.rahn.performance.testbeans.TestBeansUtils;
 
 /**
  * Test für {@link TestBeansMapperBean}.
+ *
  * @author Frank W. Rahn
  */
 public abstract class AbstractTestBeansMapperBeanTest {
@@ -81,12 +82,9 @@ public abstract class AbstractTestBeansMapperBeanTest {
 
 		XmlTable temp = mapperBean.map(source);
 		assertThat("Kein Zwischenergebnis geliefert", temp, notNullValue());
-		assertThat("Zwischenergebnis hat keine Zeilen", temp.getRows(),
-			notNullValue());
-		assertThat("Zwischenergebnis hat keine Zeilen", temp.getRows().size(),
-			greaterThan(0));
-		assertThat("Die Zeilen des Zwischenergebnis habe einen falschen Typ",
-			temp.getRows().get(0), instanceOf(XmlRow.class));
+		assertThat("Zwischenergebnis hat keine Zeilen", temp.getRows(), notNullValue());
+		assertThat("Zwischenergebnis hat keine Zeilen", temp.getRows().size(), greaterThan(0));
+		assertThat("Die Zeilen des Zwischenergebnis habe einen falschen Typ", temp.getRows().get(0), instanceOf(XmlRow.class));
 
 		DomainTable target = mapperBean.map(temp);
 		assertThat("Kein Ergebnis geliefert", target, notNullValue());

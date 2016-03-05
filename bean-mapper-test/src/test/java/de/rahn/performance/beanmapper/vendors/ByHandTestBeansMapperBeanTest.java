@@ -11,16 +11,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Test des Mappers für ByHand.
+ *
  * @author Frank W. Rahn
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration
-public class ByHandTestBeansMapperBeanTest extends
-	AbstractTestBeansMapperBeanTest {
+public class ByHandTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
 	@Autowired
-	public void setByHandTestBeansMapperBean(
-		ByHandTestBeansMapperBean mapperBean) {
+	public void setByHandTestBeansMapperBean(ByHandTestBeansMapperBean mapperBean) {
 		this.mapperBean = mapperBean;
 	}
 

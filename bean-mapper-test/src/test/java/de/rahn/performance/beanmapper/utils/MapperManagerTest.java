@@ -18,6 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Ein Test für die Klasse {@link MapperManager}.
+ * 
  * @author Frank W. Rahn
  */
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -34,12 +35,9 @@ public class MapperManagerTest {
 	 */
 	@Test
 	public void testGetMappers() {
-		assertThat("MapperManager wurde nicht angelegt", manager,
-			notNullValue());
-		assertThat("keine Mapper vorhanden", manager.getMappers(),
-			notNullValue());
-		assertThat("keine Mapper vorhanden", manager.getMappers().length,
-			greaterThan(0));
+		assertThat("MapperManager wurde nicht angelegt", manager, notNullValue());
+		assertThat("keine Mapper vorhanden", manager.getMappers(), notNullValue());
+		assertThat("keine Mapper vorhanden", manager.getMappers().length, greaterThan(0));
 
 		LOGGER.info("Mappers {}", (Object) manager.getNames());
 	}

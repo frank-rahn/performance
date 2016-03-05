@@ -10,10 +10,10 @@ import org.junit.Before;
 
 /**
  * Test des Mappers für Orika.
+ *
  * @author Frank W. Rahn
  */
-public class OrikaTestBeansMapperBeanTest extends
-AbstractTestBeansMapperBeanTest {
+public class OrikaTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
 	/**
 	 * @throws java.lang.Exception
@@ -26,6 +26,7 @@ AbstractTestBeansMapperBeanTest {
 
 	/**
 	 * {@inheritDoc}
+	 *
 	 * @see AbstractTestBeansMapperBeanTest#testMapEmptyDomainTableWithNullRows()
 	 */
 	@Override
