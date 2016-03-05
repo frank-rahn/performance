@@ -39,6 +39,7 @@
   <classpathentry kind="var" path="M2_REPO/com/googlecode/concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.2_jdk5/concurrentlinkedhashmap-lru-1.2_jdk5.jar" sourcepath="M2_REPO/com/googlecode/concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.2_jdk5/concurrentlinkedhashmap-lru-1.2_jdk5-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/carrotsearch/java-sizeof/0.0.4/java-sizeof-0.0.4.jar" sourcepath="M2_REPO/com/carrotsearch/java-sizeof/0.0.4/java-sizeof-0.0.4-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/mapstruct/mapstruct-jdk8/1.0.0.Final/mapstruct-jdk8-1.0.0.Final.jar" sourcepath="M2_REPO/org/mapstruct/mapstruct-jdk8/1.0.0.Final/mapstruct-jdk8-1.0.0.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/modelmapper/modelmapper/0.7.5/modelmapper-0.7.5.jar" sourcepath="M2_REPO/org/modelmapper/modelmapper/0.7.5/modelmapper-0.7.5-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/junit/junit/4.12/junit-4.12.jar" sourcepath="M2_REPO/junit/junit/4.12/junit-4.12-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" sourcepath="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar" sourcepath="M2_REPO/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3-sources.jar"/>
