@@ -24,6 +24,9 @@ Ein Test mit dem Mapping Framework [Orica-Mapper](https://code.google.com/p/orik
 ## MapStruct
 Ein Test mit dem Mapping Framework [MapStruct](http://mapstruct.org/). Dieser Mapper verwendet einen [Annotation Processor (APT)](http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html) zum Erzeugung (Java-Klassen) von Mappern.
 
+## ModelMapper
+Ein noch sehr junges Mapping Framework [ModelMapper](http://modelmapper.org/). Dieser Mapper bietet eine API für spezifische Anwendungsfälle an.
+
 # Zugehörige Artikel
 [Wer ist der optimale Java Bean Mapper?](http://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)
 
