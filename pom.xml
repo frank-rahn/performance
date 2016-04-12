@@ -74,6 +74,7 @@
 		<orika.version>1.4.6</orika.version>
 		<mapstruct.version>1.0.0.Final</mapstruct.version>
 		<modelmapper.version>0.7.5</modelmapper.version>
+		<jmapper.version>1.6.0</jmapper.version>
 	</properties>
 
 	<modules>
@@ -222,6 +223,11 @@
 				<groupId>org.modelmapper</groupId>
 				<artifactId>modelmapper</artifactId>
 				<version>${modelmapper.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.googlecode.jmapper-framework</groupId>
+				<artifactId>jmapper-core</artifactId>
+				<version>${jmapper.version}</version>
 			</dependency>
 
 			<!-- Test -->
