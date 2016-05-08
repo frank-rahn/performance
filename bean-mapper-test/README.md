@@ -27,6 +27,9 @@ Ein Test mit dem Mapping Framework [MapStruct](http://mapstruct.org/). Dieser Ma
 ## ModelMapper
 Ein noch sehr junges Mapping Framework [ModelMapper](http://modelmapper.org/). Dieser Mapper bietet eine API für spezifische Anwendungsfälle an.
 
+## JMapper Framework
+Ein weiteres Mapping Framework [JMapper Framework](http://jmapper-framework.github.io/jmapper-core/) mit sehr guten Performenzeigenschaften. Dieser Mapper verwendet Bytecode Generierung mit [Javassist](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/) zum Erzeugung von Mappern.
+
 # Zugehörige Artikel
 [Wer ist der optimale Java Bean Mapper?](http://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)
 
