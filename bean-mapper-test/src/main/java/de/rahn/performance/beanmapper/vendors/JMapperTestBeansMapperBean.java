@@ -23,10 +23,8 @@ import de.rahn.performance.beanmapper.TestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainRow;
 import de.rahn.performance.testbeans.DomainTable;
 
-import ma.glasnost.orika.MapperFacade;
-
 /**
- * Der Mapper für {@link MapperFacade}.
+ * Der Mapper für {@link JMapper}.
  *
  * @author Frank W. Rahn
  */
