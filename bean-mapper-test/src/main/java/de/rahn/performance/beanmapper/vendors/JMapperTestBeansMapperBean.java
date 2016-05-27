@@ -45,14 +45,13 @@ public class JMapperTestBeansMapperBean extends AbstractTestBeansMapperBean {
 			.add(mappedClass(XmlTable.class).add(global())
 				.add(conversion("dateToCalendar").from("date").to("date")
 					.body("java.util.Calendar c = java.util.Calendar.getInstance(); c.setTime(${source}); return c;")))
-			.add(mappedClass(XmlRow.class).add(global()));
-		domainToXmlMapper = new JMapper<>(XmlTable.class, DomainTable.class, jMapperAPI);
-
-		jMapperAPI = new JMapperAPI()
+			.add(mappedClass(XmlRow.class).add(global()))
 			.add(mappedClass(DomainTable.class).add(global().excludedAttributes("id"))
 				.add(conversion("calendarToDate").from("date").to("date").body("return ${source}.getTime();"))
 				.add(attribute("rows").value("rows").targetClasses(DomainRow.class)))
 			.add(mappedClass(DomainRow.class).add(global().excludedAttributes("id")));
+
+		domainToXmlMapper = new JMapper<>(XmlTable.class, DomainTable.class, jMapperAPI);
 		xmlToDomainMapper = new JMapper<>(DomainTable.class, XmlTable.class, jMapperAPI);
 	}
 
