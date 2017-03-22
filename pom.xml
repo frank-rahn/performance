@@ -47,7 +47,6 @@
 		<maven-processor-plugin.version>2.2.4</maven-processor-plugin.version>
 		<maven-jar-plugin.version>2.6</maven-jar-plugin.version>
 		<maven-source-plugin.version>2.4</maven-source-plugin.version>
-		<maven-eclipse-plugin.version>2.10</maven-eclipse-plugin.version>
 		<versions-maven-plugin.version>2.2</versions-maven-plugin.version>
 		<cxf-codegen-plugin.version>3.1.4</cxf-codegen-plugin.version>
 		<cxf-xjc-ts.version>3.0.5</cxf-xjc-ts.version>
@@ -295,25 +294,6 @@
 							</goals>
 						</execution>
 					</executions>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-eclipse-plugin</artifactId>
-					<version>${maven-eclipse-plugin.version}</version>
-					<configuration>
-						<!-- Workaround for http://jira.codehaus.org/browse/MECLIPSE-94 -->
-						<eclipseProjectDir>.</eclipseProjectDir>
-						<downloadSources>true</downloadSources>
-						<additionalProjectnatures>
-							<projectnature>org.eclipse.m2e.core.maven2Nature</projectnature>
-						</additionalProjectnatures>
-						<additionalBuildcommands>
-							<buildCommand>
-								<name>org.eclipse.m2e.core.maven2Builder</name>
-							</buildCommand>
-						</additionalBuildcommands>
-					</configuration>
 				</plugin>
 
 				<plugin>
