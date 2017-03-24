@@ -14,8 +14,6 @@ In diesem Projekt werden einige Java Bean Mapper getestet.
 [Wer ist der optimale Java Bean Mapper?](http://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=top)
 
 ## Build mit Maven
-Eclipse Konfiguration neu erzeugen: `$ mvn eclipse:clean eclipse:eclipse`
-
 Anwendung bauen: `$ mvn clean install`
 
 # Homepage des Autors
