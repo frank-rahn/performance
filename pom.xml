@@ -48,18 +48,18 @@
 		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
 		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
 		<versions-maven-plugin.version>2.3</versions-maven-plugin.version>
-		<cxf-codegen-plugin.version>3.1.10</cxf-codegen-plugin.version>
-		<cxf-xjc-ts.version>3.1.0</cxf-xjc-ts.version>
+		<cxf-codegen-plugin.version>3.1.4</cxf-codegen-plugin.version>
+		<cxf-xjc-ts.version>3.0.5</cxf-xjc-ts.version>
 		<jaxb2-fluent-api.version>3.0</jaxb2-fluent-api.version>
-		<jaxb2-basics.version>0.11.1</jaxb2-basics.version>
+		<jaxb2-basics.version>0.9.4</jaxb2-basics.version>
 
 		<!-- Utilities -->
 		<jdk.version>1.8</jdk.version>
 		<poi-ooxml.version>3.15</poi-ooxml.version>
-		<commons-lang3.version>3.5</commons-lang3.version>
+		<commons-lang.version>2.6</commons-lang.version>
 		<jide-oss.version>3.6.18</jide-oss.version>
 		<joda-time.version>2.9.7</joda-time.version>
-		<cxf-xjc-runtime.version>3.1.0</cxf-xjc-runtime.version>
+		<cxf-xjc-runtime.version>3.0.5</cxf-xjc-runtime.version>
 		<hibernate-jpa.version>1.0.0.Final</hibernate-jpa.version>
 		<log4j.version>1.2.17</log4j.version>
 		<slf4j.version>1.7.25</slf4j.version>
@@ -109,9 +109,9 @@
 
 			<!-- Utilities -->
 			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-lang3</artifactId>
-				<version>${commons-lang3.version}</version>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${commons-lang.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.jidesoft</groupId>
@@ -288,8 +288,8 @@
 					</configuration>
 					<executions>
 						<execution>
+							<phase>package</phase>
 							<goals>
-								<goal>jar</goal>
 								<goal>test-jar</goal>
 							</goals>
 						</execution>
