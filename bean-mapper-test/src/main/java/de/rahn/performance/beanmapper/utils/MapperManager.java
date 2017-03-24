@@ -4,7 +4,7 @@
  */
 package de.rahn.performance.beanmapper.utils;
 
-import static org.apache.commons.lang.ArrayUtils.contains;
+import static org.apache.commons.lang3.ArrayUtils.contains;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +20,7 @@ import de.rahn.performance.beanmapper.TestBeansMapperBean;
 
 /**
  * Dieser Manager kennt alle implementierten {@link TestBeansMapperBean}s.
- * 
+ *
  * @author Frank W. Rahn
  */
 @Component

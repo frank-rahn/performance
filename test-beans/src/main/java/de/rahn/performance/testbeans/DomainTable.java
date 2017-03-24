@@ -8,8 +8,8 @@ import static javax.persistence.AccessType.FIELD;
 import static javax.persistence.CascadeType.ALL;
 import static javax.persistence.GenerationType.SEQUENCE;
 import static javax.persistence.TemporalType.DATE;
-import static org.apache.commons.lang.builder.ToStringBuilder.reflectionToString;
-import static org.apache.commons.lang.builder.ToStringStyle.MULTI_LINE_STYLE;
+import static org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString;
+import static org.apache.commons.lang3.builder.ToStringStyle.MULTI_LINE_STYLE;
 
 import java.util.Date;
 import java.util.List;
@@ -25,6 +25,7 @@ import javax.persistence.Temporal;
 
 /**
  * Ein Java-Bean zum Test, welche eine Tabelle darstellt.
+ * 
  * @author Frank W. Rahn
  */
 @Entity
@@ -34,8 +35,7 @@ public class DomainTable {
 
 	@Id
 	@GeneratedValue(strategy = SEQUENCE, generator = "TableSEQ")
-	@SequenceGenerator(name = "TableSEQ", sequenceName = "TableSEQ",
-		schema = "rahn")
+	@SequenceGenerator(name = "TableSEQ", sequenceName = "TableSEQ", schema = "rahn")
 	private Long id;
 
 	private String name;
@@ -48,6 +48,7 @@ public class DomainTable {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see Object#equals(Object)
 	 */
 	@Override
@@ -110,6 +111,7 @@ public class DomainTable {
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @see Object#hashCode()
 	 */
 	@Override

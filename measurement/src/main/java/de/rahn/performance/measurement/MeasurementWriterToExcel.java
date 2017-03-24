@@ -5,8 +5,7 @@
 package de.rahn.performance.measurement;
 
 import static de.rahn.performance.measurement.Statistics.TITLES;
-import static org.apache.poi.ss.usermodel.CellStyle.ALIGN_CENTER;
-import static org.apache.poi.ss.usermodel.Font.BOLDWEIGHT_BOLD;
+import static org.apache.poi.ss.usermodel.HorizontalAlignment.CENTER;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -30,7 +29,7 @@ import org.joda.time.format.DateTimeFormatterBuilder;
 
 /**
  * Schreibe die aktuelle Messung in ein Excel-Sheet.
- * 
+ *
  * @author Frank W. Rahn
  */
 public class MeasurementWriterToExcel {
@@ -63,10 +62,10 @@ public class MeasurementWriterToExcel {
 		workbook = new XSSFWorkbook();
 
 		Font headerFont = workbook.createFont();
-		headerFont.setBoldweight(BOLDWEIGHT_BOLD);
+		headerFont.setBold(true);
 
 		CELLSTYLE_HEADER = workbook.createCellStyle();
-		CELLSTYLE_HEADER.setAlignment(ALIGN_CENTER);
+		CELLSTYLE_HEADER.setAlignment(CENTER);
 		CELLSTYLE_HEADER.setFont(headerFont);
 
 		CELLSTYLE_DOUBLE = workbook.createCellStyle();
@@ -79,7 +78,7 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Schreibe die Messung.
-	 * 
+	 *
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 */
@@ -96,7 +95,7 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Schreibe die Aufwärmphase.
-	 * 
+	 *
 	 * @param die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 */
@@ -110,7 +109,7 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Speichere die Datei.
-	 * 
+	 *
 	 * @throws IOException falls ein IO-Problem aufgetreten ist
 	 */
 	public void save() throws IOException {
@@ -121,7 +120,7 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Erzeuge ein Sheet und konfiguriere es.
-	 * 
+	 *
 	 * @param name der Name des Sheets
 	 * @return das Sheet
 	 */
@@ -146,7 +145,7 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Schreibe die Zusammanfassung dieser Messung.
-	 * 
+	 *
 	 * @param sheet das aktuelle Sheet
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
@@ -207,7 +206,7 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Schreibe die Messreihen der arth. Mittelwerte.
-	 * 
+	 *
 	 * @param sheet das aktuelle Sheet
 	 * @param row die nächste Zeilennummer
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
@@ -261,7 +260,7 @@ public class MeasurementWriterToExcel {
 	/**
 	 * Ermittle die Mittelwerte und stelle die Tabelle zusammen. Einzelne
 	 * Messwert können fehlen...
-	 * 
+	 *
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 * @param table die Tabelle mit den Messwerten
