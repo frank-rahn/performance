@@ -31,10 +31,6 @@
 
 		<!-- Utilities -->
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 		</dependency>
@@ -59,7 +55,6 @@
 		<dependency>
 			<groupId>ma.glasnost.orika</groupId>
 			<artifactId>orika-core</artifactId>
-			<classifier>deps-included</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.mapstruct</groupId>
