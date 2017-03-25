@@ -57,6 +57,7 @@
 		<jdk.version>1.8</jdk.version>
 		<poi-ooxml.version>3.15</poi-ooxml.version>
 		<commons-lang.version>2.6</commons-lang.version>
+		<commons-collections.version>3.2.2</commons-collections.version>
 		<jide-oss.version>3.6.18</jide-oss.version>
 		<joda-time.version>2.9.7</joda-time.version>
 		<cxf-xjc-runtime.version>3.0.5</cxf-xjc-runtime.version>
@@ -112,6 +113,11 @@
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
 				<version>${commons-lang.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-collections</groupId>
+				<artifactId>commons-collections</artifactId>
+				<version>${commons-collections.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.jidesoft</groupId>
@@ -207,6 +213,25 @@
 				<groupId>ma.glasnost.orika</groupId>
 				<artifactId>orika-core</artifactId>
 				<version>${orika.version}</version>
+				<classifier>deps-included</classifier>
+				<exclusions>
+					<exclusion>
+						<groupId>org.javassist</groupId>
+						<artifactId>javassist</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.thoughtworks.paranamer</groupId>
+						<artifactId>paranamer</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.googlecode.concurrentlinkedhashmap</groupId>
+						<artifactId>concurrentlinkedhashmap-lru</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.carrotsearch</groupId>
+						<artifactId>java-sizeof</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.mapstruct</groupId>
