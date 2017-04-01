@@ -44,7 +44,6 @@
 
 		<!-- Maven Plugins -->
 		<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
-		<maven-processor-plugin.version>3.2.0</maven-processor-plugin.version>
 		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
 		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
 		<versions-maven-plugin.version>2.3</versions-maven-plugin.version>
@@ -74,6 +73,7 @@
 		<mapstruct.version>1.1.0.Final</mapstruct.version>
 		<modelmapper.version>0.7.7</modelmapper.version>
 		<jmapper.version>1.6.0.1</jmapper.version>
+		<selma.version>0.15</selma.version>
 	</properties>
 
 	<modules>
@@ -225,6 +225,12 @@
 				<version>${mapstruct.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-processor</artifactId>
+				<version>${mapstruct.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
 				<groupId>org.modelmapper</groupId>
 				<artifactId>modelmapper</artifactId>
 				<version>${modelmapper.version}</version>
@@ -234,6 +240,17 @@
 				<artifactId>jmapper-core</artifactId>
 				<version>${jmapper.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>fr.xebia.extras</groupId>
+				<artifactId>selma</artifactId>
+				<version>${selma.version}</version>
+			</dependency>
+			<!--dependency>
+				<groupId>fr.xebia.extras</groupId>
+				<artifactId>selma-processor</artifactId>
+				<version>${selma.version}</version>
+				<scope>provided</scope>
+			</dependency-->
 
 			<!-- Test -->
 			<dependency>
@@ -309,21 +326,6 @@
 					<configuration>
 						<generateBackupPoms>false</generateBackupPoms>
 					</configuration>
-				</plugin>
-
-				<plugin>
-					<groupId>org.bsc.maven</groupId>
-					<artifactId>maven-processor-plugin</artifactId>
-					<version>${maven-processor-plugin.version}</version>
-					<executions>
-						<execution>
-							<id>process</id>
-							<phase>generate-sources</phase>
-							<goals>
-								<goal>process</goal>
-							</goals>
-						</execution>
-					</executions>
 				</plugin>
 
 				<plugin>

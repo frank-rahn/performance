@@ -16,10 +16,10 @@ import de.rahn.performance.testbeans.DomainTable;
 
 /**
  * Das Mapper Interface für MapStruct.
- * 
+ *
  * @author Frank W. Rahn
  */
-@Mapper(uses = ObjectFactory.class)
+@Mapper(uses = ObjectFactory.class, componentModel = "spring")
 public interface TestBeansMapper {
 
 	List<XmlRow> domainRowsToXmlRows(List<DomainRow> domainRows);

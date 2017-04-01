@@ -61,6 +61,11 @@
 			<artifactId>mapstruct-jdk8</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
 		</dependency>
@@ -68,6 +73,15 @@
 			<groupId>com.googlecode.jmapper-framework</groupId>
 			<artifactId>jmapper-core</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>fr.xebia.extras</groupId>
+			<artifactId>selma</artifactId>
+		</dependency>
+		<!--dependency>
+			<groupId>fr.xebia.extras</groupId>
+			<artifactId>selma-processor</artifactId>
+			<scope>provided</scope>
+		</dependency-->
 
 		<!-- Tests -->
 		<dependency>
@@ -88,29 +102,5 @@
 			<artifactId>spring-test</artifactId>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.bsc.maven</groupId>
-				<artifactId>maven-processor-plugin</artifactId>
-				<configuration>
-					<processors>
-						<processor>org.mapstruct.ap.MappingProcessor</processor>
-					</processors>
-					<options>
-						<mapstruct.defaultComponentModel>spring</mapstruct.defaultComponentModel>
-					</options>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.mapstruct</groupId>
-						<artifactId>mapstruct-processor</artifactId>
-						<version>${mapstruct.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>
