@@ -77,11 +77,11 @@
 			<groupId>fr.xebia.extras</groupId>
 			<artifactId>selma</artifactId>
 		</dependency>
-		<!--dependency>
+		<dependency>
 			<groupId>fr.xebia.extras</groupId>
 			<artifactId>selma-processor</artifactId>
 			<scope>provided</scope>
-		</dependency-->
+		</dependency>
 
 		<!-- Tests -->
 		<dependency>

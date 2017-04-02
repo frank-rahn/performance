@@ -245,12 +245,12 @@
 				<artifactId>selma</artifactId>
 				<version>${selma.version}</version>
 			</dependency>
-			<!--dependency>
+			<dependency>
 				<groupId>fr.xebia.extras</groupId>
 				<artifactId>selma-processor</artifactId>
 				<version>${selma.version}</version>
 				<scope>provided</scope>
-			</dependency-->
+			</dependency>
 
 			<!-- Test -->
 			<dependency>

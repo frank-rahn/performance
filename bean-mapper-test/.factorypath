@@ -47,5 +47,7 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/fr/xebia/extras/selma/0.15/selma-0.15.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/fr/xebia/extras/selma-processor/0.15/selma-processor-0.15.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-test/4.3.7.RELEASE/spring-test-4.3.7.RELEASE.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>
