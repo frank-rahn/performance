@@ -33,15 +33,15 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/com/carrotsearch/java-sizeof/0.0.4/java-sizeof-0.0.4.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/codehaus/janino/janino/2.7.5/janino-2.7.5.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/codehaus/janino/commons-compiler/2.7.5/commons-compiler-2.7.5.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/mapstruct/mapstruct-jdk8/1.1.0.Final/mapstruct-jdk8-1.1.0.Final.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/mapstruct/mapstruct-processor/1.1.0.Final/mapstruct-processor-1.1.0.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/mapstruct/mapstruct-jdk8/1.2.0.Beta2/mapstruct-jdk8-1.2.0.Beta2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/mapstruct/mapstruct-processor/1.2.0.Beta2/mapstruct-processor-1.2.0.Beta2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/modelmapper/modelmapper/0.7.8/modelmapper-0.7.8.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/com/googlecode/jmapper-framework/jmapper-core/1.6.0.1/jmapper-core-1.6.0.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/googlecode/jmapper-framework/jmapper-core/1.6.1.CR2/jmapper-core-1.6.1.CR2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/reflections/reflections/0.9.10/reflections-0.9.10.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/google/guava/guava/15.0/guava-15.0.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/googlecode/jmapper-framework/jmapper-api/1.2.1/jmapper-api-1.2.1.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/javassist/javassist/3.22.0-CR1/javassist-3.22.0-CR1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar" enabled="true" runInBatchMode="false"/>
