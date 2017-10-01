@@ -82,6 +82,11 @@
 			<artifactId>selma-processor</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.remondis</groupId>
+			<artifactId>remap</artifactId>
+			<version>1.0.3</version>
+		</dependency>
 
 		<!-- Tests -->
 		<dependency>
