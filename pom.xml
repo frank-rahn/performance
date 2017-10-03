@@ -43,10 +43,10 @@
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
 		<!-- Maven Plugins -->
-		<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
 		<maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
 		<maven-source-plugin.version>3.0.1</maven-source-plugin.version>
-		<versions-maven-plugin.version>2.3</versions-maven-plugin.version>
+		<versions-maven-plugin.version>2.5</versions-maven-plugin.version>
 		<cxf-codegen-plugin.version>3.1.4</cxf-codegen-plugin.version>
 		<cxf-xjc-ts.version>3.0.5</cxf-xjc-ts.version>
 		<jaxb2-fluent-api.version>3.0</jaxb2-fluent-api.version>
@@ -56,9 +56,9 @@
 		<jdk.version>1.8</jdk.version>
 		<commons-lang.version>2.6</commons-lang.version>
 		<commons-collections.version>3.2.2</commons-collections.version>
-		<poi-ooxml.version>3.15</poi-ooxml.version>
+		<poi-ooxml.version>3.17</poi-ooxml.version>
 		<jide-oss.version>3.6.18</jide-oss.version>
-		<joda-time.version>2.9.7</joda-time.version>
+		<joda-time.version>2.9.9</joda-time.version>
 		<cxf-xjc-runtime.version>3.0.5</cxf-xjc-runtime.version>
 		<hibernate-jpa.version>1.0.0.Final</hibernate-jpa.version>
 		<slf4j.version>1.7.25</slf4j.version>
@@ -67,13 +67,13 @@
 
 		<!-- Mapper -->
 		<commons-beanutils.version>1.9.3</commons-beanutils.version>
-		<spring.version>4.3.7.RELEASE</spring.version>
+		<spring.version>4.3.11.RELEASE</spring.version>
 		<dozer.version>5.5.1</dozer.version>
-		<orika.version>1.5.0</orika.version>
-		<mapstruct.version>1.2.0.Beta2</mapstruct.version>
-		<modelmapper.version>0.7.8</modelmapper.version>
+		<orika.version>1.5.1</orika.version>
+		<mapstruct.version>1.2.0.CR2</mapstruct.version>
+		<modelmapper.version>1.1.0</modelmapper.version>
 		<jmapper.version>1.6.1.CR2</jmapper.version>
-		<selma.version>0.15</selma.version>
+		<selma.version>1.0</selma.version>
 		<remap.version>1.0.3</remap.version>
 	</properties>
 
