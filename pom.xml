@@ -67,7 +67,7 @@
 
 		<!-- Mapper -->
 		<commons-beanutils.version>1.9.3</commons-beanutils.version>
-		<spring.version>4.3.11.RELEASE</spring.version>
+		<spring.version>5.0.0.RELEASE</spring.version>
 		<dozer.version>5.5.1</dozer.version>
 		<orika.version>1.5.1</orika.version>
 		<mapstruct.version>1.2.0.CR2</mapstruct.version>
@@ -192,12 +192,6 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
 				<version>${spring.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>net.sf.dozer</groupId>
@@ -276,12 +270,6 @@
 				<artifactId>spring-test</artifactId>
 				<version>${spring.version}</version>
 				<scope>test</scope>
-				<exclusions>
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
