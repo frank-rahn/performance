@@ -19,19 +19,22 @@ Ein Test mit der Klasse `org.springframework.beans.BeanUtils` aus dem Projekt [S
 Ein Test mit dem Mapping Framework [Dozer](http://dozer.sf.net/). Dieser Mapper verwendet [Reflection](http://docs.oracle.com/javase/6/docs/technotes/guides/reflection/index.html) zum Mappen der Daten (**reflection-based**).
 
 ## Orika-Mapper
-Ein Test mit dem Mapping Framework [Orica-Mapper](https://code.google.com/p/orika/). Dieser Mapper verwendet Bytecode Generierung mit [Javassist](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/) zum Erzeugung von Mappern.
+Ein Test mit dem Mapping Framework [Orica-Mapper](https://code.google.com/p/orika/). Dieser Mapper verwendet Bytecode Generierung mit [Javassist](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/) zur Erzeugung von Mappern.
 
 ## MapStruct
-Ein Test mit dem Mapping Framework [MapStruct](http://mapstruct.org/). Dieser Mapper verwendet einen [Annotation Processor (APT)](http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html) zum Erzeugung (Java-Klassen) von Mappern.
+Ein Test mit dem Mapping Framework [MapStruct](http://mapstruct.org/). Dieser Mapper verwendet einen [Annotation Processor (APT)](http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html) zur Erzeugung (Java-Klassen) von Mappern.
 
 ## ModelMapper
-Ein noch sehr junges Mapping Framework [ModelMapper](http://modelmapper.org/). Dieser Mapper bietet eine API für spezifische Anwendungsfälle an. Dieser Mapper verwendet Bytecode Generierung mit [cglib](https://github.com/cglib/cglib/wiki) zum Erzeugung von Mappern.
+Ein noch sehr junges Mapping Framework [ModelMapper](http://modelmapper.org/). Dieser Mapper bietet eine API für spezifische Anwendungsfälle an. Dieser Mapper verwendet Bytecode Generierung mit [cglib](https://github.com/cglib/cglib/wiki) zur Erzeugung von Mappern.
 
 ## JMapper Framework
-Ein weiteres Mapping Framework [JMapper Framework](http://jmapper-framework.github.io/jmapper-core/) mit sehr guten Performenzeigenschaften. Dieser Mapper verwendet Bytecode Generierung mit [Javassist](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/) zum Erzeugung von Mappern.
+Ein weiteres Mapping Framework [JMapper Framework](http://jmapper-framework.github.io/jmapper-core/) mit sehr guten Performenzeigenschaften. Dieser Mapper verwendet Bytecode Generierung mit [Javassist](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/) zur Erzeugung von Mappern.
 
 ## Selma
-Ein Test mit dem Mapping Framework [Selma](http://www.selma-java.org/). Dieser Mapper verwendet einen [Annotation Processor (APT)](http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html) zum Erzeugung (Java-Klassen) von Mappern.
+Ein Test mit dem Mapping Framework [Selma](http://www.selma-java.org/). Dieser Mapper verwendet einen [Annotation Processor (APT)](http://docs.oracle.com/javase/6/docs/technotes/guides/apt/index.html) zur Erzeugung (Java-Klassen) von Mappern.
+
+## reMap
+Ein Test mit dem Mapping Framework [reMap](https://github.com/remondis-it/remap). Der Schwerpunkt von reMap liegt in der Robustheit und einem minimalen Verwaltungsaufwand für Tests. Dieser Mapper verwendet Bytecode Generierung mit [cglib](https://github.com/cglib/cglib/wiki) zur Erzeugung von Mappern.
 
 # Zugehörige Artikel
 [Wer ist der optimale Java Bean Mapper?](http://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)
