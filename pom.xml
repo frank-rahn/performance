@@ -74,6 +74,7 @@
 		<modelmapper.version>0.7.8</modelmapper.version>
 		<jmapper.version>1.6.1.CR2</jmapper.version>
 		<selma.version>0.15</selma.version>
+		<remap.version>1.0.3</remap.version>
 	</properties>
 
 	<modules>
@@ -250,6 +251,11 @@
 				<artifactId>selma-processor</artifactId>
 				<version>${selma.version}</version>
 				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.remondis</groupId>
+				<artifactId>remap</artifactId>
+				<version>${remap.version}</version>
 			</dependency>
 
 			<!-- Test -->
