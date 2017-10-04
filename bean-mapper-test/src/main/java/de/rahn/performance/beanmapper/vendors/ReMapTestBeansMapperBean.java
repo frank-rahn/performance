@@ -6,6 +6,8 @@ package de.rahn.performance.beanmapper.vendors;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -28,6 +30,10 @@ import de.rahn.performance.testbeans.DomainTable;
 @Order(9)
 public class ReMapTestBeansMapperBean implements TestBeansMapperBean {
 
+	protected Mapper<DomainTable, XmlTable> domainToXmlTableMapper;
+
+	protected Mapper<XmlTable, DomainTable> xmlToDomainTableMapper;
+
 	/**
 	 * {@inheritDoc}
 	 *
@@ -39,18 +45,41 @@ public class ReMapTestBeansMapperBean implements TestBeansMapperBean {
 	}
 
 	/**
+	 * Initialisiere diese Spring-Bean.
+	 */
+	@PostConstruct
+	public ReMapTestBeansMapperBean initialize() {
+		Mapper<DomainRow, XmlRow> domainToXmlRowMapper = Mapping.from(DomainRow.class).to(XmlRow.class).mapper();
+		Mapper<XmlRow, DomainRow> xmlToDomainRowMapper = Mapping.from(XmlRow.class).to(DomainRow.class).mapper();
+
+		// @formatter:off
+		domainToXmlTableMapper = Mapping
+			.from(DomainTable.class)
+			.to(XmlTable.class)
+			.replace(DomainTable::getDate, XmlTable::getDate)
+				.with(dateToCalendar())
+			.useMapper(domainToXmlRowMapper)
+			.mapper();
+
+		xmlToDomainTableMapper = Mapping
+			.from(XmlTable.class)
+			.to(DomainTable.class)
+			.replace(XmlTable::getDate, DomainTable::getDate)
+				.with(calendarToDate())
+			.useMapper(xmlToDomainRowMapper).mapper();
+		// @formatter:on
+
+		return this;
+	}
+
+	/**
 	 * {@inheritDoc}
 	 *
 	 * @see TestBeansMapperBean#map(DomainTable)
 	 */
 	@Override
 	public XmlTable map(DomainTable source) throws Exception {
-		Mapper<DomainRow, XmlRow> rowMapper = Mapping.from(DomainRow.class).to(XmlRow.class).mapper();
-
-		Mapper<DomainTable, XmlTable> tableMapper = Mapping.from(DomainTable.class).to(XmlTable.class)
-			.replace(DomainTable::getDate, XmlTable::getDate).with(dateToCalendar()).useMapper(rowMapper).mapper();
-
-		return tableMapper.map(source);
+		return domainToXmlTableMapper.map(source);
 	}
 
 	/**
@@ -60,30 +89,33 @@ public class ReMapTestBeansMapperBean implements TestBeansMapperBean {
 	 */
 	@Override
 	public DomainTable map(XmlTable source) throws Exception {
-		Mapper<XmlRow, DomainRow> rowMapper = Mapping.from(XmlRow.class).to(DomainRow.class).mapper();
-
-		Mapper<XmlTable, DomainTable> tableMapper = Mapping.from(XmlTable.class).to(DomainTable.class)
-			.replace(XmlTable::getDate, DomainTable::getDate).with(calendarToDate()).useMapper(rowMapper).mapper();
-
-		return tableMapper.map(source);
+		return xmlToDomainTableMapper.map(source);
 	}
 
-	private Transform<Calendar, Date> dateToCalendar() {
+	/**
+	 * @return ein Transformer von {@link Date} nach {@link Calendar}
+	 */
+	protected Transform<Calendar, Date> dateToCalendar() {
 		return source -> {
 			if (source == null) {
 				return null;
 			}
+
 			Calendar c = Calendar.getInstance();
 			c.setTime(source);
 			return c;
 		};
 	}
 
-	private Transform<Date, Calendar> calendarToDate() {
+	/**
+	 * @return ein Transformer von {@link Calendar} nach {@link Date}
+	 */
+	protected Transform<Date, Calendar> calendarToDate() {
 		return source -> {
 			if (source == null) {
 				return null;
 			}
+
 			return source.getTime();
 		};
 	}
