@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Die statisticschen Daten zu einem Messpunkt.
+ * Die statistischen Daten zu einem Messpunkt.
  * @author Frank Rahn
  */
 public class Statistics {

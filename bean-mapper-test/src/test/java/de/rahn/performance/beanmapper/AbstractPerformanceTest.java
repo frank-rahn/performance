@@ -88,7 +88,7 @@ public abstract class AbstractPerformanceTest {
 		// Statistiken zurücksetzen
 		measurement.endWarmUp();
 
-		// Den Test eine bestimmte Zeit durchfürhen
+		// Den Test eine bestimmte Zeit durchführen
 		LOGGER.info("Messung wird für {} Minuten gestartet...", runDurationInMinutes);
 		int run = 1;
 		final long timer = MINUTES.toMillis(runDurationInMinutes) + currentTimeMillis();

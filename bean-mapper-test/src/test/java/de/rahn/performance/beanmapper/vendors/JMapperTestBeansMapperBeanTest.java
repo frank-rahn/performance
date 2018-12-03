@@ -37,7 +37,7 @@ public class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanT
 			fail("Hier hatte eine Exception geworfen werden sollen");
 		} catch (JMapperException exception) {
 			// Hier wird XmlTable.setRows(null) aufgerufen.
-			// Die JAXB Generierung läst das direkte setzen von Listen nicht zu.
+			// Die JAXB Generierung lässt das direkte setzen von Listen nicht zu.
 			// Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
 		}
 	}

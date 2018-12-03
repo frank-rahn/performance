@@ -144,7 +144,7 @@ public class MeasurementWriterToExcel {
 	}
 
 	/**
-	 * Schreibe die Zusammanfassung dieser Messung.
+	 * Schreibe die Zusammenfassung dieser Messung.
 	 *
 	 * @param sheet das aktuelle Sheet
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
