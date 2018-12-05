@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>de.rahn.performance</groupId>
 		<artifactId>performance</artifactId>
-		<version>1.4.1-SNAPSHOT</version>
+		<version>1.4.2-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 
