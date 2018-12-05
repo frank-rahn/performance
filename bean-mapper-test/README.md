@@ -37,7 +37,7 @@ Ein Test mit dem Mapping Framework [Selma](http://www.selma-java.org/). Dieser M
 Ein Test mit dem Mapping Framework [reMap](https://github.com/remondis-it/remap). Der Schwerpunkt von reMap liegt in der Robustheit und einem minimalen Verwaltungsaufwand für Tests. Dieser Mapper verwendet Bytecode Generierung mit [cglib](https://github.com/cglib/cglib/wiki) zur Erzeugung von Mappern.
 
 # Zugehörige Artikel
-[Wer ist der optimale Java Bean Mapper?](http://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)
+[Wer ist der optimale Java Bean Mapper?](https://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)
 
 # Homepage des Autors
-[Frank W. Rahn](http://www.frank-rahn.de/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)
+[Frank W. Rahn](https://www.frank-rahn.de/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test)

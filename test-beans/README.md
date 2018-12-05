@@ -10,4 +10,4 @@ Dieses Projekt stellt einige Testdatenstrukturen zur Nutzung bei den Performanzt
 Die Utility-Klasse `de.rahn.performance.testbeans.TestBeansUtil` mit der Instanzen der oben genannten Klassen erzeugt und mit zufällig Testdaten gefüllt werden.
 
 # Homepage des Autors
-[Frank W. Rahn](http://www.frank-rahn.de/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=test-beans)
+[Frank W. Rahn](https://www.frank-rahn.de/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=test-beans)
