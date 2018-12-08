@@ -6,8 +6,8 @@ package de.rahn.performance.testbeans;
 
 import static javax.persistence.AccessType.FIELD;
 import static javax.persistence.TemporalType.TIMESTAMP;
-import static org.apache.commons.lang.builder.ToStringBuilder.reflectionToString;
-import static org.apache.commons.lang.builder.ToStringStyle.MULTI_LINE_STYLE;
+import static org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString;
+import static org.apache.commons.lang3.builder.ToStringStyle.MULTI_LINE_STYLE;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
