@@ -5,6 +5,7 @@ package de.rahn.performance.beanmapper.vendors;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.function.Function;
 
 import javax.annotation.PostConstruct;
 
@@ -13,7 +14,6 @@ import org.springframework.stereotype.Component;
 
 import com.remondis.remap.Mapper;
 import com.remondis.remap.Mapping;
-import com.remondis.remap.Transform;
 
 import de.frank_rahn.xmlns.types.testtypes._1.XmlRow;
 import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
@@ -95,7 +95,7 @@ public class ReMapTestBeansMapperBean implements TestBeansMapperBean {
 	/**
 	 * @return ein Transformer von {@link Date} nach {@link Calendar}
 	 */
-	protected Transform<Calendar, Date> dateToCalendar() {
+	protected Function<Date, Calendar> dateToCalendar() {
 		return source -> {
 			if (source == null) {
 				return null;
@@ -110,7 +110,7 @@ public class ReMapTestBeansMapperBean implements TestBeansMapperBean {
 	/**
 	 * @return ein Transformer von {@link Calendar} nach {@link Date}
 	 */
-	protected Transform<Date, Calendar> calendarToDate() {
+	protected Function<Calendar, Date> calendarToDate() {
 		return source -> {
 			if (source == null) {
 				return null;
