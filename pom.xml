@@ -67,14 +67,14 @@
 
 		<!-- Mapper -->
 		<commons-beanutils.version>1.9.3</commons-beanutils.version>
-		<spring.version>5.1.3.RELEASE</spring.version>
+		<spring.version>5.1.5.RELEASE</spring.version>
 		<dozer.version>5.5.1</dozer.version>
-		<orika-core.version>1.5.2</orika-core.version>
-		<mapstruct.version>1.2.0.Final</mapstruct.version>
+		<orika-core.version>1.5.4</orika-core.version>
+		<mapstruct.version>1.3.0.Final</mapstruct.version>
 		<modelmapper.version>2.3.2</modelmapper.version>
 		<jmapper-core.version>1.6.1.CR2</jmapper-core.version>
 		<selma.version>1.0</selma.version>
-		<remap.version>4.1.1</remap.version>
+		<remap.version>4.1.5</remap.version>
 	</properties>
 
 	<modules>
@@ -212,11 +212,6 @@
 			<dependency>
 				<groupId>org.mapstruct</groupId>
 				<artifactId>mapstruct</artifactId>
-				<version>${mapstruct.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mapstruct</groupId>
-				<artifactId>mapstruct-jdk8</artifactId>
 				<version>${mapstruct.version}</version>
 			</dependency>
 			<dependency>
