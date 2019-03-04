@@ -12,7 +12,7 @@ import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.beanmapper.TestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainTable;
-
+import ma.glasnost.orika.BoundMapperFacade;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
@@ -26,7 +26,8 @@ import ma.glasnost.orika.impl.DefaultMapperFactory;
 @Order(4)
 public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
-	private MapperFacade orika;
+	private BoundMapperFacade<DomainTable, XmlTable> mapDomainTable;
+	private BoundMapperFacade<XmlTable, DomainTable> mapXmlTable;
 
 	/**
 	 * Initialisiere diese Spring-Bean.
@@ -34,7 +35,8 @@ public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 	@PostConstruct
 	public void initialize() {
 		MapperFactory factory = new DefaultMapperFactory.Builder().build();
-		orika = factory.getMapperFacade();
+		mapDomainTable = factory.getMapperFacade(DomainTable.class, XmlTable.class);
+		mapXmlTable = factory.getMapperFacade(XmlTable.class, DomainTable.class);
 	}
 
 	/**
@@ -44,7 +46,7 @@ public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 	 */
 	@Override
 	public XmlTable map(DomainTable source) throws Exception {
-		return orika.map(source, XmlTable.class);
+		return mapDomainTable.map(source);
 	}
 
 	/**
@@ -54,7 +56,7 @@ public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 	 */
 	@Override
 	public DomainTable map(XmlTable source) throws Exception {
-		return orika.map(source, DomainTable.class);
+		return mapXmlTable.map(source);
 	}
 
 }
