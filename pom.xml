@@ -11,7 +11,7 @@
 	<!-- The Basics & Project information -->
 	<groupId>de.rahn.performance</groupId>
 	<artifactId>performance</artifactId>
-	<version>1.4.3-SNAPSHOT</version>
+	<version>1.4.4-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Performance Maven Parent</name>
