@@ -12,7 +12,7 @@ package de.rahn.performance.beanmapper;
 public class PerformanceTestWithCompleteFixtures extends AbstractPerformanceTest {
 
 	/**
-	 * {@inheritDoc}F
+	 * {@inheritDoc}
 	 *
 	 * @see AbstractPerformanceTest#setUpBefore()
 	 */
