@@ -46,8 +46,8 @@
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 		<maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
 		<maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-		<versions-maven-plugin.version>2.7</versions-maven-plugin.version>
-		<cxf-codegen-plugin.version>3.3.7</cxf-codegen-plugin.version>
+		<versions-maven-plugin.version>2.8.1</versions-maven-plugin.version>
+		<cxf-codegen-plugin.version>3.4.2</cxf-codegen-plugin.version>
 		<cxf-xjc-ts.version>3.3.1</cxf-xjc-ts.version>
 		<jaxb2-fluent-api.version>3.0</jaxb2-fluent-api.version>
 		<jaxb2-basics.version>0.9.4</jaxb2-basics.version><!-- Version nicht ändern. Siehe Commit fe6b6ad54d01b816e032c20cdc14418e25e384e2 -->
@@ -58,20 +58,21 @@
 		<commons-collections.version>3.2.2</commons-collections.version>
 		<poi-ooxml.version>4.1.2</poi-ooxml.version>
 		<jide-oss.version>3.6.18</jide-oss.version>
-		<joda-time.version>2.10.6</joda-time.version>
-		<cxf-xjc-runtime.version>3.2.3</cxf-xjc-runtime.version>
+		<joda-time.version>2.10.9</joda-time.version>
+		<cxf-xjc-runtime.version>3.3.1</cxf-xjc-runtime.version>
 		<hibernate-jpa-2.1-api.version>1.0.2.Final</hibernate-jpa-2.1-api.version>
 		<slf4j.version>1.7.30</slf4j.version>
 		<hamcrest-library.version>1.3</hamcrest-library.version>
 		<junit.version>4.13.1</junit.version>
+		<jakarta.jws-api.version>1.1.1</jakarta.jws-api.version>
 
 		<!-- Mapper -->
 		<commons-beanutils.version>1.9.4</commons-beanutils.version>
-		<spring.version>5.2.8.RELEASE</spring.version>
+		<spring.version>5.3.2</spring.version>
 		<dozer.version>5.5.1</dozer.version>
 		<orika-core.version>1.5.4</orika-core.version>
-		<mapstruct.version>1.3.1.Final</mapstruct.version>
-		<modelmapper.version>2.3.8</modelmapper.version>
+		<mapstruct.version>1.4.1.Final</mapstruct.version>
+		<modelmapper.version>2.3.9</modelmapper.version>
 		<jmapper-core.version>1.6.1.CR2</jmapper-core.version>
 		<selma.version>1.0</selma.version>
 		<remap.version>4.2.5</remap.version>
@@ -130,15 +131,15 @@
 				<version>${joda-time.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>jakarta.jws</groupId>
+				<artifactId>jakarta.jws-api</artifactId>
+				<version>${jakarta.jws-api.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
 				<groupId>org.apache.cxf.xjc-utils</groupId>
 				<artifactId>cxf-xjc-runtime</artifactId>
 				<version>${cxf-xjc-runtime.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>javax.xml.bind</groupId>
-						<artifactId>jaxb-api</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate.javax.persistence</groupId>
