@@ -7,9 +7,9 @@ package de.rahn.performance.beanmapper;
 import static de.rahn.performance.testbeans.TestBeansUtils.createXmlTable;
 import static java.lang.System.currentTimeMillis;
 import static java.util.concurrent.TimeUnit.MINUTES;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import java.io.IOException;
@@ -40,7 +40,7 @@ public abstract class AbstractPerformanceTest {
 
 	protected static final Logger LOGGER = getLogger(AbstractPerformanceTest.class);
 
-	private PerformanceMeasurement measurement;
+	protected PerformanceMeasurement measurement;
 
 	@Autowired
 	private MapperManager manager;
@@ -120,7 +120,7 @@ public abstract class AbstractPerformanceTest {
 	 * @param mapper der aktuelle Mapper
 	 * @param run der aktuelle Durchlauf
 	 */
-	private void runTestWithMapper(TestBeansMapperBean mapper, int run) {
+	protected void runTestWithMapper(TestBeansMapperBean mapper, int run) {
 		final String msg = "FEHLER im " + mapper.getMapperName() + " beim " + run + "ten Durchlauf";
 
 		try {
@@ -131,7 +131,7 @@ public abstract class AbstractPerformanceTest {
 
 			// Überprüfung
 			assertThat(msg, table, notNullValue());
-			assertThat(msg, table, is(domainTable));
+			assertThat(msg, table, equalTo(domainTable));
 
 			// Messwert registrieren
 			measurement.addValue(mapper.getMapperName(), value);

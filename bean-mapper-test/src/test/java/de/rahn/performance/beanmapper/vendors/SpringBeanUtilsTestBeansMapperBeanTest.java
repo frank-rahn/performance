@@ -4,12 +4,9 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.junit.Assert.fail;
-
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.FatalBeanException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -26,23 +23,6 @@ public class SpringBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMap
 	@Autowired
 	public void setSpringBeanUtilsTestBeansMapperBean(SpringBeanUtilsTestBeansMapperBean mapperBean) {
 		this.mapperBean = mapperBean;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @see AbstractTestBeansMapperBeanTest#testMapEmptyDomainTableWithNullRows()
-	 */
-	@Override
-	public void testMapEmptyDomainTableWithNullRows() throws Exception {
-		try {
-			super.testMapEmptyDomainTableWithNullRows();
-			fail("Hier hatte eine Exception geworfen werden sollen");
-		} catch (FatalBeanException exception) {
-			// Hier wird XmlTable.setRows(null) aufgerufen.
-			// Die JAXB Generierung lässt das direkte setzen von Listen nicht zu.
-			// Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
-		}
 	}
 
 	/**
