@@ -1,6 +1,6 @@
 # Rahmenbedingungen
 
-* Java Version 8 (64 Bit, AdoptOpenJDK Hotspot)
+* Java Version 11 (64 Bit, AdoptOpenJDK Hotspot)
 * Linux Ubuntu 64 Bit 20.04.1 LTS
 * Desktop-Rechner
 * Speicher 64 GB
