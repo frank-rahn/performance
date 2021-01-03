@@ -12,7 +12,7 @@
 			http://www.springframework.org/schema/context/spring-context.xsd
 	">
 
-	<bean class="de.frank_rahn.xmlns.types.testtypes._1.ObjectFactory" />
+	<bean class="https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory" />
 
 	<bean class="de.rahn.performance.beanmapper.vendors.CommonsBeanUtilsTestBeansMapperBean" />
 

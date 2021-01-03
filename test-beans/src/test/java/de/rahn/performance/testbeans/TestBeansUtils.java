@@ -12,9 +12,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Random;
 
-import de.frank_rahn.xmlns.types.testtypes._1.ObjectFactory;
-import de.frank_rahn.xmlns.types.testtypes._1.XmlRow;
-import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 
 /**
  * Diese Klasse erzeugt zufällig gefüllte TestBeans.

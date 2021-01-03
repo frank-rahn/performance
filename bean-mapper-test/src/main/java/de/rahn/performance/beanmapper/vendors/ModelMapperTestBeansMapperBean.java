@@ -9,10 +9,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.beanmapper.TestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 
 /**
  * Der Mapper für {@link ModelMapper}.

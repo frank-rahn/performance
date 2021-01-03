@@ -45,7 +45,7 @@
 						<configuration>
 							<wsdlOptions>
 								<wsdlOption>
-									<wsdl>http://xmlns.frank-rahn.de/ws/test/1.0</wsdl>
+									<wsdl>https://xmlns.frank-rahn.de/ws/test/1.0</wsdl>
 								</wsdlOption>
 							</wsdlOptions>
 						</configuration>

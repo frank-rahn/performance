@@ -22,11 +22,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
 import de.rahn.performance.beanmapper.utils.MapperManager;
 import de.rahn.performance.beanmapper.vendors.ByHandTestBeansMapperBean;
 import de.rahn.performance.measurement.PerformanceMeasurement;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 
 /**
  * Ein Performanz Test der Mapper. Dabei wird ein {@link XmlTable} auf ein

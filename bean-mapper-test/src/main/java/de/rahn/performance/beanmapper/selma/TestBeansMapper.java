@@ -7,11 +7,10 @@ package de.rahn.performance.beanmapper.selma;
 import static fr.xebia.extras.selma.CollectionMappingStrategy.ALLOW_GETTER;
 import static fr.xebia.extras.selma.IoC.SPRING;
 
-import de.frank_rahn.xmlns.types.testtypes._1.ObjectFactory;
-import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
 import de.rahn.performance.testbeans.DomainTable;
-
 import fr.xebia.extras.selma.Mapper;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 
 /**
  * Das Mapper Interface für Selma.

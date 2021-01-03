@@ -16,7 +16,7 @@
 	<context:component-scan annotation-config="true"
 		base-package="de.rahn.performance.beanmapper.selma" />
 
-	<bean class="de.frank_rahn.xmlns.types.testtypes._1.ObjectFactory" />
+	<bean class="https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory" />
 
 	<bean class="de.rahn.performance.beanmapper.vendors.SelmaTestBeansMapperBean" />
 

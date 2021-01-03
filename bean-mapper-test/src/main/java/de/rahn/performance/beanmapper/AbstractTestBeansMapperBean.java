@@ -10,9 +10,9 @@ import java.util.List;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import de.frank_rahn.xmlns.types.testtypes._1.ObjectFactory;
-import de.frank_rahn.xmlns.types.testtypes._1.XmlRow;
-import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 
 /**
  * Allgemeine Basisklasse für den {@link TestBeansMapperBean}.

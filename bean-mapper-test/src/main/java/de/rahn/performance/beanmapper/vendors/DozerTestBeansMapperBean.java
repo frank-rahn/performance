@@ -13,12 +13,12 @@ import org.dozer.loader.api.TypeDefinition;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import de.frank_rahn.xmlns.types.testtypes._1.XmlRow;
-import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.beanmapper.TestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainRow;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 
 /**
  * Der Mapper für {@link DozerBeanMapper}.
@@ -48,7 +48,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 			@Override
 			protected void configure() {
 				mapping(new TypeDefinition(DomainTable.class),
-					new TypeDefinition(XmlTable.class).beanFactory(JAXBBeanFactory.class));
+						new TypeDefinition(XmlTable.class).beanFactory(JAXBBeanFactory.class));
 			}
 		});
 		((DozerBeanMapper) dozer).addMapping(new BeanMappingBuilder() {
@@ -61,7 +61,7 @@ public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 			@Override
 			protected void configure() {
 				mapping(new TypeDefinition(DomainRow.class),
-					new TypeDefinition(XmlRow.class).beanFactory(JAXBBeanFactory.class));
+						new TypeDefinition(XmlRow.class).beanFactory(JAXBBeanFactory.class));
 			}
 		});
 	}

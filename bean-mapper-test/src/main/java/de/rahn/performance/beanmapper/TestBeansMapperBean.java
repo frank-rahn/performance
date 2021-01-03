@@ -4,8 +4,8 @@
  */
 package de.rahn.performance.beanmapper;
 
-import de.frank_rahn.xmlns.types.testtypes._1.XmlTable;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 
 /**
  * Die Schnittstelle aller Spring-Beans der Test-Mapper.
