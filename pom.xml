@@ -53,7 +53,7 @@
 		<jaxb2-basics.version>0.9.4</jaxb2-basics.version><!-- Version nicht ändern. Siehe Commit fe6b6ad54d01b816e032c20cdc14418e25e384e2 -->
 
 		<!-- Utilities -->
-		<jdk.version>1.8</jdk.version>
+		<jdk.version>11</jdk.version>
 		<commons-lang3.version>3.11</commons-lang3.version>
 		<commons-collections.version>3.2.2</commons-collections.version>
 		<poi-ooxml.version>4.1.2</poi-ooxml.version>
