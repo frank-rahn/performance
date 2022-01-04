@@ -45,6 +45,7 @@ public class PerformanceTestWithIncompleteFixtures extends AbstractPerformanceTe
 	protected void setUpBefore() {
 		numberOfRows = 0;
 		numberOfColumns = 0;
+		excludedMapper = new String[] { "Selma" };
 	}
 
 	@Override

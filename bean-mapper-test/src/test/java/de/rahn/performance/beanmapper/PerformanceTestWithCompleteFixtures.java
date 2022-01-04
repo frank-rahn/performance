@@ -20,7 +20,7 @@ public class PerformanceTestWithCompleteFixtures extends AbstractPerformanceTest
 	protected void setUpBefore() {
 		numberOfRows = 100;
 		numberOfColumns = 100;
-		excludedMapper = new String[] { "Commons-BeanUtils", "Spring-BeanUtils" };
+		excludedMapper = new String[] { "Commons-BeanUtils", "Spring-BeanUtils", "Selma" };
 	}
 
 }

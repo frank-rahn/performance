@@ -330,7 +330,6 @@
 								<goal>wsdl2java</goal>
 							</goals>
 							<configuration>
-								<!--fork>once</fork-->
 								<encoding>${encoding}</encoding>
 								<additionalJvmArgs>-Dfile.encoding=${encoding}</additionalJvmArgs>
 								<defaultOptions>
@@ -341,8 +340,8 @@
 										<extraarg>-xjc-Xfluent-api</extraarg>
 									</extraargs>
 									<bindingFiles>
-										<bindingFile>http://xmlns.frank-rahn.de/binding/jaxb/1.1</bindingFile>
-										<bindingFile>http://xmlns.frank-rahn.de/binding/jaxws/1.0</bindingFile>
+										<bindingFile>https://xmlns.frank-rahn.de/binding/jaxb/1.1</bindingFile>
+										<bindingFile>https://xmlns.frank-rahn.de/binding/jaxws/1.0</bindingFile>
 									</bindingFiles>
 								</defaultOptions>
 							</configuration>
