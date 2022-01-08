@@ -15,37 +15,27 @@ import de.rahn.performance.beanmapper.vendors.SpringBeanUtilsTestBeansMapperBean
 import de.rahn.performance.testbeans.DomainTable;
 
 /**
- * Ein Performanz Test der Mapper mit unvollständig gefüllten Test-Objekten.
+ * Ein Performanz-Test der Mapper mit unvollständig gefüllten Test-Objekten.
  *
  * @author Frank W. Rahn
  */
+@SuppressWarnings("NewClassNamingConvention")
 public class PerformanceTestWithIncompleteFixtures extends AbstractPerformanceTest {
 
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @see AbstractPerformanceTest#setUpAfter()
-	 */
 	@Override
 	protected void setUpAfter() {
-		// Leere die Attribute, die nicht durch alle Mapper verarbeitet werden können
+		// Leere die Attribute, die nicht durch alle Mapper verarbeitet werden
 		xmlTable.setDate(null);
 
-		// Leere die Attribute, die nicht durch alle Mapper verarbeitet werden können
+		// Leere die Attribute, die nicht durch alle Mapper verarbeitet werden
 		domainTable.setDate(null);
 		domainTable.getRows().clear();
 	}
 
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @see AbstractPerformanceTest#setUpBefore()
-	 */
 	@Override
 	protected void setUpBefore() {
 		numberOfRows = 0;
 		numberOfColumns = 0;
-		excludedMapper = new String[] { "Selma" };
 	}
 
 	@Override
@@ -61,7 +51,7 @@ public class PerformanceTestWithIncompleteFixtures extends AbstractPerformanceTe
 
 				// Überprüfung
 				assertThat(msg, table, notNullValue());
-				table.setRows(new ArrayList<>()); // Wegen dem Unterschied zu org.apache.commons.beanutils.BeanUtils
+				table.setRows(new ArrayList<>()); // Wegen des Unterschieds zu org.apache.commons.beanutils.BeanUtils
 				assertThat(msg, table, equalTo(domainTable));
 
 				// Messwert registrieren
@@ -74,6 +64,5 @@ public class PerformanceTestWithIncompleteFixtures extends AbstractPerformanceTe
 		} else {
 			super.runTestWithMapper(mapper, run);
 		}
-
 	}
 }
