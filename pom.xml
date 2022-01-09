@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="
-		http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd
-	">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<!-- The Basics & Project information -->
 	<groupId>de.rahn.performance</groupId>
 	<artifactId>performance</artifactId>
-	<version>1.5.4-SNAPSHOT</version>
+	<version>1.5.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Performance Maven Parent</name>
@@ -56,6 +52,7 @@
 		<jdk.version>11</jdk.version>
 		<commons-lang3.version>3.12.0</commons-lang3.version>
 		<commons-collections.version>3.2.2</commons-collections.version>
+		<commons-io.version>2.11.0</commons-io.version>
 		<poi-ooxml.version>5.1.0</poi-ooxml.version>
 		<jide-oss.version>3.6.18</jide-oss.version>
 		<joda-time.version>2.10.13</joda-time.version>
@@ -69,7 +66,7 @@
 		<!-- Mapper -->
 		<commons-beanutils.version>1.9.4</commons-beanutils.version>
 		<spring.version>5.3.14</spring.version>
-		<dozer.version>5.5.1</dozer.version>
+		<dozer-core.version>6.5.2</dozer-core.version>
 		<orika-core.version>1.5.4</orika-core.version>
 		<mapstruct.version>1.4.2.Final</mapstruct.version>
 		<modelmapper.version>3.0.0</modelmapper.version>
@@ -119,6 +116,11 @@
 				<groupId>commons-collections</groupId>
 				<artifactId>commons-collections</artifactId>
 				<version>${commons-collections.version}</version>
+			</dependency>
+			<dependency>
+				<artifactId>commons-io</artifactId>
+				<groupId>commons-io</groupId>
+				<version>${commons-io.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.jidesoft</groupId>
@@ -195,9 +197,15 @@
 				<version>${spring.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.sf.dozer</groupId>
-				<artifactId>dozer</artifactId>
-				<version>${dozer.version}</version>
+				<groupId>com.github.dozermapper</groupId>
+				<artifactId>dozer-core</artifactId>
+				<version>${dozer-core.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>commons-io</artifactId>
+						<groupId>commons-io</groupId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>ma.glasnost.orika</groupId>
