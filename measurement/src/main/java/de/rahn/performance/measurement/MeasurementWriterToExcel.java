@@ -34,7 +34,7 @@ import org.joda.time.format.DateTimeFormatterBuilder;
  */
 public class MeasurementWriterToExcel {
 
-	/** Spaltenbreite 23mm */
+	/** Spaltenbreite 23 mm */
 	private static final int COLUMN_WIDTH = 23;
 
 	/** Der {@link CellStyle} für die Überschriften. */
@@ -52,7 +52,7 @@ public class MeasurementWriterToExcel {
 	private final String timeStamp;
 
 	/**
-	 * @param fileName Der Name der Ausgabedatei
+	 * @param fileName der Name der Ausgabedatei
 	 */
 	public MeasurementWriterToExcel(String fileName) {
 		super();
@@ -88,6 +88,7 @@ public class MeasurementWriterToExcel {
 
 		int row = writeSummary(sheet, meteringPointNames, measurements);
 
+		//noinspection UnusedAssignment
 		row = writeAverages(sheet, row, meteringPointNames, measurements);
 
 		sheet.createFreezePane(1, 0);
@@ -96,7 +97,7 @@ public class MeasurementWriterToExcel {
 	/**
 	 * Schreibe die Aufwärmphase.
 	 *
-	 * @param die Liste der Namen der Messpunkte
+	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 */
 	public void processWarmUp(List<String> meteringPointNames, Map<String, Statistics> measurements) {
@@ -110,7 +111,7 @@ public class MeasurementWriterToExcel {
 	/**
 	 * Speichere die Datei.
 	 *
-	 * @throws IOException falls ein IO-Problem aufgetreten ist
+	 * @throws IOException, falls ein IO-Problem aufgetreten ist
 	 */
 	public void save() throws IOException {
 		try (FileOutputStream fileOutputStream = new FileOutputStream(file)) {
@@ -157,9 +158,9 @@ public class MeasurementWriterToExcel {
 
 		// Datum schreiben
 		Row headerRow = sheet.createRow(row++);
-		Cell hcell = headerRow.createCell(0);
-		hcell.setCellValue(timeStamp);
-		hcell.setCellStyle(CELLSTYLE_HEADER);
+		Cell headerCell = headerRow.createCell(0);
+		headerCell.setCellValue(timeStamp);
+		headerCell.setCellStyle(CELLSTYLE_HEADER);
 
 		// Überschrift
 		headerRow = sheet.createRow(row++);
@@ -239,8 +240,8 @@ public class MeasurementWriterToExcel {
 		// Schreibe die Messreihen
 		for (int i = 0; i < SIZE; i++) {
 			Row contentRow = sheet.createRow(++row);
-			Cell xcell = contentRow.createCell(0);
-			xcell.setCellValue(meteringPointNames.get(i));
+			Cell contentCell = contentRow.createCell(0);
+			contentCell.setCellValue(meteringPointNames.get(i));
 
 			for (int column = 0; column < numberOfValues.size(); column++) {
 				BigDecimal d = table.get(numberOfValues.get(column))[i];
@@ -259,12 +260,12 @@ public class MeasurementWriterToExcel {
 
 	/**
 	 * Ermittle die Mittelwerte und stelle die Tabelle zusammen. Einzelne
-	 * Messwert können fehlen...
+	 * Messwerte können fehlen...
 	 *
 	 * @param meteringPointNames die Liste der Namen der Messpunkte
 	 * @param measurements die Messung
 	 * @param table die Tabelle mit den Messwerten
-	 * @param numberOfValues die Zeile mit den Anzahl der Messwerten, aus denen
+	 * @param numberOfValues die Zeile mit der Anzahl der Messwerte, aus denen
 	 *        die Mittelwerte gebildet wurden
 	 * @return die Anzahl der Zeilen
 	 */
@@ -296,5 +297,4 @@ public class MeasurementWriterToExcel {
 
 		return size;
 	}
-
 }
