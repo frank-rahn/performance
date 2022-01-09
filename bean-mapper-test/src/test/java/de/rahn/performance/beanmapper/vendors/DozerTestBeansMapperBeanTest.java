@@ -6,7 +6,7 @@ package de.rahn.performance.beanmapper.vendors;
 
 import static org.junit.Assert.fail;
 
-import org.dozer.MappingException;
+import com.github.dozermapper.core.MappingException;
 import org.junit.Before;
 
 /**
@@ -16,20 +16,12 @@ import org.junit.Before;
  */
 public class DozerTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-	/**
-	 * @throws java.lang.Exception
-	 */
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() {
 		mapperBean = new DozerTestBeansMapperBean();
 		((DozerTestBeansMapperBean) mapperBean).initialize();
 	}
 
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @see AbstractTestBeansMapperBeanTest#testMapEmptyDomainTableWithNullRows()
-	 */
 	@Override
 	public void testMapEmptyDomainTableWithNullRows() throws Exception {
 		try {
@@ -41,5 +33,5 @@ public class DozerTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTes
 			// Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
 		}
 	}
-
 }
+
