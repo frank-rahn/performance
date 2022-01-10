@@ -17,12 +17,14 @@ import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
  *
  * @author Frank W. Rahn
  */
-@Mapper(withIoC = SPRING, withCollectionStrategy = ALLOW_GETTER, withCustom = { DateCustomMapper.class, CustomCalendar.class },
-	withFactories = { ObjectFactory.class })
+@Mapper(
+    withIoC = SPRING,
+    withCollectionStrategy = ALLOW_GETTER,
+    withCustom = {DateCustomMapper.class, CustomCalendar.class},
+    withFactories = {ObjectFactory.class})
 public interface TestBeansMapper {
 
-	XmlTable asXmlTable(DomainTable domainTable);
+  XmlTable asXmlTable(DomainTable domainTable);
 
-	DomainTable asDomainTable(XmlTable xmlTable);
-
+  DomainTable asDomainTable(XmlTable xmlTable);
 }

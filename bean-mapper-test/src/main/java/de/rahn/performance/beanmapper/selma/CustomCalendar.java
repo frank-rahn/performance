@@ -16,7 +16,6 @@
 package de.rahn.performance.beanmapper.selma;
 
 import java.util.Calendar;
-
 import org.springframework.stereotype.Component;
 
 /**
@@ -27,21 +26,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomCalendar {
 
-	/**
-	 * Konvertiere ein {@link Calendar} in ein {@link Calendar}.
-	 *
-	 * @param in das {@link Calendar}
-	 * @return der {@link Calendar}
-	 */
-	public Calendar customCalendarMapper(Calendar in) {
-		if (in == null) {
-			return null;
-		}
+  /**
+   * Konvertiere ein {@link Calendar} in ein {@link Calendar}.
+   *
+   * @param in das {@link Calendar}
+   * @return der {@link Calendar}
+   */
+  public Calendar customCalendarMapper(Calendar in) {
+    if (in == null) {
+      return null;
+    }
 
-		Calendar out = Calendar.getInstance();
-		out.setTimeInMillis(in.getTimeInMillis());
+    Calendar out = Calendar.getInstance();
+    out.setTimeInMillis(in.getTimeInMillis());
 
-		return out;
-	}
-
+    return out;
+  }
 }

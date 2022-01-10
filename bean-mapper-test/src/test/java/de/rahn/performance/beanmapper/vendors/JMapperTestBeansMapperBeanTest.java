@@ -5,9 +5,8 @@ package de.rahn.performance.beanmapper.vendors;
 
 import static org.junit.Assert.fail;
 
-import org.junit.Before;
-
 import com.googlecode.jmapper.exceptions.JMapperException;
+import org.junit.Before;
 
 /**
  * Test des Mappers für JMapper.
@@ -16,30 +15,21 @@ import com.googlecode.jmapper.exceptions.JMapperException;
  */
 public class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@Before
-	public void setUp() throws Exception {
-		mapperBean = new JMapperTestBeansMapperBean();
-		((JMapperTestBeansMapperBean) mapperBean).initialize();
-	}
+  @Before
+  public void setUp() {
+    mapperBean = new JMapperTestBeansMapperBean();
+    ((JMapperTestBeansMapperBean) mapperBean).initialize();
+  }
 
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @see AbstractTestBeansMapperBeanTest#testMapEmptyDomainTableWithNullRows()
-	 */
-	@Override
-	public void testMapEmptyDomainTableWithNullRows() throws Exception {
-		try {
-			super.testMapEmptyDomainTableWithNullRows();
-			fail("Hier hatte eine Exception geworfen werden sollen");
-		} catch (JMapperException exception) {
-			// Hier wird XmlTable.setRows(null) aufgerufen.
-			// Die JAXB Generierung lässt das direkte setzen von Listen nicht zu.
-			// Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
-		}
-	}
-
+  @Override
+  public void testMapEmptyDomainTableWithNullRows() throws Exception {
+    try {
+      super.testMapEmptyDomainTableWithNullRows();
+      fail("Hier hatte eine Exception geworfen werden sollen");
+    } catch (JMapperException exception) {
+      // Hier wird XmlTable.setRows(null) aufgerufen.
+      // Die JAXB Generierung lässt das direkte setzen von Listen nicht zu.
+      // Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
+    }
+  }
 }

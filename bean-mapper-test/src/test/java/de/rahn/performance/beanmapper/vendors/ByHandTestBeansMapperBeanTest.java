@@ -18,9 +18,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration
 public class ByHandTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-	@Autowired
-	public void setByHandTestBeansMapperBean(ByHandTestBeansMapperBean mapperBean) {
-		this.mapperBean = mapperBean;
-	}
-
+  @Autowired
+  public void setByHandTestBeansMapperBean(ByHandTestBeansMapperBean mapperBean) {
+    this.mapperBean = mapperBean;
+  }
 }

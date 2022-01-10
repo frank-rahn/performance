@@ -4,7 +4,7 @@
  */
 /**
  * Das Basis-Package der Bean Mappers.
- * 
+ *
  * @author Frank W. Rahn
  */
 package de.rahn.performance.beanmapper;

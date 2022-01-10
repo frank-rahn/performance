@@ -20,21 +20,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration
 public class SpringBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-	@Autowired
-	public void setSpringBeanUtilsTestBeansMapperBean(SpringBeanUtilsTestBeansMapperBean mapperBean) {
-		this.mapperBean = mapperBean;
-	}
+  @Autowired
+  public void setSpringBeanUtilsTestBeansMapperBean(SpringBeanUtilsTestBeansMapperBean mapperBean) {
+    this.mapperBean = mapperBean;
+  }
 
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @see AbstractTestBeansMapperBeanTest#testMapTable()
-	 */
-	@Test
-	@Ignore("Dieser Test kann nicht funktioniert")
-	@Override
-	public void testMapTable() throws Exception {
-		super.testMapTable();
-	}
-
+  @Test
+  @Ignore("Dieser Test kann nicht funktioniert")
+  @Override
+  public void testMapTable() throws Exception {
+    super.testMapTable();
+  }
 }

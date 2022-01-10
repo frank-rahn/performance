@@ -3,7 +3,8 @@
  * reserved.
  */
 /**
- * Ein Reihe von Java-Beans für Messungen oder Ähnliches.
+ * Eine Reihe von Java-Beans für Messungen oder Ähnliches.
+ *
  * @author Frank W. Rahn
  */
 package de.rahn.performance.testbeans;

@@ -16,22 +16,21 @@ import org.junit.Before;
  */
 public class DozerTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-	@Before
-	public void setUp() {
-		mapperBean = new DozerTestBeansMapperBean();
-		((DozerTestBeansMapperBean) mapperBean).initialize();
-	}
+  @Before
+  public void setUp() {
+    mapperBean = new DozerTestBeansMapperBean();
+    ((DozerTestBeansMapperBean) mapperBean).initialize();
+  }
 
-	@Override
-	public void testMapEmptyDomainTableWithNullRows() throws Exception {
-		try {
-			super.testMapEmptyDomainTableWithNullRows();
-			fail("Hier hatte eine Exception geworfen werden sollen");
-		} catch (MappingException exception) {
-			// Hier wird XmlTable.setRows(null) aufgerufen.
-			// Die JAXB Generierung lässt das direkte setzen von Listen nicht zu.
-			// Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
-		}
-	}
+  @Override
+  public void testMapEmptyDomainTableWithNullRows() throws Exception {
+    try {
+      super.testMapEmptyDomainTableWithNullRows();
+      fail("Hier hatte eine Exception geworfen werden sollen");
+    } catch (MappingException exception) {
+      // Hier wird XmlTable.setRows(null) aufgerufen.
+      // Die JAXB Generierung lässt das direkte setzen von Listen nicht zu.
+      // Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
+    }
+  }
 }
-

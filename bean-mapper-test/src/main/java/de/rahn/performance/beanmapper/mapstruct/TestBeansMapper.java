@@ -4,15 +4,13 @@
  */
 package de.rahn.performance.beanmapper.mapstruct;
 
-import java.util.List;
-
-import org.mapstruct.Mapper;
-
 import de.rahn.performance.testbeans.DomainRow;
 import de.rahn.performance.testbeans.DomainTable;
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
+import java.util.List;
+import org.mapstruct.Mapper;
 
 /**
  * Das Mapper Interface für MapStruct.
@@ -22,15 +20,15 @@ import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 @Mapper(uses = ObjectFactory.class, componentModel = "spring")
 public interface TestBeansMapper {
 
-	List<XmlRow> domainRowsToXmlRows(List<DomainRow> domainRows);
+  List<XmlRow> domainRowsToXmlRows(List<DomainRow> domainRows);
 
-	XmlRow domainRowToXmlRow(DomainRow domainRow);
+  XmlRow domainRowToXmlRow(DomainRow domainRow);
 
-	XmlTable domainTableToXmlTable(DomainTable domainTable);
+  XmlTable domainTableToXmlTable(DomainTable domainTable);
 
-	List<DomainRow> xmlRowsToDomainRows(List<XmlRow> xmlRows);
+  List<DomainRow> xmlRowsToDomainRows(List<XmlRow> xmlRows);
 
-	DomainRow xmlRowToDomainRow(XmlRow xmlRow);
+  DomainRow xmlRowToDomainRow(XmlRow xmlRow);
 
-	DomainTable xmlTableToDomainTable(XmlTable xmlTable);
+  DomainTable xmlTableToDomainTable(XmlTable xmlTable);
 }

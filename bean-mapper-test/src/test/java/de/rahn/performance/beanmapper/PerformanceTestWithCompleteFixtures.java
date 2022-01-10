@@ -12,10 +12,10 @@ package de.rahn.performance.beanmapper;
 @SuppressWarnings("NewClassNamingConvention")
 public class PerformanceTestWithCompleteFixtures extends AbstractPerformanceTest {
 
-	@Override
-	protected void setUpBefore() {
-		numberOfRows = 100;
-		numberOfColumns = 100;
-		excludedMapper = new String[] { "Commons-BeanUtils", "Spring-BeanUtils" };
-	}
+  @Override
+  protected void setUpBefore() {
+    numberOfRows = 100;
+    numberOfColumns = 100;
+    excludedMapper = new String[]{"Commons-BeanUtils", "Spring-BeanUtils"};
+  }
 }

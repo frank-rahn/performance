@@ -15,7 +15,7 @@
  */
 /**
  * Zusätzliche Implementierungen bzw. Definitionen für Selma.
- * 
+ *
  * @author Frank W. Rahn
  */
 package de.rahn.performance.beanmapper.selma;

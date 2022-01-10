@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>de.rahn.performance</groupId>
-		<artifactId>performance</artifactId>
-		<version>1.5.5-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
-	</parent>
+  <parent>
+    <groupId>de.rahn.performance</groupId>
+    <artifactId>performance</artifactId>
+    <version>1.5.5-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
 
-	<!-- The Basics & Project information -->
-	<artifactId>test-beans</artifactId>
-	<name>Test-Beans</name>
-	<description>Ein Reihe von Java-Beans zum Testen</description>
-	<url>https://github.com/frank-rahn/performance</url>
+  <!-- The Basics & Project information -->
+  <artifactId>test-beans</artifactId>
+  <name>Test-Beans</name>
+  <description>Ein Reihe von Java-Beans zum Testen</description>
+  <url>https://github.com/frank-rahn/performance</url>
 
-	<!-- Project Settings -->
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf.xjc-utils</groupId>
-			<artifactId>cxf-xjc-runtime</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.1-api</artifactId>
-		</dependency>
-	</dependencies>
+  <!-- Project Settings -->
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf.xjc-utils</groupId>
+      <artifactId>cxf-xjc-runtime</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.1-api</artifactId>
+    </dependency>
+  </dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.cxf</groupId>
-				<artifactId>cxf-codegen-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>wsdl2java</id>
-						<configuration>
-							<wsdlOptions>
-								<wsdlOption>
-									<wsdl>https://xmlns.frank-rahn.de/ws/test/1.0</wsdl>
-								</wsdlOption>
-							</wsdlOptions>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-codegen-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>wsdl2java</id>
+            <configuration>
+              <wsdlOptions>
+                <wsdlOption>
+                  <wsdl>https://xmlns.frank-rahn.de/ws/test/1.0</wsdl>
+                </wsdlOption>
+              </wsdlOptions>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

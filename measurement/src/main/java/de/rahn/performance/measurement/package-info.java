@@ -3,7 +3,8 @@
  * reserved.
  */
 /**
- * Ein Reihe von Utilities zum Messen und Auswerten von Messungen.
+ * Eine Reihe von Utilities zum Messen und Auswerten von Messungen.
+ *
  * @author Frank W. Rahn
  */
 package de.rahn.performance.measurement;

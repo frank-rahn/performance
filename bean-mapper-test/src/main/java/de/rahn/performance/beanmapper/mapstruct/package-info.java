@@ -4,7 +4,7 @@
  */
 /**
  * Zusätzliche Implementierungen bzw. Definitionen für MapStruct.
- * 
+ *
  * @author Frank W. Rahn
  */
 package de.rahn.performance.beanmapper.mapstruct;

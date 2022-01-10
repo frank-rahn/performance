@@ -4,7 +4,7 @@
  */
 /**
  * Ein Reihe von allgemeinen Utilities für die Bean-Mapper.
- * 
+ *
  * @author Frank W. Rahn
  */
 package de.rahn.performance.beanmapper.utils;
