@@ -4,7 +4,7 @@ In diesem Repository befinden sich Projekte rund um das Thema Performanz.
 
 ## measurement
 
-Ein Reihe von Utilities zum Messen und Auswerten von Messungen.
+Eine Reihe von Utilities zum Messen und Auswerten von Messungen.
 
 ## test-beans
 
