@@ -42,39 +42,64 @@
     <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
     <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-    <versions-maven-plugin.version>2.12.0</versions-maven-plugin.version>
-    <cxf-codegen-plugin.version>3.5.3</cxf-codegen-plugin.version>
+    <versions-maven-plugin.version>2.13.0</versions-maven-plugin.version>
+    <cxf-codegen-plugin.version>3.5.4</cxf-codegen-plugin.version>
 
     <!-- Version nicht ändern. Siehe Commit fe6b6ad54d01b816e032c20cdc14418e25e384e2 -->
+    <!-- org.apache.cxf.xjc-utils:cxf-xjc-runtime -->
     <cxf-xjc-runtime.version>3.3.2</cxf-xjc-runtime.version>
+    <!-- org.apache.cxf.xjcplugins:cxf-xjc-ts -->
     <cxf-xjc-ts.version>3.3.2</cxf-xjc-ts.version>
+    <!-- org.jvnet.jaxb2_commons:jaxb2-fluent-api -->
     <jaxb2-fluent-api.version>3.0</jaxb2-fluent-api.version>
+    <!-- org.jvnet.jaxb2_commons:jaxb2-basics -->
     <jaxb2-basics.version>0.9.4</jaxb2-basics.version>
+    <!-- jakarta.jws:jakarta.jws-api -->
     <jakarta.jws-api.version>1.1.1</jakarta.jws-api.version>
 
     <!-- Utilities -->
     <jdk.version>17</jdk.version>
+    <!-- org.apache.commons:commons-lang3 -->
     <commons-lang3.version>3.12.0</commons-lang3.version>
+    <!-- commons-collections:commons-collections -->
     <commons-collections.version>3.2.2</commons-collections.version>
+    <!-- commons-io:commons-io -->
     <commons-io.version>2.11.0</commons-io.version>
+    <!-- org.apache.poi:poi-ooxml -->
     <poi-ooxml.version>5.2.3</poi-ooxml.version>
+    <!-- com.jidesoft:jide-oss -->
     <jide-oss.version>3.6.18</jide-oss.version>
-    <joda-time.version>2.11.2</joda-time.version>
+    <!-- joda-time:joda-time -->
+    <joda-time.version>2.12.2</joda-time.version>
+    <!-- org.hibernate.javax.persistence:hibernate-jpa-2.1-api -->
     <hibernate-jpa-2.1-api.version>1.0.2.Final</hibernate-jpa-2.1-api.version>
-    <slf4j.version>2.0.3</slf4j.version>
+    <!-- org.slf4j:slf4j-api -->
+    <slf4j.version>2.0.5</slf4j.version>
+    <!-- org.apache.logging.log4j:log4j-to-slf4j -->
     <log4j-to-slf4j.version>2.19.0</log4j-to-slf4j.version>
+    <!-- org.hamcrest:hamcrest-library -->
     <hamcrest-library.version>1.3</hamcrest-library.version>
+    <!-- junit:junit -->
     <junit.version>4.13.2</junit.version>
 
     <!-- Mapper -->
+    <!-- commons-beanutils:commons-beanutils -->
     <commons-beanutils.version>1.9.4</commons-beanutils.version>
-    <spring.version>5.3.23</spring.version>
+    <!-- org.springframework:spring-context -->
+    <spring.version>6.0.2</spring.version>
+    <!-- com.github.dozermapper:dozer-core -->
     <dozer-core.version>6.5.2</dozer-core.version>
+    <!-- ma.glasnost.orika:orika-core -->
     <orika-core.version>1.5.4</orika-core.version>
-    <mapstruct.version>1.5.2.Final</mapstruct.version>
-    <modelmapper.version>3.1.0</modelmapper.version>
+    <!-- org.mapstruct:mapstruct -->
+    <mapstruct.version>1.5.3.Final</mapstruct.version>
+    <!-- org.modelmapper:modelmapper -->
+    <modelmapper.version>3.1.1</modelmapper.version>
+    <!-- com.googlecode.jmapper-framework:jmapper-core -->
     <jmapper-core.version>1.6.1.CR2</jmapper-core.version>
+    <!-- fr.xebia.extras:selma -->
     <selma.version>1.0</selma.version>
+    <!-- com.remondis:remap -->
     <remap.version>4.2.6</remap.version>
   </properties>
 
