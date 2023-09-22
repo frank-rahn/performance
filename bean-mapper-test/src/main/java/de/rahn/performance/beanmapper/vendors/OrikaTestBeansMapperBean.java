@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
  *
  * @author Frank W. Rahn
  */
-@Component("Orika")
+//@Component("Orika")
 @Order(4)
 public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 

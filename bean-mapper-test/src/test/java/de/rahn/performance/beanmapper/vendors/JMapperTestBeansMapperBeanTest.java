@@ -7,12 +7,15 @@ import static org.junit.Assert.fail;
 
 import com.googlecode.jmapper.exceptions.JMapperException;
 import org.junit.Before;
+import org.junit.Ignore;
 
 /**
  * Test des Mappers für JMapper.
  *
  * @author Frank W. Rahn
  */
+@Ignore("Abgeschaltet, wegen einer InaccessibleObjectException unter JDK-17 nicht lauffähig und nicht mehr gepflegt "
+    + "(EOL)")
 public class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   @Before
