@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
  *
  * @author Frank W. Rahn
  */
-@Component("JMapper")
+//@Component("JMapper")
 @Order(7)
 public class JMapperTestBeansMapperBean extends AbstractTestBeansMapperBean {
 

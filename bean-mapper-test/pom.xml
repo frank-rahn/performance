@@ -7,7 +7,7 @@
   <parent>
     <groupId>de.rahn.performance</groupId>
     <artifactId>performance</artifactId>
-    <version>1.5.6-SNAPSHOT</version>
+    <version>1.5.7-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
