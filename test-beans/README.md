@@ -9,8 +9,7 @@ Dieses Projekt stellt einige Testdatenstrukturen zur Nutzung bei den Performanzt
 
 ## Zusätzliches
 
-Die Utility-Klasse `de.rahn.performance.testbeans.TestBeansUtil` mit der Instanzen der oben genannten Klassen erzeugt
-und mit zufällig Testdaten gefüllt werden.
+Die Utility-Klasse `de.rahn.performance.testbeans.TestBeansUtil` mit der Instanzen der oben genannten Klassen erzeugt und mit zufälligen Testdaten gefüllt werden.
 
 # Homepage des Autors
 

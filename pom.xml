@@ -7,7 +7,7 @@
   <!-- The Basics & Project information -->
   <groupId>de.rahn.performance</groupId>
   <artifactId>performance</artifactId>
-  <version>1.5.7-SNAPSHOT</version>
+  <version>1.5.8-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Performance Maven Parent</name>
@@ -39,11 +39,11 @@
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
     <!-- Maven Plugins -->
-    <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+    <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
     <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-    <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-    <versions-maven-plugin.version>2.13.0</versions-maven-plugin.version>
-    <cxf-codegen-plugin.version>3.5.4</cxf-codegen-plugin.version>
+    <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+    <versions-maven-plugin.version>2.16.2</versions-maven-plugin.version>
+    <cxf-codegen-plugin.version>3.6.2</cxf-codegen-plugin.version>
 
     <!-- Version nicht ändern. Siehe Commit fe6b6ad54d01b816e032c20cdc14418e25e384e2 -->
     <!-- org.apache.cxf.xjc-utils:cxf-xjc-runtime -->
@@ -55,7 +55,7 @@
     <!-- org.jvnet.jaxb2_commons:jaxb2-basics -->
     <jaxb2-basics.version>0.9.4</jaxb2-basics.version>
     <!-- jakarta.jws:jakarta.jws-api -->
-    <jakarta.jws-api.version>1.1.1</jakarta.jws-api.version>
+    <jakarta.jws-api.version>2.1.0</jakarta.jws-api.version>
 
     <!-- Utilities -->
     <jdk.version>17</jdk.version>
@@ -64,13 +64,13 @@
     <!-- pkg:maven/commons-collections/commons-collections -->
     <commons-collections.version>3.2.2</commons-collections.version>
     <!-- pkg:maven/commons-io/commons-io -->
-    <commons-io.version>2.13.0</commons-io.version>
+    <commons-io.version>2.15.1</commons-io.version>
     <!-- pkg:maven/org.apache.poi/poi-ooxml -->
-    <poi-ooxml.version>5.2.3</poi-ooxml.version>
-    <!-- pkg:maven/com.jidesoft/jide-oss -->
-    <jide-oss.version>3.6.18</jide-oss.version>
+    <poi-ooxml.version>5.2.5</poi-ooxml.version>
+    <!-- pkg:maven/com.formdev/jide-oss -->
+    <jide-oss.version>3.7.14</jide-oss.version>
     <!-- pkg:maven/joda-time/joda-time -->
-    <joda-time.version>2.12.5</joda-time.version>
+    <joda-time.version>2.12.7</joda-time.version>
     <!-- pkg:maven/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
     <hibernate-jpa-2.1-api.version>1.0.2.Final</hibernate-jpa-2.1-api.version>
     <!-- pkg:maven/org.slf4j/slf4j-api -->
@@ -151,7 +151,7 @@
         <version>${commons-io.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.jidesoft</groupId>
+        <groupId>com.formdev</groupId>
         <artifactId>jide-oss</artifactId>
         <version>${jide-oss.version}</version>
       </dependency>
