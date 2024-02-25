@@ -4,25 +4,27 @@
  */
 package de.rahn.performance.testbeans;
 
-import static javax.persistence.AccessType.FIELD;
-import static javax.persistence.TemporalType.TIMESTAMP;
+import static jakarta.persistence.AccessType.FIELD;
+import static jakarta.persistence.TemporalType.TIMESTAMP;
 import static org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString;
 import static org.apache.commons.lang3.builder.ToStringStyle.MULTI_LINE_STYLE;
 
+import jakarta.persistence.ElementCollection;
 import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.List;
-import javax.persistence.Access;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
+import jakarta.persistence.Access;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
 
 /**
  * Ein Java-Bean zum Test, welche eine Zeile darstellt.
  *
  * @author Frank W. Rahn
  */
+@SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
 @Access(FIELD)
 @Table(schema = "rahn")
@@ -202,6 +204,7 @@ public class DomainRow {
 
   private int column79;
 
+  @ElementCollection
   private List<String> columns;
 
   @Override
@@ -212,10 +215,10 @@ public class DomainRow {
     if (obj == null) {
       return false;
     }
-    if (!(obj instanceof DomainRow)) {
+    if (!(obj instanceof DomainRow other)) {
       return false;
     }
-    DomainRow other = (DomainRow) obj;
+
     if (column00 == null) {
       if (other.column00 != null) {
         return false;

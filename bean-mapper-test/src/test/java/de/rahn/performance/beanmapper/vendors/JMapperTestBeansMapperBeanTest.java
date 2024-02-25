@@ -6,6 +6,7 @@ package de.rahn.performance.beanmapper.vendors;
 import static org.junit.Assert.fail;
 
 import com.googlecode.jmapper.exceptions.JMapperException;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import org.junit.Before;
 import org.junit.Ignore;
 
@@ -20,7 +21,7 @@ public class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanT
 
   @Before
   public void setUp() {
-    mapperBean = new JMapperTestBeansMapperBean();
+    mapperBean = new JMapperTestBeansMapperBean(new ObjectFactory());
     ((JMapperTestBeansMapperBean) mapperBean).initialize();
   }
 

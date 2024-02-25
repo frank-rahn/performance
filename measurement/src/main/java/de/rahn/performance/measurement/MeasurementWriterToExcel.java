@@ -270,7 +270,7 @@ public class MeasurementWriterToExcel {
   }
 
   /**
-   * Ermittle die Mittelwerte und stelle die Tabelle zusammen. Einzelne Messwerte können fehlen...
+   * Ermittle die Mittelwerte und stelle die Tabelle zusammen. Einzelne Messwerte können fehlen ...
    *
    * @param meteringPointNames die Liste der Namen der Messpunkte
    * @param measurements       die Messung
@@ -287,7 +287,7 @@ public class MeasurementWriterToExcel {
       int index = meteringPointNames.indexOf(statistics.getMeteringPointName());
 
       if (index < 0) {
-        // Unbekannter Messpunkt ==> Ignorieren
+        // Unbekannter Messpunkt → Ignorieren
         continue;
       }
 

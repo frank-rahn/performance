@@ -6,26 +6,22 @@ package de.rahn.performance.beanmapper.vendors;
 
 import static org.junit.Assert.fail;
 
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import java.lang.reflect.InvocationTargetException;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Test des Mappers für Commons-BeanUtils.
  *
  * @author Frank W. Rahn
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration
 public class CommonsBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-  @Autowired
-  public void setCommonsBeanUtilsTestBeansMapperBean(CommonsBeanUtilsTestBeansMapperBean mapperBean) {
-    this.mapperBean = mapperBean;
+  @Before
+  public void setUp() {
+    mapperBean = new CommonsBeanUtilsTestBeansMapperBean(new ObjectFactory());
   }
 
   @Override
@@ -40,10 +36,12 @@ public class CommonsBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMa
     }
   }
 
+  @SuppressWarnings("EmptyMethod")
   @Test
   @Ignore("Dieser Test kann nicht funktioniert")
   @Override
   public void testMapTable() throws Exception {
+    // Diese Methode wird überschrieben, um die Annotationen platzieren zu können
     super.testMapTable();
   }
 }

@@ -9,7 +9,7 @@
 
 ## Zugehörige Artikel
 
-[Wer ist der optimale Java Bean Mapper?](https://www.frank-rahn.de/java-bean-mapper/?utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test-docs-jdk17-01)
+[Wer ist der optimale Java Bean Mapper?](https://www.frank-rahn.de/java-bean-mapper/? utm_source=github&utm_medium=readme&utm_campaign=performance&utm_content=bean-mapper-test-docs-jdk17-02)
 
 ## Homepage des Autors
 

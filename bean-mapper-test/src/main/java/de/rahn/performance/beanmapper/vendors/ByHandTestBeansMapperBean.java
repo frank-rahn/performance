@@ -6,6 +6,7 @@ package de.rahn.performance.beanmapper.vendors;
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainRow;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 import java.util.ArrayList;
@@ -23,6 +24,10 @@ import org.springframework.stereotype.Component;
 @Component("ByHand")
 @Order(0)
 public class ByHandTestBeansMapperBean extends AbstractTestBeansMapperBean {
+
+  public ByHandTestBeansMapperBean(ObjectFactory factory) {
+    super(factory);
+  }
 
   @Override
   public XmlTable map(DomainTable source) throws Exception {

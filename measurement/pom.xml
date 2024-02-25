@@ -7,7 +7,7 @@
   <parent>
     <groupId>de.rahn.performance</groupId>
     <artifactId>performance</artifactId>
-    <version>1.5.8-SNAPSHOT</version>
+    <version>1.5.9-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -55,5 +55,4 @@
       <artifactId>hamcrest-library</artifactId>
     </dependency>
   </dependencies>
-
 </project>

@@ -142,7 +142,7 @@ public class Statistics {
   }
 
   /**
-   * @return die Liste der Mittelwerte mit der Anzahl der zugrundeliegenden Messwerten
+   * @return die Liste der Mittelwerte mit der Anzahl der zugrundeliegenden Messwerte
    */
   public List<Average> getAverages() {
     return averages;

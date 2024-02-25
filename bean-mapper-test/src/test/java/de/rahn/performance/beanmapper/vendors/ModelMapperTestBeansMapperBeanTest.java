@@ -5,6 +5,7 @@ package de.rahn.performance.beanmapper.vendors;
 
 import static org.junit.Assert.fail;
 
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import org.junit.Before;
 import org.modelmapper.MappingException;
 
@@ -17,7 +18,7 @@ public class ModelMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperB
 
   @Before
   public void setUp() {
-    mapperBean = new ModelMapperTestBeansMapperBean();
+    mapperBean = new ModelMapperTestBeansMapperBean(new ObjectFactory());
     ((ModelMapperTestBeansMapperBean) mapperBean).initialize();
   }
 

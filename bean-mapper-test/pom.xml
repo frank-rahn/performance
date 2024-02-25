@@ -7,7 +7,7 @@
   <parent>
     <groupId>de.rahn.performance</groupId>
     <artifactId>performance</artifactId>
-    <version>1.5.8-SNAPSHOT</version>
+    <version>1.5.9-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -40,6 +40,10 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.annotation</groupId>
+      <artifactId>jakarta.annotation-api</artifactId>
     </dependency>
 
     <!-- Die Mapper -->
@@ -109,5 +113,4 @@
       <artifactId>spring-test</artifactId>
     </dependency>
   </dependencies>
-
 </project>

@@ -15,7 +15,5 @@
   <bean class="https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory"/>
 
   <!-- Die Spring-Beans scannen und JSR-250 aktivieren -->
-  <context:component-scan annotation-config="true"
-    base-package="de.rahn.performance.beanmapper"/>
-
+  <context:component-scan base-package="de.rahn.performance.beanmapper"/>
 </beans>

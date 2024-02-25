@@ -13,11 +13,11 @@ import com.googlecode.jmapper.api.JMapperAPI;
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainRow;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;
 
 /**
  * Der Mapper für {@link JMapper}.
@@ -31,6 +31,10 @@ public class JMapperTestBeansMapperBean extends AbstractTestBeansMapperBean {
   private JMapper<XmlTable, DomainTable> domainToXmlMapper;
 
   private JMapper<DomainTable, XmlTable> xmlToDomainMapper;
+
+  public JMapperTestBeansMapperBean(ObjectFactory factory) {
+    super(factory);
+  }
 
   /**
    * Initialisiere diese Spring-Bean.

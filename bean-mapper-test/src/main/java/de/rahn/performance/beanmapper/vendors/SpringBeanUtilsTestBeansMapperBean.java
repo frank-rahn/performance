@@ -5,6 +5,7 @@ package de.rahn.performance.beanmapper.vendors;
 
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 import org.springframework.beans.BeanUtils;
 import org.springframework.core.annotation.Order;
@@ -18,6 +19,10 @@ import org.springframework.stereotype.Component;
 @Component("Spring-BeanUtils")
 @Order(2)
 public class SpringBeanUtilsTestBeansMapperBean extends AbstractTestBeansMapperBean {
+
+  protected SpringBeanUtilsTestBeansMapperBean(ObjectFactory factory) {
+    super(factory);
+  }
 
   @Override
   public XmlTable map(DomainTable source) throws Exception {

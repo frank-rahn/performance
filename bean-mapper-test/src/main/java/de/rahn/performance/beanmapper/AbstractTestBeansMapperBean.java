@@ -10,7 +10,6 @@ import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Allgemeine Basisklasse für den {@link TestBeansMapperBean}.
@@ -19,10 +18,13 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public abstract class AbstractTestBeansMapperBean implements TestBeansMapperBean, BeanNameAware {
 
-  @Autowired
-  private ObjectFactory factory;
+  private final ObjectFactory factory;
 
   private String beanName;
+
+  public AbstractTestBeansMapperBean(ObjectFactory factory) {
+    this.factory = factory;
+  }
 
   @Override
   public String getMapperName() {

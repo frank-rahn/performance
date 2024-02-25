@@ -6,8 +6,8 @@ package de.rahn.performance.beanmapper.vendors;
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.beanmapper.mapstruct.TestBeansMapper;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -20,8 +20,13 @@ import org.springframework.stereotype.Component;
 @Order(5)
 public class MapStructTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
-  @Autowired
-  private TestBeansMapper testBeansMapper;
+  private final TestBeansMapper testBeansMapper;
+
+  public MapStructTestBeansMapperBean(ObjectFactory factory, TestBeansMapper testBeansMapper) {
+    super(factory);
+
+    this.testBeansMapper = testBeansMapper;
+  }
 
   @Override
   public XmlTable map(DomainTable source) throws Exception {

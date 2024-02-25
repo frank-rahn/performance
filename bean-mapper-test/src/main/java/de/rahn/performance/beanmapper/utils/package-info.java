@@ -3,7 +3,7 @@
  * reserved.
  */
 /**
- * Ein Reihe von allgemeinen Utilities für die Bean-Mapper.
+ * Eine Reihe von allgemeinen Utilities für die Bean-Mapper.
  *
  * @author Frank W. Rahn
  */

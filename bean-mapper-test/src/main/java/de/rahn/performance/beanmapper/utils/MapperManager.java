@@ -7,12 +7,11 @@ package de.rahn.performance.beanmapper.utils;
 import static org.apache.commons.lang3.ArrayUtils.contains;
 
 import de.rahn.performance.beanmapper.TestBeansMapperBean;
+import jakarta.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -23,12 +22,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class MapperManager {
 
-  @Autowired
-  private TestBeansMapperBean[] mappers;
+  private final TestBeansMapperBean[] mappers;
 
   private Map<String, TestBeansMapperBean> mapperByName;
 
   private String[] names;
+
+  public MapperManager(TestBeansMapperBean[] mappers) {
+    this.mappers = mappers;
+  }
 
   /**
    * @param name der Names des gewünschten Mappers

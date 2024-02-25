@@ -16,6 +16,7 @@ import de.rahn.performance.beanmapper.utils.MapperManager;
 import de.rahn.performance.beanmapper.vendors.ByHandTestBeansMapperBean;
 import de.rahn.performance.measurement.PerformanceMeasurement;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 import java.io.IOException;
 import org.junit.Before;
@@ -32,7 +33,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author Frank W. Rahn
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring.xml"})
+@ContextConfiguration(locations = {"classpath:spring.xml"})
 public abstract class AbstractPerformanceTest {
 
   protected static final Logger LOGGER = getLogger(AbstractPerformanceTest.class);
@@ -42,6 +43,9 @@ public abstract class AbstractPerformanceTest {
   @Autowired
   private MapperManager manager;
 
+  @Autowired
+  private ObjectFactory factory;
+
   protected XmlTable xmlTable;
 
   protected DomainTable domainTable;
@@ -50,6 +54,7 @@ public abstract class AbstractPerformanceTest {
 
   protected int numberOfColumns;
 
+  @SuppressWarnings("CanBeFinal")
   protected int runDurationInMinutes = 10;
 
   protected String[] excludedMapper = new String[0];
@@ -65,7 +70,7 @@ public abstract class AbstractPerformanceTest {
 
     xmlTable = createXmlTable(numberOfRows, numberOfColumns);
 
-    domainTable = new ByHandTestBeansMapperBean().map(xmlTable);
+    domainTable = new ByHandTestBeansMapperBean(factory).map(xmlTable);
 
     setUpAfter();
 

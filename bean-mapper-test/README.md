@@ -25,7 +25,7 @@ Ein Test mit dem Mapping Framework [Dozer](http://dozer.sf.net/). Dieser Mapper 
 
 ## Orika-Mapper
 
-Ein Test mit dem Mapping Framework [Orica-Mapper](https://code.google.com/p/orika/). Dieser Mapper verwendet Bytecode Generierung mit [Javassist](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/) zur Erzeugung von Mappern.
+Ein Test mit dem Mapping Framework [Orika-Mapper](https://code.google.com/p/orika/). Dieser Mapper verwendet Bytecode Generierung mit [Javassist](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/) zur Erzeugung von Mappern.
 
 ## MapStruct
 

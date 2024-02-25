@@ -7,8 +7,8 @@ import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.beanmapper.selma.TestBeansMapper;
 import de.rahn.performance.testbeans.DomainTable;
 import fr.xebia.extras.selma.Selma;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -21,8 +21,13 @@ import org.springframework.stereotype.Component;
 @Order(8)
 public class SelmaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
-  @Autowired
-  private TestBeansMapper mapper;
+  private final TestBeansMapper mapper;
+
+  public SelmaTestBeansMapperBean(ObjectFactory factory, TestBeansMapper mapper) {
+    super(factory);
+
+    this.mapper = mapper;
+  }
 
   @Override
   public XmlTable map(DomainTable source) throws Exception {

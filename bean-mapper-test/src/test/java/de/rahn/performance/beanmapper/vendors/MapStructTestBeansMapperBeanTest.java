@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author Frank W. Rahn
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration
+@ContextConfiguration(locations = {"classpath:spring.xml"})
 public class MapStructTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   @Autowired

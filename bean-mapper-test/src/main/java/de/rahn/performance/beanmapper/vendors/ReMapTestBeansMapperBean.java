@@ -13,7 +13,7 @@ import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.function.Function;
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 

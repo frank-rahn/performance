@@ -5,8 +5,9 @@ package de.rahn.performance.beanmapper.vendors;
 
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import org.modelmapper.ModelMapper;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -21,6 +22,10 @@ import org.springframework.stereotype.Component;
 public class ModelMapperTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
   private ModelMapper modelMapper;
+
+  public ModelMapperTestBeansMapperBean(ObjectFactory factory) {
+    super(factory);
+  }
 
   /**
    * Initialisiere diese Spring-Bean.

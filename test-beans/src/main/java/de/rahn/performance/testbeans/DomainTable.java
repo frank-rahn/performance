@@ -4,34 +4,36 @@
  */
 package de.rahn.performance.testbeans;
 
-import static javax.persistence.AccessType.FIELD;
-import static javax.persistence.CascadeType.ALL;
-import static javax.persistence.GenerationType.SEQUENCE;
-import static javax.persistence.TemporalType.DATE;
+import static jakarta.persistence.AccessType.FIELD;
+import static jakarta.persistence.CascadeType.ALL;
+import static jakarta.persistence.GenerationType.SEQUENCE;
+import static jakarta.persistence.TemporalType.DATE;
 import static org.apache.commons.lang3.builder.ToStringBuilder.reflectionToString;
 import static org.apache.commons.lang3.builder.ToStringStyle.MULTI_LINE_STYLE;
 
 import java.util.Date;
 import java.util.List;
-import javax.persistence.Access;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
+import jakarta.persistence.Access;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
 
 /**
  * Ein Java-Bean zum Test, welche eine Tabelle darstellt.
  *
  * @author Frank W. Rahn
  */
+@SuppressWarnings("JpaDataSourceORMInspection")
 @Entity
 @Access(FIELD)
 @Table(schema = "rahn")
 public class DomainTable {
 
+  @SuppressWarnings("unused")
   @Id
   @GeneratedValue(strategy = SEQUENCE, generator = "TableSEQ")
   @SequenceGenerator(name = "TableSEQ", sequenceName = "TableSEQ", schema = "rahn")
@@ -53,11 +55,10 @@ public class DomainTable {
     if (obj == null) {
       return false;
     }
-    if (!(obj instanceof DomainTable)) {
+    if (!(obj instanceof DomainTable other)) {
       return false;
     }
 
-    DomainTable other = (DomainTable) obj;
     if (date == null) {
       if (other.date != null) {
         return false;

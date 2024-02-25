@@ -4,22 +4,19 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
+import org.junit.Before;
 
 /**
  * Test des Mappers für ByHand.
  *
  * @author Frank W. Rahn
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration
 public class ByHandTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-  @Autowired
-  public void setByHandTestBeansMapperBean(ByHandTestBeansMapperBean mapperBean) {
-    this.mapperBean = mapperBean;
+  @Before
+  public void mapperBean() {
+    mapperBean = new ByHandTestBeansMapperBean(new ObjectFactory());
   }
+
 }

@@ -11,9 +11,10 @@ import com.github.dozermapper.core.loader.api.TypeDefinition;
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainRow;
 import de.rahn.performance.testbeans.DomainTable;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -27,6 +28,10 @@ import org.springframework.stereotype.Component;
 public class DozerTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
   private Mapper dozer;
+
+  public DozerTestBeansMapperBean(ObjectFactory factory) {
+    super(factory);
+  }
 
   /**
    * Initialisiere diese Spring-Bean.

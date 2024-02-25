@@ -7,7 +7,7 @@
   <!-- The Basics & Project information -->
   <groupId>de.rahn.performance</groupId>
   <artifactId>performance</artifactId>
-  <version>1.5.8-SNAPSHOT</version>
+  <version>1.5.9-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Performance Maven Parent</name>
@@ -43,24 +43,19 @@
     <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
     <versions-maven-plugin.version>2.16.2</versions-maven-plugin.version>
-    <cxf-codegen-plugin.version>3.6.2</cxf-codegen-plugin.version>
 
-    <!-- Version nicht ändern. Siehe Commit fe6b6ad54d01b816e032c20cdc14418e25e384e2 -->
-    <!-- org.apache.cxf.xjc-utils:cxf-xjc-runtime -->
-    <cxf-xjc-runtime.version>3.3.2</cxf-xjc-runtime.version>
-    <!-- org.apache.cxf.xjcplugins:cxf-xjc-ts -->
-    <cxf-xjc-ts.version>3.3.2</cxf-xjc-ts.version>
-    <!-- org.jvnet.jaxb2_commons:jaxb2-fluent-api -->
-    <jaxb2-fluent-api.version>3.0</jaxb2-fluent-api.version>
-    <!-- org.jvnet.jaxb2_commons:jaxb2-basics -->
-    <jaxb2-basics.version>0.9.4</jaxb2-basics.version>
-    <!-- jakarta.jws:jakarta.jws-api -->
-    <jakarta.jws-api.version>2.1.0</jakarta.jws-api.version>
+    <!-- Jakarta EE 10 -->
+    <!-- pkg:maven/jakarta.annotation/jakarta.annotation-api -->
+    <jakarta.annotation-api.version>2.1.1</jakarta.annotation-api.version>
+    <!-- pkg:maven/jakarta.xml.ws/jakarta.xml.ws-api -->
+    <jakarta.xml.ws-api.version>4.0.1</jakarta.xml.ws-api.version>
+    <!-- pkg:maven/jakarta.persistence/jakarta.persistence-api -->
+    <jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
 
     <!-- Utilities -->
     <jdk.version>17</jdk.version>
     <!-- pkg:maven/org.apache.commons/commons-lang3 -->
-    <commons-lang3.version>3.13.0</commons-lang3.version>
+    <commons-lang3.version>3.14.0</commons-lang3.version>
     <!-- pkg:maven/commons-collections/commons-collections -->
     <commons-collections.version>3.2.2</commons-collections.version>
     <!-- pkg:maven/commons-io/commons-io -->
@@ -71,12 +66,10 @@
     <jide-oss.version>3.7.14</jide-oss.version>
     <!-- pkg:maven/joda-time/joda-time -->
     <joda-time.version>2.12.7</joda-time.version>
-    <!-- pkg:maven/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
-    <hibernate-jpa-2.1-api.version>1.0.2.Final</hibernate-jpa-2.1-api.version>
     <!-- pkg:maven/org.slf4j/slf4j-api -->
-    <slf4j.version>2.0.9</slf4j.version>
+    <slf4j.version>2.0.12</slf4j.version>
     <!-- pkg:maven/org.apache.logging.log4j/log4j-to-slf4j -->
-    <log4j-to-slf4j.version>2.20.0</log4j-to-slf4j.version>
+    <log4j-to-slf4j.version>2.22.1</log4j-to-slf4j.version>
     <!-- pkg:maven/org.hamcrest/hamcrest-library -->
     <hamcrest-library.version>1.3</hamcrest-library.version>
     <!-- pkg:maven/junit/junit -->
@@ -161,20 +154,20 @@
         <version>${joda-time.version}</version>
       </dependency>
       <dependency>
-        <groupId>jakarta.jws</groupId>
-        <artifactId>jakarta.jws-api</artifactId>
-        <version>${jakarta.jws-api.version}</version>
+        <groupId>jakarta.annotation</groupId>
+        <artifactId>jakarta.annotation-api</artifactId>
+        <version>${jakarta.annotation-api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.xml.ws</groupId>
+        <artifactId>jakarta.xml.ws-api</artifactId>
+        <version>${jakarta.xml.ws-api.version}</version>
         <scope>compile</scope>
       </dependency>
       <dependency>
-        <groupId>org.apache.cxf.xjc-utils</groupId>
-        <artifactId>cxf-xjc-runtime</artifactId>
-        <version>${cxf-xjc-runtime.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.hibernate.javax.persistence</groupId>
-        <artifactId>hibernate-jpa-2.1-api</artifactId>
-        <version>${hibernate-jpa-2.1-api.version}</version>
+        <groupId>jakarta.persistence</groupId>
+        <artifactId>jakarta.persistence-api</artifactId>
+        <version>${jakarta.persistence-api.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.poi</groupId>
@@ -363,58 +356,6 @@
           </configuration>
         </plugin>
 
-        <plugin>
-          <groupId>org.apache.cxf</groupId>
-          <artifactId>cxf-codegen-plugin</artifactId>
-          <version>${cxf-codegen-plugin.version}</version>
-          <executions>
-            <execution>
-              <id>wsdl2java</id>
-              <phase>generate-sources</phase>
-              <goals>
-                <goal>wsdl2java</goal>
-              </goals>
-              <configuration>
-                <encoding>${encoding}</encoding>
-                <fork>false</fork>
-                <defaultOptions>
-                  <extraargs>
-                    <extraarg>-xjc-enableIntrospection</extraarg>
-                    <extraarg>-xjc-Xsetters</extraarg>
-                    <extraarg>-xjc-Xts:style:org.apache.cxf.xjc.runtime.JAXBToStringStyle.MULTI_LINE_STYLE</extraarg>
-                    <extraarg>-xjc-Xfluent-api</extraarg>
-                  </extraargs>
-                  <bindingFiles>
-                    <bindingFile>https://xmlns.frank-rahn.de/binding/jaxb/1.1</bindingFile>
-                    <bindingFile>https://xmlns.frank-rahn.de/binding/jaxws/1.0</bindingFile>
-                  </bindingFiles>
-                </defaultOptions>
-              </configuration>
-            </execution>
-          </executions>
-          <dependencies>
-            <dependency>
-              <groupId>org.slf4j</groupId>
-              <artifactId>slf4j-simple</artifactId>
-              <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>org.apache.cxf.xjcplugins</groupId>
-              <artifactId>cxf-xjc-ts</artifactId>
-              <version>${cxf-xjc-ts.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>org.jvnet.jaxb2_commons</groupId>
-              <artifactId>jaxb2-fluent-api</artifactId>
-              <version>${jaxb2-fluent-api.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>org.jvnet.jaxb2_commons</groupId>
-              <artifactId>jaxb2-basics</artifactId>
-              <version>${jaxb2-basics.version}</version>
-            </dependency>
-          </dependencies>
-        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -438,5 +379,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>

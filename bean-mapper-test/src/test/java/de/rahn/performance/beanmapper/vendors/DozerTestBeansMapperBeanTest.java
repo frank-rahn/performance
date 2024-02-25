@@ -7,6 +7,7 @@ package de.rahn.performance.beanmapper.vendors;
 import static org.junit.Assert.fail;
 
 import com.github.dozermapper.core.MappingException;
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import org.junit.Before;
 
 /**
@@ -18,7 +19,7 @@ public class DozerTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTes
 
   @Before
   public void setUp() {
-    mapperBean = new DozerTestBeansMapperBean();
+    mapperBean = new DozerTestBeansMapperBean(new ObjectFactory());
     ((DozerTestBeansMapperBean) mapperBean).initialize();
   }
 

@@ -6,6 +6,7 @@ package de.rahn.performance.beanmapper.vendors;
 
 import static org.junit.Assert.fail;
 
+import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import org.junit.Before;
 import org.junit.Ignore;
 
@@ -19,7 +20,7 @@ public class OrikaTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTes
 
   @Before
   public void setUp() {
-    mapperBean = new OrikaTestBeansMapperBean();
+    mapperBean = new OrikaTestBeansMapperBean(new ObjectFactory());
     ((OrikaTestBeansMapperBean) mapperBean).initialize();
   }
 
