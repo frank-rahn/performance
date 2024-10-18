@@ -79,7 +79,7 @@
     <!-- pkg:maven/commons-beanutils/commons-beanutils -->
     <commons-beanutils.version>1.9.4</commons-beanutils.version>
     <!-- pkg:maven/org.springframework/spring-context -->
-    <spring.version>6.1.4</spring.version>
+    <spring.version>6.1.14</spring.version>
     <!-- EOL pkg:maven/com.github.dozermapper/dozer-core -->
     <dozer-core.version>6.5.2</dozer-core.version>
     <!-- pkg:maven/ma.glasnost.orika/orika-core -->
