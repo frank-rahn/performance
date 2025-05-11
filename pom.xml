@@ -39,10 +39,10 @@
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
     <!-- Maven Plugins -->
-    <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
-    <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-    <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
-    <versions-maven-plugin.version>2.16.2</versions-maven-plugin.version>
+    <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+    <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+    <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+    <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
 
     <!-- Jakarta EE 10 -->
     <!-- pkg:maven/jakarta.annotation/jakarta.annotation-api -->
@@ -55,21 +55,21 @@
     <!-- Utilities -->
     <jdk.version>17</jdk.version>
     <!-- pkg:maven/org.apache.commons/commons-lang3 -->
-    <commons-lang3.version>3.14.0</commons-lang3.version>
+    <commons-lang3.version>3.17.0</commons-lang3.version>
     <!-- pkg:maven/commons-collections/commons-collections -->
     <commons-collections.version>3.2.2</commons-collections.version>
     <!-- pkg:maven/commons-io/commons-io -->
-    <commons-io.version>2.15.1</commons-io.version>
+    <commons-io.version>2.19.0</commons-io.version>
     <!-- pkg:maven/org.apache.poi/poi-ooxml -->
-    <poi-ooxml.version>5.2.5</poi-ooxml.version>
+    <poi-ooxml.version>5.4.1</poi-ooxml.version>
     <!-- pkg:maven/com.formdev/jide-oss -->
-    <jide-oss.version>3.7.14</jide-oss.version>
+    <jide-oss.version>3.7.15</jide-oss.version>
     <!-- pkg:maven/joda-time/joda-time -->
-    <joda-time.version>2.12.7</joda-time.version>
+    <joda-time.version>2.14.0</joda-time.version>
     <!-- pkg:maven/org.slf4j/slf4j-api -->
-    <slf4j.version>2.0.12</slf4j.version>
+    <slf4j.version>2.0.17</slf4j.version>
     <!-- pkg:maven/org.apache.logging.log4j/log4j-to-slf4j -->
-    <log4j-to-slf4j.version>2.23.0</log4j-to-slf4j.version>
+    <log4j-to-slf4j.version>2.24.3</log4j-to-slf4j.version>
     <!-- pkg:maven/org.hamcrest/hamcrest-library -->
     <hamcrest-library.version>1.3</hamcrest-library.version>
     <!-- pkg:maven/junit/junit -->

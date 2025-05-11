@@ -76,6 +76,7 @@
       <groupId>org.modelmapper</groupId>
       <artifactId>modelmapper</artifactId>
     </dependency>
+    <!--suppress VulnerableLibrariesLocal -->
     <dependency>
       <groupId>com.googlecode.jmapper-framework</groupId>
       <artifactId>jmapper-core</artifactId>
