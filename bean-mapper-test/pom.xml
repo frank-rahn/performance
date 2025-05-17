@@ -7,7 +7,7 @@
   <parent>
     <groupId>de.rahn.performance</groupId>
     <artifactId>performance</artifactId>
-    <version>1.5.10-SNAPSHOT</version>
+    <version>1.6.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -76,6 +76,7 @@
       <groupId>org.modelmapper</groupId>
       <artifactId>modelmapper</artifactId>
     </dependency>
+    <!--suppress VulnerableLibrariesLocal -->
     <dependency>
       <groupId>com.googlecode.jmapper-framework</groupId>
       <artifactId>jmapper-core</artifactId>

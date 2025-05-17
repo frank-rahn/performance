@@ -7,7 +7,7 @@
   <!-- The Basics & Project information -->
   <groupId>de.rahn.performance</groupId>
   <artifactId>performance</artifactId>
-  <version>1.5.10-SNAPSHOT</version>
+  <version>1.6.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Performance Maven Parent</name>
@@ -39,10 +39,10 @@
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
     <!-- Maven Plugins -->
-    <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
-    <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-    <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
-    <versions-maven-plugin.version>2.16.2</versions-maven-plugin.version>
+    <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+    <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+    <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+    <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
 
     <!-- Jakarta EE 10 -->
     <!-- pkg:maven/jakarta.annotation/jakarta.annotation-api -->
@@ -55,21 +55,21 @@
     <!-- Utilities -->
     <jdk.version>17</jdk.version>
     <!-- pkg:maven/org.apache.commons/commons-lang3 -->
-    <commons-lang3.version>3.14.0</commons-lang3.version>
+    <commons-lang3.version>3.17.0</commons-lang3.version>
     <!-- pkg:maven/commons-collections/commons-collections -->
     <commons-collections.version>3.2.2</commons-collections.version>
     <!-- pkg:maven/commons-io/commons-io -->
-    <commons-io.version>2.15.1</commons-io.version>
+    <commons-io.version>2.19.0</commons-io.version>
     <!-- pkg:maven/org.apache.poi/poi-ooxml -->
-    <poi-ooxml.version>5.2.5</poi-ooxml.version>
+    <poi-ooxml.version>5.4.1</poi-ooxml.version>
     <!-- pkg:maven/com.formdev/jide-oss -->
-    <jide-oss.version>3.7.14</jide-oss.version>
+    <jide-oss.version>3.7.15</jide-oss.version>
     <!-- pkg:maven/joda-time/joda-time -->
-    <joda-time.version>2.12.7</joda-time.version>
+    <joda-time.version>2.14.0</joda-time.version>
     <!-- pkg:maven/org.slf4j/slf4j-api -->
-    <slf4j.version>2.0.12</slf4j.version>
+    <slf4j.version>2.0.17</slf4j.version>
     <!-- pkg:maven/org.apache.logging.log4j/log4j-to-slf4j -->
-    <log4j-to-slf4j.version>2.23.0</log4j-to-slf4j.version>
+    <log4j-to-slf4j.version>2.24.3</log4j-to-slf4j.version>
     <!-- pkg:maven/org.hamcrest/hamcrest-library -->
     <hamcrest-library.version>1.3</hamcrest-library.version>
     <!-- pkg:maven/junit/junit -->
@@ -77,23 +77,23 @@
 
     <!-- Mapper -->
     <!-- pkg:maven/commons-beanutils/commons-beanutils -->
-    <commons-beanutils.version>1.9.4</commons-beanutils.version>
+    <commons-beanutils.version>1.10.1</commons-beanutils.version>
     <!-- pkg:maven/org.springframework/spring-context -->
-    <spring.version>6.1.14</spring.version>
+    <spring.version>6.2.7</spring.version>
     <!-- EOL pkg:maven/com.github.dozermapper/dozer-core -->
-    <dozer-core.version>6.5.2</dozer-core.version>
+    <dozer-core.version>7.0.0</dozer-core.version>
     <!-- pkg:maven/ma.glasnost.orika/orika-core -->
     <orika-core.version>1.5.4</orika-core.version>
     <!-- pkg:maven/org.mapstruct/mapstruct -->
-    <mapstruct.version>1.5.5.Final</mapstruct.version>
+    <mapstruct.version>1.6.3</mapstruct.version>
     <!-- pkg:maven/org.modelmapper/modelmapper -->
-    <modelmapper.version>3.2.0</modelmapper.version>
+    <modelmapper.version>3.2.3</modelmapper.version>
     <!-- EOL pkg:maven/com.googlecode.jmapper-framework/jmapper-core -->
     <jmapper-core.version>1.6.1.CR2</jmapper-core.version>
     <!-- pkg:maven/fr.xebia.extras/selma -->
     <selma.version>1.0</selma.version>
     <!-- pkg:maven/com.remondis/remap -->
-    <remap.version>4.3.2</remap.version>
+    <remap.version>4.4.0</remap.version>
   </properties>
 
   <modules>
