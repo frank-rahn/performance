@@ -7,7 +7,7 @@
   <!-- The Basics & Project information -->
   <groupId>de.rahn.performance</groupId>
   <artifactId>performance</artifactId>
-  <version>1.5.10-SNAPSHOT</version>
+  <version>1.6.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Performance Maven Parent</name>
@@ -77,23 +77,23 @@
 
     <!-- Mapper -->
     <!-- pkg:maven/commons-beanutils/commons-beanutils -->
-    <commons-beanutils.version>1.9.4</commons-beanutils.version>
+    <commons-beanutils.version>1.10.1</commons-beanutils.version>
     <!-- pkg:maven/org.springframework/spring-context -->
-    <spring.version>6.1.4</spring.version>
+    <spring.version>6.2.7</spring.version>
     <!-- EOL pkg:maven/com.github.dozermapper/dozer-core -->
-    <dozer-core.version>6.5.2</dozer-core.version>
+    <dozer-core.version>7.0.0</dozer-core.version>
     <!-- pkg:maven/ma.glasnost.orika/orika-core -->
     <orika-core.version>1.5.4</orika-core.version>
     <!-- pkg:maven/org.mapstruct/mapstruct -->
-    <mapstruct.version>1.5.5.Final</mapstruct.version>
+    <mapstruct.version>1.6.3</mapstruct.version>
     <!-- pkg:maven/org.modelmapper/modelmapper -->
-    <modelmapper.version>3.2.0</modelmapper.version>
+    <modelmapper.version>3.2.3</modelmapper.version>
     <!-- EOL pkg:maven/com.googlecode.jmapper-framework/jmapper-core -->
     <jmapper-core.version>1.6.1.CR2</jmapper-core.version>
     <!-- pkg:maven/fr.xebia.extras/selma -->
     <selma.version>1.0</selma.version>
     <!-- pkg:maven/com.remondis/remap -->
-    <remap.version>4.3.2</remap.version>
+    <remap.version>4.4.0</remap.version>
   </properties>
 
   <modules>
