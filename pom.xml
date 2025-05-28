@@ -77,7 +77,7 @@
 
     <!-- Mapper -->
     <!-- pkg:maven/commons-beanutils/commons-beanutils -->
-    <commons-beanutils.version>1.10.1</commons-beanutils.version>
+    <commons-beanutils.version>1.11.0</commons-beanutils.version>
     <!-- pkg:maven/org.springframework/spring-context -->
     <spring.version>6.2.7</spring.version>
     <!-- EOL pkg:maven/com.github.dozermapper/dozer-core -->
