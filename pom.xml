@@ -7,7 +7,7 @@
   <!-- The Basics & Project information -->
   <groupId>de.rahn.performance</groupId>
   <artifactId>performance</artifactId>
-  <version>1.6.1-SNAPSHOT</version>
+  <version>1.6.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Performance Maven Parent</name>
@@ -48,18 +48,18 @@
     <!-- pkg:maven/jakarta.annotation/jakarta.annotation-api -->
     <jakarta.annotation-api.version>2.1.1</jakarta.annotation-api.version>
     <!-- pkg:maven/jakarta.xml.ws/jakarta.xml.ws-api -->
-    <jakarta.xml.ws-api.version>4.0.1</jakarta.xml.ws-api.version>
+    <jakarta.xml.ws-api.version>4.0.2</jakarta.xml.ws-api.version>
     <!-- pkg:maven/jakarta.persistence/jakarta.persistence-api -->
     <jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
 
     <!-- Utilities -->
     <jdk.version>17</jdk.version>
     <!-- pkg:maven/org.apache.commons/commons-lang3 -->
-    <commons-lang3.version>3.17.0</commons-lang3.version>
+    <commons-lang3.version>3.18.0</commons-lang3.version>
     <!-- pkg:maven/commons-collections/commons-collections -->
     <commons-collections.version>3.2.2</commons-collections.version>
     <!-- pkg:maven/commons-io/commons-io -->
-    <commons-io.version>2.19.0</commons-io.version>
+    <commons-io.version>2.20.0</commons-io.version>
     <!-- pkg:maven/org.apache.poi/poi-ooxml -->
     <poi-ooxml.version>5.4.1</poi-ooxml.version>
     <!-- pkg:maven/com.formdev/jide-oss -->
@@ -69,7 +69,7 @@
     <!-- pkg:maven/org.slf4j/slf4j-api -->
     <slf4j.version>2.0.17</slf4j.version>
     <!-- pkg:maven/org.apache.logging.log4j/log4j-to-slf4j -->
-    <log4j-to-slf4j.version>2.24.3</log4j-to-slf4j.version>
+    <log4j-to-slf4j.version>2.25.1</log4j-to-slf4j.version>
     <!-- pkg:maven/org.hamcrest/hamcrest-library -->
     <hamcrest-library.version>1.3</hamcrest-library.version>
     <!-- pkg:maven/junit/junit -->
@@ -77,9 +77,9 @@
 
     <!-- Mapper -->
     <!-- pkg:maven/commons-beanutils/commons-beanutils -->
-    <commons-beanutils.version>1.10.1</commons-beanutils.version>
+    <commons-beanutils.version>1.11.0</commons-beanutils.version>
     <!-- pkg:maven/org.springframework/spring-context -->
-    <spring.version>6.2.7</spring.version>
+    <spring.version>6.2.10</spring.version>
     <!-- EOL pkg:maven/com.github.dozermapper/dozer-core -->
     <dozer-core.version>7.0.0</dozer-core.version>
     <!-- pkg:maven/ma.glasnost.orika/orika-core -->
@@ -87,7 +87,7 @@
     <!-- pkg:maven/org.mapstruct/mapstruct -->
     <mapstruct.version>1.6.3</mapstruct.version>
     <!-- pkg:maven/org.modelmapper/modelmapper -->
-    <modelmapper.version>3.2.3</modelmapper.version>
+    <modelmapper.version>3.2.4</modelmapper.version>
     <!-- EOL pkg:maven/com.googlecode.jmapper-framework/jmapper-core -->
     <jmapper-core.version>1.6.1.CR2</jmapper-core.version>
     <!-- pkg:maven/fr.xebia.extras/selma -->
