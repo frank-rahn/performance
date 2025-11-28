@@ -97,13 +97,12 @@
 
     <!-- Tests -->
     <dependency>
-      <groupId>de.rahn.performance</groupId>
-      <artifactId>test-beans</artifactId>
-      <type>test-jar</type>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-launcher</artifactId>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
     </dependency>
     <dependency>
       <groupId>org.hamcrest</groupId>
@@ -112,6 +111,11 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>de.rahn.performance</groupId>
+      <artifactId>test-beans</artifactId>
+      <type>test-jar</type>
     </dependency>
   </dependencies>
 </project>

@@ -5,7 +5,7 @@
 package de.rahn.performance.beanmapper.vendors;
 
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 
 /**
  * Test des Mappers für ByHand.
@@ -14,9 +14,8 @@ import org.junit.Before;
  */
 public class ByHandTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-  @Before
+  @BeforeEach
   public void mapperBean() {
     mapperBean = new ByHandTestBeansMapperBean(new ObjectFactory());
   }
-
 }

@@ -4,27 +4,41 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
-import org.junit.Before;
-import org.junit.Ignore;
+import java.lang.reflect.InaccessibleObjectException;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test des Mappers für Orika.
  *
  * @author Frank W. Rahn
  */
-@Ignore("Vorübergehen abgeschaltet, da wegen einer InaccessibleObjectException unter JDK-17 nicht lauffähig")
+@Disabled("Vorübergehen abgeschaltet, da wegen einer InaccessibleObjectException unter JDK-17 nicht lauffähig")
 public class OrikaTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
+  private static final String ACCESSIBLE = "accessible: module java.base does not \"opens java.lang\"";
 
-  @Before
+  @BeforeEach
   public void setUp() {
-    mapperBean = new OrikaTestBeansMapperBean(new ObjectFactory());
-    ((OrikaTestBeansMapperBean) mapperBean).initialize();
+    try {
+      mapperBean = new OrikaTestBeansMapperBean(new ObjectFactory());
+      ((OrikaTestBeansMapperBean) mapperBean).initialize();
+    } catch (InaccessibleObjectException exception) {
+      var err = exception.getLocalizedMessage();
+      if(err.contains(ACCESSIBLE)) {
+        Assertions.fail(ACCESSIBLE);
+      } else {
+        Assertions.fail("InaccessibleObjectException: " + err);
+      }
+    }
   }
 
   @Override
+  @Test
   public void testMapEmptyDomainTableWithNullRows() throws Exception {
     try {
       super.testMapEmptyDomainTableWithNullRows();

@@ -8,8 +8,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 import java.math.BigDecimal;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Ein Test für die Klasse {@link Statistics}.
@@ -39,7 +39,7 @@ public class StatisticsTest {
   /**
    * Initialisiere den Test.
    */
-  @Before
+  @BeforeEach
   public void setUp() {
     classUnderTests = new Statistics(METERING_POINT_NAME);
 

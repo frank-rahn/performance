@@ -12,4 +12,11 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bean-mapper-test" options="-Xlint:unchecked -Xlint:deprecation" />
+      <module name="measurement" options="-Xlint:unchecked -Xlint:deprecation" />
+      <module name="test-beans" options="-Xlint:unchecked -Xlint:deprecation" />
+    </option>
+  </component>
 </project>

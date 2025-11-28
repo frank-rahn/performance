@@ -4,13 +4,13 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import java.lang.reflect.InvocationTargetException;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test des Mappers für Commons-BeanUtils.
@@ -19,12 +19,13 @@ import org.junit.Test;
  */
 public class CommonsBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-  @Before
+  @BeforeEach
   public void setUp() {
     mapperBean = new CommonsBeanUtilsTestBeansMapperBean(new ObjectFactory());
   }
 
   @Override
+  @Test
   public void testMapEmptyDomainTableWithNullRows() throws Exception {
     try {
       super.testMapEmptyDomainTableWithNullRows();
@@ -36,9 +37,8 @@ public class CommonsBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMa
     }
   }
 
-  @SuppressWarnings("EmptyMethod")
   @Test
-  @Ignore("Dieser Test kann nicht funktioniert")
+  @Disabled("Dieser Test kann nicht funktioniert")
   @Override
   public void testMapTable() throws Exception {
     // Diese Methode wird überschrieben, um die Annotationen platzieren zu können

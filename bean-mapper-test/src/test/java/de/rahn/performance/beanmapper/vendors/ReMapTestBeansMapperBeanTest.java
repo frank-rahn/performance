@@ -6,8 +6,8 @@ package de.rahn.performance.beanmapper.vendors;
 import com.remondis.remap.AssertMapping;
 import de.rahn.performance.testbeans.DomainTable;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test des Mappers für reMap.
@@ -16,7 +16,7 @@ import org.junit.Test;
  */
 public class ReMapTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-  @Before
+  @BeforeEach
   public void setUp() {
     mapperBean = new ReMapTestBeansMapperBean().initialize();
   }

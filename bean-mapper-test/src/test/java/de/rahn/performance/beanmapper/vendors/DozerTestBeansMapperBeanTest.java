@@ -4,11 +4,12 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import com.github.dozermapper.core.MappingException;
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test des Mappers für Dozer.
@@ -17,13 +18,14 @@ import org.junit.Before;
  */
 public class DozerTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-  @Before
+  @BeforeEach
   public void setUp() {
     mapperBean = new DozerTestBeansMapperBean(new ObjectFactory());
     ((DozerTestBeansMapperBean) mapperBean).initialize();
   }
 
   @Override
+  @Test
   public void testMapEmptyDomainTableWithNullRows() throws Exception {
     try {
       super.testMapEmptyDomainTableWithNullRows();

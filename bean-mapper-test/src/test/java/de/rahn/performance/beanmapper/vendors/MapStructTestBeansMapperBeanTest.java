@@ -4,19 +4,20 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 /**
  * Test des Mappers für MapStruct.
  *
  * @author Frank W. Rahn
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = {"classpath:spring.xml"})
 public class MapStructTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
@@ -26,6 +27,7 @@ public class MapStructTestBeansMapperBeanTest extends AbstractTestBeansMapperBea
   }
 
   @Override
+  @Test
   public void testMapEmptyDomainTableWithNullRows() throws Exception {
     try {
       super.testMapEmptyDomainTableWithNullRows();

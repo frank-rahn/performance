@@ -17,7 +17,7 @@ import de.rahn.performance.testbeans.TestBeansUtils;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 import java.util.ArrayList;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test für {@link TestBeansMapperBean}.

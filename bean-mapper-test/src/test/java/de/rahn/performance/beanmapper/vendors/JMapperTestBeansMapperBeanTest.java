@@ -3,29 +3,46 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import com.googlecode.jmapper.exceptions.JMapperException;
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
-import org.junit.Before;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test des Mappers für JMapper.
  *
  * @author Frank W. Rahn
  */
-@Ignore("Abgeschaltet, wegen einer InaccessibleObjectException unter JDK-17 nicht lauffähig und nicht mehr gepflegt "
+@Disabled("Abgeschaltet, wegen einer InaccessibleObjectException unter JDK-17 nicht lauffähig und nicht mehr gepflegt "
     + "(EOL)")
 public class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
+  private static final String ACCESSIBLE = "accessible: module java.base does not \"opens java.util\"";
 
-  @Before
+  @BeforeEach
   public void setUp() {
-    mapperBean = new JMapperTestBeansMapperBean(new ObjectFactory());
-    ((JMapperTestBeansMapperBean) mapperBean).initialize();
+    try {
+      mapperBean = new JMapperTestBeansMapperBean(new ObjectFactory());
+      ((JMapperTestBeansMapperBean) mapperBean).initialize();
+    } catch (JMapperException error) {
+      var exception = error.getCause(); // java.lang.ExceptionInInitializerError
+      exception = exception.getCause(); // java.lang.reflect.InaccessibleObjectException
+      var err = exception.getLocalizedMessage();
+      if (err.contains(ACCESSIBLE)) {
+        Assertions.fail(ACCESSIBLE);
+      } else {
+        Assertions.fail("InaccessibleObjectException: " + err);
+      }
+
+      fail(exception.getMessage());
+    }
   }
 
   @Override
+  @Test
   public void testMapEmptyDomainTableWithNullRows() throws Exception {
     try {
       super.testMapEmptyDomainTableWithNullRows();

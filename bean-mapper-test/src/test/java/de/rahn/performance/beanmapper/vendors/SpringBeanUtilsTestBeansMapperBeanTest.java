@@ -5,9 +5,9 @@
 package de.rahn.performance.beanmapper.vendors;
 
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test des Mappers für Spring-BeanUtils.
@@ -16,14 +16,14 @@ import org.junit.Test;
  */
 public class SpringBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
-  @Before
+  @BeforeEach
   public void mapperBean() {
     mapperBean = new SpringBeanUtilsTestBeansMapperBean(new ObjectFactory());
   }
 
   @SuppressWarnings("EmptyMethod")
   @Test
-  @Ignore("Dieser Test kann nicht funktioniert")
+  @Disabled("Dieser Test kann nicht funktioniert")
   @Override
   public void testMapTable() throws Exception {
     // Diese Methode wird überschrieben, um die Annotationen platzieren zu können

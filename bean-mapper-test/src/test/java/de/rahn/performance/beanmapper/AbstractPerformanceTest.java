@@ -19,20 +19,20 @@ import de.rahn.performance.testbeans.DomainTable;
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 import java.io.IOException;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 /**
  * Ein Performanz-Test der Mapper. Dabei wird ein {@link XmlTable} auf ein {@link DomainTable} gemappt.
  *
  * @author Frank W. Rahn
  */
-@RunWith(SpringJUnit4ClassRunner.class)
+@ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = {"classpath:spring.xml"})
 public abstract class AbstractPerformanceTest {
 
@@ -64,7 +64,7 @@ public abstract class AbstractPerformanceTest {
    *
    * @throws Exception, wenn die Testdaten nicht erzeugt werden können
    */
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     setUpBefore();
 

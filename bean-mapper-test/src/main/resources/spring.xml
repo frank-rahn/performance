@@ -12,7 +12,7 @@
 	">
 
   <!-- Die Fabrik für JAXB -->
-  <bean class="https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory"/>
+  <bean id="objectFactory" class="https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory"/>
 
   <!-- Die Spring-Beans scannen und JSR-250 aktivieren -->
   <context:component-scan base-package="de.rahn.performance.beanmapper"/>

@@ -9,20 +9,20 @@ import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.slf4j.LoggerFactory.getLogger;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 /**
  * Ein Test für die Klasse {@link MapperManager}.
  *
  * @author Frank W. Rahn
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring.xml"})
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(locations = {"classpath:spring.xml"})
 public class MapperManagerTest {
 
   private static final Logger LOGGER = getLogger(MapperManagerTest.class);
