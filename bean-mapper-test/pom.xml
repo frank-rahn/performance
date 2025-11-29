@@ -68,11 +68,6 @@
       <artifactId>mapstruct</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.mapstruct</groupId>
-      <artifactId>mapstruct-processor</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
       <groupId>org.modelmapper</groupId>
       <artifactId>modelmapper</artifactId>
     </dependency>
@@ -84,11 +79,6 @@
     <dependency>
       <groupId>fr.xebia.extras</groupId>
       <artifactId>selma</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>fr.xebia.extras</groupId>
-      <artifactId>selma-processor</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.remondis</groupId>

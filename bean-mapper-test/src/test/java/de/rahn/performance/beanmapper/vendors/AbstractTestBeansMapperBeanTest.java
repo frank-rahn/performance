@@ -81,7 +81,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
     assertThat("Kein Zwischenergebnis geliefert", temp, notNullValue());
     assertThat("Zwischenergebnis hat keine Zeilen", temp.getRows(), notNullValue());
     assertThat("Zwischenergebnis hat keine Zeilen", temp.getRows().size(), greaterThan(0));
-    assertThat("Die Zeilen des Zwischenergebnis habe einen falschen Typ", temp.getRows().get(0),
+    assertThat("Die Zeilen des Zwischenergebnis habe einen falschen Typ", temp.getRows().getFirst(),
         instanceOf(XmlRow.class));
 
     DomainTable target = mapperBean.map(temp);

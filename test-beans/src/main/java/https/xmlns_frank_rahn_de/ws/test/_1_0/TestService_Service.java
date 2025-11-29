@@ -5,6 +5,8 @@ import jakarta.xml.ws.WebEndpoint;
 import jakarta.xml.ws.WebServiceClient;
 import jakarta.xml.ws.WebServiceFeature;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,8 +26,8 @@ public class TestService_Service extends Service {
   static {
     URL url = null;
     try {
-      url = new URL("https://xmlns.frank-rahn.de/ws/test/1.0");
-    } catch (MalformedURLException e) {
+      url = new URI("https://xmlns.frank-rahn.de/ws/test/1.0").toURL();
+    } catch (URISyntaxException | MalformedURLException e) {
       Logger.getLogger(TestService_Service.class.getName())
           .log(Level.INFO,
               "Can not initialize the default wsdl from {0}", "https://xmlns.frank-rahn.de/ws/test/1.0");

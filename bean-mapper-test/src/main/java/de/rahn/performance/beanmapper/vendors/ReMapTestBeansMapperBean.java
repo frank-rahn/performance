@@ -10,19 +10,18 @@ import de.rahn.performance.testbeans.DomainRow;
 import de.rahn.performance.testbeans.DomainTable;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
+import jakarta.annotation.PostConstruct;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.function.Function;
-import jakarta.annotation.PostConstruct;
 import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;
 
 /**
  * Der Mapper für {@link Mapper}.
  *
  * @author Tom Hombergs
  */
-@Component("reMap")
+//@Component("reMap")
 @Order(9)
 public class ReMapTestBeansMapperBean implements TestBeansMapperBean {
 

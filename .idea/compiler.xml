@@ -6,6 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for Performance Maven Parent" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.6.3/mapstruct-processor-1.6.3.jar" />
+          <entry name="$MAVEN_REPOSITORY$/fr/xebia/extras/selma-processor/1.0/selma-processor-1.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/fr/xebia/extras/selma/1.0/selma-1.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
+        </processorPath>
         <module name="measurement" />
         <module name="bean-mapper-test" />
         <module name="test-beans" />

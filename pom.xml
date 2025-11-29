@@ -53,7 +53,7 @@
     <jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
 
     <!-- Utilities -->
-    <jdk.version>17</jdk.version>
+    <jdk.version>21</jdk.version>
     <!-- pkg:maven/org.apache.commons/commons-lang3 -->
     <commons-lang3.version>3.18.0</commons-lang3.version>
     <!-- pkg:maven/commons-collections/commons-collections -->
@@ -250,12 +250,6 @@
         <version>${mapstruct.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.mapstruct</groupId>
-        <artifactId>mapstruct-processor</artifactId>
-        <version>${mapstruct.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
         <groupId>org.modelmapper</groupId>
         <artifactId>modelmapper</artifactId>
         <version>${modelmapper.version}</version>
@@ -275,12 +269,6 @@
         <groupId>fr.xebia.extras</groupId>
         <artifactId>selma</artifactId>
         <version>${selma.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>fr.xebia.extras</groupId>
-        <artifactId>selma-processor</artifactId>
-        <version>${selma.version}</version>
-        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>com.remondis</groupId>
@@ -324,6 +312,18 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${maven-compiler-plugin.version}</version>
           <configuration>
+            <annotationProcessorPaths>
+              <path>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+              </path>
+              <path>
+                <groupId>fr.xebia.extras</groupId>
+                <artifactId>selma-processor</artifactId>
+                <version>${selma.version}</version>
+              </path>
+            </annotationProcessorPaths>
             <compilerArgs>
               <arg>-Xlint:unchecked</arg>
               <arg>-Xlint:deprecation</arg>
