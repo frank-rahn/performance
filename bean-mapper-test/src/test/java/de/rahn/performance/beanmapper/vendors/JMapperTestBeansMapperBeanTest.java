@@ -9,7 +9,6 @@ import com.googlecode.jmapper.exceptions.JMapperException;
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -17,9 +16,8 @@ import org.junit.jupiter.api.Test;
  *
  * @author Frank W. Rahn
  */
-@Disabled("Abgeschaltet, wegen einer InaccessibleObjectException unter JDK-17 nicht lauffähig und nicht mehr gepflegt "
-    + "(EOL)")
 public class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
+
   private static final String ACCESSIBLE = "accessible: module java.base does not \"opens java.util\"";
 
   @BeforeEach

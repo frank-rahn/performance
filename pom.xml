@@ -40,6 +40,7 @@
 
     <!-- Maven Plugins -->
     <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+    <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
     <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
     <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
@@ -55,13 +56,13 @@
     <!-- Utilities -->
     <jdk.version>21</jdk.version>
     <!-- pkg:maven/org.apache.commons/commons-lang3 -->
-    <commons-lang3.version>3.18.0</commons-lang3.version>
+    <commons-lang3.version>3.20.0</commons-lang3.version>
     <!-- pkg:maven/commons-collections/commons-collections -->
     <commons-collections.version>3.2.2</commons-collections.version>
     <!-- pkg:maven/commons-io/commons-io -->
-    <commons-io.version>2.20.0</commons-io.version>
+    <commons-io.version>2.21.0</commons-io.version>
     <!-- pkg:maven/org.apache.poi/poi-ooxml -->
-    <poi-ooxml.version>5.4.1</poi-ooxml.version>
+    <poi-ooxml.version>5.5.0</poi-ooxml.version>
     <!-- pkg:maven/com.formdev/jide-oss -->
     <jide-oss.version>3.7.15</jide-oss.version>
     <!-- pkg:maven/joda-time/joda-time -->
@@ -69,7 +70,7 @@
     <!-- pkg:maven/org.slf4j/slf4j-api -->
     <slf4j.version>2.0.17</slf4j.version>
     <!-- pkg:maven/org.apache.logging.log4j/log4j-to-slf4j -->
-    <log4j-to-slf4j.version>2.25.1</log4j-to-slf4j.version>
+    <log4j-to-slf4j.version>2.25.2</log4j-to-slf4j.version>
     <!-- pkg:maven/org.hamcrest/hamcrest-library -->
     <hamcrest-library.version>3.0</hamcrest-library.version>
     <!-- pkg:maven/org.junit.jupiter/junit-jupiter -->
@@ -329,6 +330,26 @@
               <arg>-Xlint:deprecation</arg>
             </compilerArgs>
             <release>${jdk.version}</release>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven-surefire-plugin.version}</version>
+          <configuration>
+            <argLine>
+              <!-- For Orika -->
+              --add-opens java.base/java.lang=ALL-UNNAMED
+              <!-- For reMap -->
+              --add-opens java.base/java.lang=ALL-UNNAMED
+              <!-- For JMapper -->
+              --add-opens java.base/java.lang=ALL-UNNAMED
+              --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+              --add-opens=java.base/java.text=ALL-UNNAMED
+              --add-opens java.base/java.util=ALL-UNNAMED
+              --add-opens=java.desktop/java.awt.font=ALL-UNNAMED
+            </argLine>
           </configuration>
         </plugin>
 

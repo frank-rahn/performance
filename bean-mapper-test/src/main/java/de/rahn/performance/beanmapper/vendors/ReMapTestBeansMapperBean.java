@@ -15,13 +15,16 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.function.Function;
 import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 
 /**
  * Der Mapper für {@link Mapper}.
+ * <p>
+ * <strong><em>Achtung</em></strong>: Dieser Mapper liefert unter JDK-21 eine UnsupportedOperationException!
  *
  * @author Tom Hombergs
  */
-//@Component("reMap")
+@Component("reMap")
 @Order(9)
 public class ReMapTestBeansMapperBean implements TestBeansMapperBean {
 

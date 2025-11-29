@@ -18,13 +18,18 @@ import https.xmlns_frank_rahn_de.types.testtypes._1.XmlRow;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 import jakarta.annotation.PostConstruct;
 import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 
 /**
  * Der Mapper für {@link JMapper}.
+ * <p>
+ * <strong><em>Achtung</em></strong>: Dieser Mapper liefert unter JDK-17 eine InaccessibleObjectException!
+ * <p>
+ * <strong><em>Achtung</em></strong>: Dieser Mapper wird nicht mehr gepflegt (EOL)!
  *
  * @author Frank W. Rahn
  */
-//@Component("JMapper")
+@Component("JMapper")
 @Order(7)
 public class JMapperTestBeansMapperBean extends AbstractTestBeansMapperBean {
 

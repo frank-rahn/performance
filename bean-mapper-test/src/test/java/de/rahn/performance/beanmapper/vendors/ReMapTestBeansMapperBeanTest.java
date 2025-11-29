@@ -8,7 +8,6 @@ import de.rahn.performance.testbeans.DomainTable;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -16,7 +15,6 @@ import org.junit.jupiter.api.Test;
  *
  * @author Tom Hombergs
  */
-@Disabled("Vorübergehen abgeschaltet, da wegen einer UnsupportedOperationException unter JDK-21 nicht lauffähig")
 public class ReMapTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   private static final String ACCESSIBLE = "accessible: module java.base does not \"opens java.lang\"";

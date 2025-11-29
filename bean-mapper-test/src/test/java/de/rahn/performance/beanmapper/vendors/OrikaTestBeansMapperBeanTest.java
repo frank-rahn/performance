@@ -10,7 +10,6 @@ import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import java.lang.reflect.InaccessibleObjectException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -18,8 +17,8 @@ import org.junit.jupiter.api.Test;
  *
  * @author Frank W. Rahn
  */
-@Disabled("Vorübergehen abgeschaltet, da wegen einer InaccessibleObjectException unter JDK-17 nicht lauffähig")
 public class OrikaTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
+
   private static final String ACCESSIBLE = "accessible: module java.base does not \"opens java.lang\"";
 
   @BeforeEach
@@ -29,7 +28,7 @@ public class OrikaTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTes
       ((OrikaTestBeansMapperBean) mapperBean).initialize();
     } catch (InaccessibleObjectException exception) {
       var err = exception.getLocalizedMessage();
-      if(err.contains(ACCESSIBLE)) {
+      if (err.contains(ACCESSIBLE)) {
         Assertions.fail(ACCESSIBLE);
       } else {
         Assertions.fail("InaccessibleObjectException: " + err);

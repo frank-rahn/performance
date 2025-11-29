@@ -13,13 +13,16 @@ import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
 import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 
 /**
  * Der Mapper für {@link MapperFacade}.
+ * <p>
+ * <strong><em>Achtung</em></strong>: Dieser Mapper liefert unter JDK-17 eine InaccessibleObjectException!
  *
  * @author Frank W. Rahn
  */
-//@Component("Orika")
+@Component("Orika")
 @Order(4)
 public class OrikaTestBeansMapperBean extends AbstractTestBeansMapperBean {
 
