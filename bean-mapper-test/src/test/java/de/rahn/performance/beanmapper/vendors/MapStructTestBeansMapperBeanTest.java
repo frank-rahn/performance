@@ -6,6 +6,7 @@ package de.rahn.performance.beanmapper.vendors;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
+import de.rahn.performance.beanmapper.config.SpringConfiguration;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  * @author Frank W. Rahn
  */
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(locations = {"classpath:spring.xml"})
+@ContextConfiguration(classes = {SpringConfiguration.class})
 public class MapStructTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   @Autowired

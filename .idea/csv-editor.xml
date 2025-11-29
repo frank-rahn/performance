@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/.moderne/build/20251128210647-60Odb/manifest.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/.moderne/run/20251128202318-Y1pBn/trace.csv">
           <value>
             <Attribute>

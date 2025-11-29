@@ -9,6 +9,7 @@ import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.slf4j.LoggerFactory.getLogger;
 
+import de.rahn.performance.beanmapper.config.SpringConfiguration;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
@@ -22,7 +23,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  * @author Frank W. Rahn
  */
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(locations = {"classpath:spring.xml"})
+@ContextConfiguration(classes = {SpringConfiguration.class})
 public class MapperManagerTest {
 
   private static final Logger LOGGER = getLogger(MapperManagerTest.class);

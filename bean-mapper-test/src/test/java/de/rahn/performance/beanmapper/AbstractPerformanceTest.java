@@ -12,6 +12,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.slf4j.LoggerFactory.getLogger;
 
+import de.rahn.performance.beanmapper.config.SpringConfiguration;
 import de.rahn.performance.beanmapper.utils.MapperManager;
 import de.rahn.performance.beanmapper.vendors.ByHandTestBeansMapperBean;
 import de.rahn.performance.measurement.PerformanceMeasurement;
@@ -33,7 +34,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  * @author Frank W. Rahn
  */
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(locations = {"classpath:spring.xml"})
+@ContextConfiguration(classes = {SpringConfiguration.class})
 public abstract class AbstractPerformanceTest {
 
   protected static final Logger LOGGER = getLogger(AbstractPerformanceTest.class);
