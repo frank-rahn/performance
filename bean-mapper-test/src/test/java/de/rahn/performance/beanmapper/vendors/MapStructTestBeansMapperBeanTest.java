@@ -4,7 +4,7 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import de.rahn.performance.beanmapper.config.SpringConfiguration;
 import org.junit.jupiter.api.Test;
@@ -29,14 +29,7 @@ public class MapStructTestBeansMapperBeanTest extends AbstractTestBeansMapperBea
 
   @Override
   @Test
-  public void testMapEmptyDomainTableWithNullRows() throws Exception {
-    try {
-      super.testMapEmptyDomainTableWithNullRows();
-      fail("Hier hatte eine Exception geworfen werden sollen");
-    } catch (NullPointerException exception) {
-      // Hier wird XmlTable.setRows(null) aufgerufen.
-      // Die JAXB Generierung lässt das direkte setzen von Listen nicht zu.
-      // Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
-    }
+  public void mapEmptyDomainTableWithNullRows() {
+    assertThatThrownBy(super::mapEmptyDomainTableWithNullRows).isInstanceOf(NullPointerException.class);
   }
 }

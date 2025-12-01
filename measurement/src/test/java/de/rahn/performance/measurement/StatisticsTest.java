@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
  *
  * @author Frank W. Rahn
  */
-public class StatisticsTest {
+class StatisticsTest {
 
   private static final String METERING_POINT_NAME = "MeteringPointName";
 
@@ -40,7 +40,7 @@ public class StatisticsTest {
    * Initialisiere den Test.
    */
   @BeforeEach
-  public void setUp() {
+  void setUp() {
     classUnderTests = new Statistics(METERING_POINT_NAME);
 
     for (long i = COUNTER; i > 0; --i) {
@@ -52,7 +52,7 @@ public class StatisticsTest {
    * Test method for {@link Statistics#getMeteringPointName()} .
    */
   @Test
-  public void testGetMeteringPointName() {
+  void getMeteringPointName() {
     assertThat(classUnderTests.getMeteringPointName(), is(METERING_POINT_NAME));
   }
 
@@ -60,7 +60,7 @@ public class StatisticsTest {
    * Test method for {@link Statistics#getCounter()}.
    */
   @Test
-  public void testGetCounter() {
+  void getCounter() {
     assertThat(classUnderTests.getCounter(), is(COUNTER));
   }
 
@@ -68,7 +68,7 @@ public class StatisticsTest {
    * Test method for {@link Statistics#getMinimum()}.
    */
   @Test
-  public void testGetMinimum() {
+  void getMinimum() {
     assertThat(classUnderTests.getMinimum(), is(MINIMUM));
   }
 
@@ -76,7 +76,7 @@ public class StatisticsTest {
    * Test method for {@link Statistics#getMaximum()}.
    */
   @Test
-  public void testGetMaximum() {
+  void getMaximum() {
     assertThat(classUnderTests.getMaximum(), is(MAXIMUM));
   }
 
@@ -84,7 +84,7 @@ public class StatisticsTest {
    * Test method for {@link Statistics#getLast()}.
    */
   @Test
-  public void testGetLast() {
+  void getLast() {
     assertThat(classUnderTests.getLast(), is(LAST));
   }
 
@@ -92,7 +92,7 @@ public class StatisticsTest {
    * Test method for {@link Statistics#average()}.
    */
   @Test
-  public void testAverage() {
+  void average() {
     assertThat(classUnderTests.average(), is(new BigDecimal(AVERAGE)));
   }
 
@@ -100,7 +100,7 @@ public class StatisticsTest {
    * Test method for {@link Statistics#standardDeviation()}.
    */
   @Test
-  public void testStandardDeviation() {
+  void standardDeviation() {
     assertThat(classUnderTests.standardDeviation(), is(STDDEV));
   }
 
@@ -108,7 +108,7 @@ public class StatisticsTest {
    * Test method for {@link Statistics#getValues()}.
    */
   @Test
-  public void testGetValues() {
+  void getValues() {
     assertThat(classUnderTests.getValues(), is(VALUES));
   }
 }

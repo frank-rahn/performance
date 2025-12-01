@@ -5,9 +5,7 @@
 package de.rahn.performance.beanmapper;
 
 import static java.lang.System.currentTimeMillis;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.notNullValue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import de.rahn.performance.beanmapper.vendors.SpringBeanUtilsTestBeansMapperBean;
 import de.rahn.performance.testbeans.DomainTable;
@@ -49,9 +47,9 @@ public class PerformanceTestWithIncompleteFixtures extends AbstractPerformanceTe
         long value = currentTimeMillis() - start;
 
         // Überprüfung
-        assertThat(msg, table, notNullValue());
+        assertThat(table).as(msg).isNotNull();
         table.setRows(new ArrayList<>()); // Wegen des Unterschieds zu org.apache.commons.beanutils.BeanUtils
-        assertThat(msg, table, equalTo(domainTable));
+        assertThat(domainTable).as(msg).isEqualTo(table);
 
         // Messwert registrieren
         measurement.addValue(mapper.getMapperName(), value);

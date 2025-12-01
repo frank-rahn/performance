@@ -3,11 +3,11 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.Assertions.fail;
 
 import com.googlecode.jmapper.exceptions.JMapperException;
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,12 +16,13 @@ import org.junit.jupiter.api.Test;
  *
  * @author Frank W. Rahn
  */
-public class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
+@SuppressWarnings("ResultOfMethodCallIgnored")
+class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   private static final String ACCESSIBLE = "accessible: module java.base does not \"opens java.util\"";
 
   @BeforeEach
-  public void setUp() {
+  void setUp() {
     try {
       mapperBean = new JMapperTestBeansMapperBean(new ObjectFactory());
       ((JMapperTestBeansMapperBean) mapperBean).initialize();
@@ -30,9 +31,9 @@ public class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanT
       exception = exception.getCause(); // java.lang.reflect.InaccessibleObjectException
       var err = exception.getLocalizedMessage();
       if (err.contains(ACCESSIBLE)) {
-        Assertions.fail(ACCESSIBLE);
+        fail(ACCESSIBLE);
       } else {
-        Assertions.fail("InaccessibleObjectException: " + err);
+        fail("InaccessibleObjectException: " + err);
       }
 
       fail(exception.getMessage());
@@ -41,14 +42,7 @@ public class JMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanT
 
   @Override
   @Test
-  public void testMapEmptyDomainTableWithNullRows() throws Exception {
-    try {
-      super.testMapEmptyDomainTableWithNullRows();
-      fail("Hier hatte eine Exception geworfen werden sollen");
-    } catch (JMapperException exception) {
-      // Hier wird XmlTable.setRows(null) aufgerufen.
-      // Die JAXB Generierung lässt das direkte setzen von Listen nicht zu.
-      // Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
-    }
+  public void mapEmptyDomainTableWithNullRows() {
+    assertThatThrownBy(super::mapEmptyDomainTableWithNullRows).isInstanceOf(JMapperException.class);
   }
 }

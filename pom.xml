@@ -77,6 +77,8 @@
     <junit.version>5.14.1</junit.version>
     <!-- pkg:maven/org.junit.platform/junit-platform-launcher -->
     <junit-platform-launcher.version>1.14.1</junit-platform-launcher.version>
+    <!-- pkg:maven/org.assertj/assertj-core -->
+    <assertj.version>3.27.6</assertj.version>
 
     <!-- Mapper -->
     <!-- pkg:maven/commons-beanutils/commons-beanutils -->
@@ -300,6 +302,12 @@
         <groupId>org.springframework</groupId>
         <artifactId>spring-test</artifactId>
         <version>${spring.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <version>${assertj.version}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>

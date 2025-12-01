@@ -4,11 +4,11 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.Assertions.fail;
 
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import java.lang.reflect.InaccessibleObjectException;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,35 +17,29 @@ import org.junit.jupiter.api.Test;
  *
  * @author Frank W. Rahn
  */
-public class OrikaTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
+@SuppressWarnings("ResultOfMethodCallIgnored")
+class OrikaTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   private static final String ACCESSIBLE = "accessible: module java.base does not \"opens java.lang\"";
 
   @BeforeEach
-  public void setUp() {
+  void setUp() {
     try {
       mapperBean = new OrikaTestBeansMapperBean(new ObjectFactory());
       ((OrikaTestBeansMapperBean) mapperBean).initialize();
     } catch (InaccessibleObjectException exception) {
       var err = exception.getLocalizedMessage();
       if (err.contains(ACCESSIBLE)) {
-        Assertions.fail(ACCESSIBLE);
+        fail(ACCESSIBLE);
       } else {
-        Assertions.fail("InaccessibleObjectException: " + err);
+        fail("InaccessibleObjectException: " + err);
       }
     }
   }
 
   @Override
   @Test
-  public void testMapEmptyDomainTableWithNullRows() throws Exception {
-    try {
-      super.testMapEmptyDomainTableWithNullRows();
-      fail("Hier hatte eine Exception geworfen werden sollen");
-    } catch (NullPointerException exception) {
-      // Hier wird XmlTable.setRows(null) aufgerufen.
-      // Die JAXB Generierung lässt das direkte setzen von Listen nicht zu.
-      // Sondern ruft rows.addAll(null) auf, was zum Fehler führt.
-    }
+  public void mapEmptyDomainTableWithNullRows() {
+    assertThatThrownBy(super::mapEmptyDomainTableWithNullRows).isInstanceOf(NullPointerException.class);
   }
 }

@@ -14,10 +14,10 @@ import org.junit.jupiter.api.Test;
  *
  * @author Frank W. Rahn
  */
-public class SpringBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
+class SpringBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   @BeforeEach
-  public void mapperBean() {
+  void mapperBean() {
     mapperBean = new SpringBeanUtilsTestBeansMapperBean(new ObjectFactory());
   }
 
@@ -25,8 +25,8 @@ public class SpringBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMap
   @Test
   @Disabled("Dieser Test kann nicht funktioniert")
   @Override
-  public void testMapTable() throws Exception {
+  public void mapTable() throws Exception {
     // Diese Methode wird überschrieben, um die Annotationen platzieren zu können
-    super.testMapTable();
+    super.mapTable();
   }
 }

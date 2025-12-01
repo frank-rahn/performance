@@ -103,6 +103,10 @@
       <artifactId>spring-test</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+    </dependency>
+    <dependency>
       <groupId>de.rahn.performance</groupId>
       <artifactId>test-beans</artifactId>
       <type>test-jar</type>

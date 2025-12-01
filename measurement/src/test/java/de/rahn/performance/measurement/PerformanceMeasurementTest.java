@@ -2,7 +2,7 @@ package de.rahn.performance.measurement;
 
 import org.junit.jupiter.api.Test;
 
-public class PerformanceMeasurementTest {
+class PerformanceMeasurementTest {
 
   private PerformanceMeasurement classUnderTest;
 
@@ -10,7 +10,7 @@ public class PerformanceMeasurementTest {
    * Erstelle eine einfache Datei.
    */
   @Test
-  public void testMeasurement_1() throws Exception {
+  void measurement1() throws Exception {
     classUnderTest = new PerformanceMeasurement("target/testMeasurement_1");
 
     for (int i = 0; i < 3; i++) {
@@ -40,7 +40,7 @@ public class PerformanceMeasurementTest {
    * Erstelle eine einfache Datei.
    */
   @Test
-  public void testMeasurement_2() throws Exception {
+  void measurement2() throws Exception {
     classUnderTest = new PerformanceMeasurement("target/testMeasurement_2");
     classUnderTest.endWarmUp();
     classUnderTest.endMeasurement();
@@ -50,7 +50,7 @@ public class PerformanceMeasurementTest {
    * Erstelle eine einfache Datei.
    */
   @Test
-  public void testMeasurement_3() throws Exception {
+  void measurement3() throws Exception {
     classUnderTest = new PerformanceMeasurement("target/testMeasurement_3");
     classUnderTest.endWarmUp();
     classUnderTest.endMeasurement();

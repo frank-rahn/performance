@@ -4,9 +4,7 @@
  */
 package de.rahn.performance.beanmapper.utils;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.greaterThan;
-import static org.hamcrest.Matchers.notNullValue;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import de.rahn.performance.beanmapper.config.SpringConfiguration;
@@ -24,7 +22,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  */
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {SpringConfiguration.class})
-public class MapperManagerTest {
+class MapperManagerTest {
 
   private static final Logger LOGGER = getLogger(MapperManagerTest.class);
 
@@ -35,10 +33,10 @@ public class MapperManagerTest {
    * Test method for {@link MapperManager#getMappers()}.
    */
   @Test
-  public void testGetMappers() {
-    assertThat("MapperManager wurde nicht angelegt", manager, notNullValue());
-    assertThat("keine Mapper vorhanden", manager.getMappers(), notNullValue());
-    assertThat("keine Mapper vorhanden", manager.getMappers().length, greaterThan(0));
+  void getMappers() {
+    assertThat(manager).as("MapperManager wurde nicht angelegt").isNotNull();
+    assertThat(manager.getMappers()).as("keine Mapper vorhanden").isNotNull();
+    assertThat(manager.getMappers().length > 0).as("keine Mapper vorhanden").isTrue();
 
     LOGGER.info("Mappers {}", (Object) manager.getNames());
   }

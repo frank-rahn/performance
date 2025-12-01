@@ -12,10 +12,10 @@ import org.junit.jupiter.api.BeforeEach;
  *
  * @author Frank W. Rahn
  */
-public class ByHandTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
+class ByHandTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   @BeforeEach
-  public void mapperBean() {
+  void mapperBean() {
     mapperBean = new ByHandTestBeansMapperBean(new ObjectFactory());
   }
 }

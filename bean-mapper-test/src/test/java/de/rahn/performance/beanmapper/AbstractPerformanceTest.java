@@ -7,9 +7,7 @@ package de.rahn.performance.beanmapper;
 import static de.rahn.performance.testbeans.TestBeansUtils.createXmlTable;
 import static java.lang.System.currentTimeMillis;
 import static java.util.concurrent.TimeUnit.MINUTES;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.notNullValue;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import de.rahn.performance.beanmapper.config.SpringConfiguration;
@@ -19,7 +17,6 @@ import de.rahn.performance.measurement.PerformanceMeasurement;
 import de.rahn.performance.testbeans.DomainTable;
 import https.xmlns_frank_rahn_de.types.testtypes._1.ObjectFactory;
 import https.xmlns_frank_rahn_de.types.testtypes._1.XmlTable;
-import java.io.IOException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -82,7 +79,7 @@ public abstract class AbstractPerformanceTest {
    * Die Messung durchführen.
    */
   @Test
-  public void testPerformance() throws IOException {
+  public void performance() throws Exception {
     // Warmlaufen
     for (int i = 0; i < 10; i++) {
       runTestOverAllMappers(i);
@@ -129,8 +126,8 @@ public abstract class AbstractPerformanceTest {
       long value = currentTimeMillis() - start;
 
       // Überprüfung
-      assertThat(msg, table, notNullValue());
-      assertThat(msg, table, equalTo(domainTable));
+      assertThat(table).as(msg).isNotNull();
+      assertThat(domainTable).as(msg).isEqualTo(table);
 
       // Messwert registrieren
       measurement.addValue(mapper.getMapperName(), value);
