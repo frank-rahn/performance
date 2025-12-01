@@ -4,8 +4,7 @@
  */
 package de.rahn.performance.beanmapper.vendors;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import de.rahn.performance.beanmapper.AbstractTestBeansMapperBean;
 import de.rahn.performance.beanmapper.TestBeansMapperBean;
@@ -34,7 +33,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
     source.setRows(new ArrayList<>());
 
     XmlTable target = mapperBean.map(source);
-    org.assertj.core.api.Assertions.assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
+    assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
   }
 
   /**
@@ -43,7 +42,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
   @Test
   public void mapEmptyDomainTableWithNullRows() throws Exception {
     XmlTable target = mapperBean.map(new DomainTable());
-    org.assertj.core.api.Assertions.assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
+    assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
   }
 
   /**
@@ -55,7 +54,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
     source.setRows(new ArrayList<>());
 
     DomainTable target = mapperBean.map(source);
-    org.assertj.core.api.Assertions.assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
+    assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
   }
 
   /**
@@ -64,7 +63,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
   @Test
   public void mapEmptyXmlTableWithNullRows() throws Exception {
     DomainTable target = mapperBean.map(new XmlTable());
-    org.assertj.core.api.Assertions.assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
+    assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
   }
 
   /**
@@ -75,13 +74,13 @@ public abstract class AbstractTestBeansMapperBeanTest {
     DomainTable source = TestBeansUtils.createDomainTable(1, 1);
 
     XmlTable temp = mapperBean.map(source);
-    org.assertj.core.api.Assertions.assertThat(temp).as("Kein Zwischenergebnis geliefert").isNotNull();
-    org.assertj.core.api.Assertions.assertThat(temp.getRows()).as("Zwischenergebnis hat keine Zeilen").isNotNull();
-    org.assertj.core.api.Assertions.assertThat(temp.getRows().size() > 0).as("Zwischenergebnis hat keine Zeilen").isTrue();
-    org.assertj.core.api.Assertions.assertThat(temp.getRows().getFirst()).as("Die Zeilen des Zwischenergebnis habe einen falschen Typ").isInstanceOf(XmlRow.class);
+    assertThat(temp).as("Kein Zwischenergebnis geliefert").isNotNull();
+    assertThat(temp.getRows()).as("Zwischenergebnis hat keine Zeilen").isNotNull();
+    assertThat(temp.getRows().isEmpty()).as("Zwischenergebnis hat keine Zeilen").isFalse();
+    assertThat(temp.getRows().getFirst()).as("Die Zeilen des Zwischenergebnis habe einen falschen Typ").isInstanceOf(XmlRow.class);
 
     DomainTable target = mapperBean.map(temp);
-    org.assertj.core.api.Assertions.assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
-    assertThat("source und target nicht gleich", target, is(source));
+    assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
+    assertThat(target).as("source und target nicht gleich").isEqualTo(source);
   }
 }

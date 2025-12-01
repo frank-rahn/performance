@@ -4,8 +4,7 @@
  */
 package de.rahn.performance.measurement;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.math.BigDecimal;
 import org.junit.jupiter.api.BeforeEach;
@@ -53,7 +52,7 @@ class StatisticsTest {
    */
   @Test
   void getMeteringPointName() {
-    assertThat(classUnderTests.getMeteringPointName(), is(METERING_POINT_NAME));
+    assertThat(classUnderTests.getMeteringPointName()).isEqualTo(METERING_POINT_NAME);
   }
 
   /**
@@ -61,7 +60,7 @@ class StatisticsTest {
    */
   @Test
   void getCounter() {
-    assertThat(classUnderTests.getCounter(), is(COUNTER));
+    assertThat(classUnderTests.getCounter()).isEqualTo(COUNTER);
   }
 
   /**
@@ -69,7 +68,7 @@ class StatisticsTest {
    */
   @Test
   void getMinimum() {
-    assertThat(classUnderTests.getMinimum(), is(MINIMUM));
+    assertThat(classUnderTests.getMinimum()).isEqualTo(MINIMUM);
   }
 
   /**
@@ -77,7 +76,7 @@ class StatisticsTest {
    */
   @Test
   void getMaximum() {
-    assertThat(classUnderTests.getMaximum(), is(MAXIMUM));
+    assertThat(classUnderTests.getMaximum()).isEqualTo(MAXIMUM);
   }
 
   /**
@@ -85,7 +84,7 @@ class StatisticsTest {
    */
   @Test
   void getLast() {
-    assertThat(classUnderTests.getLast(), is(LAST));
+    assertThat(classUnderTests.getLast()).isEqualTo(LAST);
   }
 
   /**
@@ -93,7 +92,7 @@ class StatisticsTest {
    */
   @Test
   void average() {
-    assertThat(classUnderTests.average(), is(new BigDecimal(AVERAGE)));
+    assertThat(classUnderTests.average()).isEqualTo(new BigDecimal(AVERAGE));
   }
 
   /**
@@ -101,7 +100,7 @@ class StatisticsTest {
    */
   @Test
   void standardDeviation() {
-    assertThat(classUnderTests.standardDeviation(), is(STDDEV));
+    assertThat(classUnderTests.standardDeviation()).isEqualTo(STDDEV);
   }
 
   /**
@@ -109,6 +108,6 @@ class StatisticsTest {
    */
   @Test
   void getValues() {
-    assertThat(classUnderTests.getValues(), is(VALUES));
+    assertThat(classUnderTests.getValues()).isEqualTo(VALUES);
   }
 }

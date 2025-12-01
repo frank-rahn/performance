@@ -71,8 +71,6 @@
     <slf4j.version>2.0.17</slf4j.version>
     <!-- pkg:maven/org.apache.logging.log4j/log4j-to-slf4j -->
     <log4j-to-slf4j.version>2.25.2</log4j-to-slf4j.version>
-    <!-- pkg:maven/org.hamcrest/hamcrest-library -->
-    <hamcrest-library.version>3.0</hamcrest-library.version>
     <!-- pkg:maven/org.junit.jupiter/junit-jupiter -->
     <junit.version>5.14.1</junit.version>
     <!-- pkg:maven/org.junit.platform/junit-platform-launcher -->
@@ -290,12 +288,6 @@
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
         <version>${junit.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.hamcrest</groupId>
-        <artifactId>hamcrest-library</artifactId>
-        <version>${hamcrest-library.version}</version>
         <scope>test</scope>
       </dependency>
       <dependency>
