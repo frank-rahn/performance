@@ -26,7 +26,7 @@ class DozerTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   @Override
   @Test
-  public void mapEmptyDomainTableWithNullRows() {
+  void mapEmptyDomainTableWithNullRows() {
     assertThatThrownBy(super::mapEmptyDomainTableWithNullRows).isInstanceOf(MappingException.class);
   }
 }

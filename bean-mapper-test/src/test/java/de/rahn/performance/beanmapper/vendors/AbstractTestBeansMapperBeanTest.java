@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
  *
  * @author Frank W. Rahn
  */
-public abstract class AbstractTestBeansMapperBeanTest {
+abstract class AbstractTestBeansMapperBeanTest {
 
   protected TestBeansMapperBean mapperBean;
 
@@ -28,7 +28,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
    * Test method for {@link AbstractTestBeansMapperBean#map(DomainTable)}.
    */
   @Test
-  public void mapEmptyDomainTableWithEmptyRows() throws Exception {
+  void mapEmptyDomainTableWithEmptyRows() throws Exception {
     DomainTable source = new DomainTable();
     source.setRows(new ArrayList<>());
 
@@ -40,7 +40,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
    * Test method for {@link AbstractTestBeansMapperBean#map(DomainTable)}.
    */
   @Test
-  public void mapEmptyDomainTableWithNullRows() throws Exception {
+  void mapEmptyDomainTableWithNullRows() throws Exception {
     XmlTable target = mapperBean.map(new DomainTable());
     assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
   }
@@ -49,7 +49,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
    * Test method for {@link AbstractTestBeansMapperBean#map(XmlTable)}.
    */
   @Test
-  public void mapEmptyXmlTableWithEmptyRows() throws Exception {
+  void mapEmptyXmlTableWithEmptyRows() throws Exception {
     XmlTable source = new XmlTable();
     source.setRows(new ArrayList<>());
 
@@ -61,7 +61,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
    * Test method for {@link AbstractTestBeansMapperBean#map(XmlTable)}.
    */
   @Test
-  public void mapEmptyXmlTableWithNullRows() throws Exception {
+  void mapEmptyXmlTableWithNullRows() throws Exception {
     DomainTable target = mapperBean.map(new XmlTable());
     assertThat(target).as("Kein Ergebnis geliefert").isNotNull();
   }
@@ -70,7 +70,7 @@ public abstract class AbstractTestBeansMapperBeanTest {
    * Test method for {@link AbstractTestBeansMapperBean#map(XmlTable)}.
    */
   @Test
-  public void mapTable() throws Exception {
+  void mapTable() throws Exception {
     DomainTable source = TestBeansUtils.createDomainTable(1, 1);
 
     XmlTable temp = mapperBean.map(source);

@@ -25,7 +25,7 @@ class SpringBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBean
   @Test
   @Disabled("Dieser Test kann nicht funktioniert")
   @Override
-  public void mapTable() throws Exception {
+  void mapTable() throws Exception {
     // Diese Methode wird überschrieben, um die Annotationen platzieren zu können
     super.mapTable();
   }

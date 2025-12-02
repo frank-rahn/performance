@@ -20,16 +20,16 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  */
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {SpringConfiguration.class})
-public class SelmaTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
+class SelmaTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest {
 
   @Autowired
-  public void setSelmaTestBeansMapperBean(SelmaTestBeansMapperBean mapperBean) {
+  void setSelmaTestBeansMapperBean(SelmaTestBeansMapperBean mapperBean) {
     this.mapperBean = mapperBean;
   }
 
   @Override
   @Test
-  public void mapEmptyDomainTableWithNullRows() {
+  void mapEmptyDomainTableWithNullRows() {
     assertThatThrownBy(super::mapEmptyDomainTableWithNullRows).isInstanceOf(NullPointerException.class);
   }
 }

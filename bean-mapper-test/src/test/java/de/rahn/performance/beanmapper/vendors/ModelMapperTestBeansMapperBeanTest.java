@@ -25,7 +25,7 @@ class ModelMapperTestBeansMapperBeanTest extends AbstractTestBeansMapperBeanTest
 
   @Override
   @Test
-  public void mapEmptyDomainTableWithNullRows() throws Exception {
+  void mapEmptyDomainTableWithNullRows() {
     assertThatThrownBy(super::mapEmptyDomainTableWithNullRows).isInstanceOf(MappingException.class);
   }
 }

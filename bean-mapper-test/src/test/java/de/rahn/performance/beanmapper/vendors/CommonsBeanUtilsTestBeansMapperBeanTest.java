@@ -26,14 +26,14 @@ class CommonsBeanUtilsTestBeansMapperBeanTest extends AbstractTestBeansMapperBea
 
   @Override
   @Test
-  public void mapEmptyDomainTableWithNullRows() {
+  void mapEmptyDomainTableWithNullRows() {
     assertThatThrownBy(super::mapEmptyDomainTableWithNullRows).isInstanceOf(InvocationTargetException.class);
   }
 
   @Test
   @Disabled("Dieser Test kann nicht funktioniert")
   @Override
-  public void mapTable() throws Exception {
+  void mapTable() throws Exception {
     // Diese Methode wird überschrieben, um die Annotationen platzieren zu können
     super.mapTable();
   }

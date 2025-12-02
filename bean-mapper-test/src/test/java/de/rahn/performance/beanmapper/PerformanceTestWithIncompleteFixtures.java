@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * @author Frank W. Rahn
  */
 @SuppressWarnings("NewClassNamingConvention")
-public class PerformanceTestWithIncompleteFixtures extends AbstractPerformanceTest {
+class PerformanceTestWithIncompleteFixtures extends AbstractPerformanceTest {
 
   @Override
   protected void setUpAfter() {
@@ -36,7 +36,7 @@ public class PerformanceTestWithIncompleteFixtures extends AbstractPerformanceTe
   }
 
   @Override
-  protected void runTestWithMapper(TestBeansMapperBean mapper, int run) {
+  void runTestWithMapper(TestBeansMapperBean mapper, int run) {
     if (mapper instanceof SpringBeanUtilsTestBeansMapperBean) {
       final String msg = "FEHLER im " + mapper.getMapperName() + " beim " + run + "ten Durchlauf";
 

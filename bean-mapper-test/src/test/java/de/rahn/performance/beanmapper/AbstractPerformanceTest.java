@@ -32,7 +32,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  */
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {SpringConfiguration.class})
-public abstract class AbstractPerformanceTest {
+abstract class AbstractPerformanceTest {
 
   protected static final Logger LOGGER = getLogger(AbstractPerformanceTest.class);
 
@@ -63,7 +63,7 @@ public abstract class AbstractPerformanceTest {
    * @throws Exception, wenn die Testdaten nicht erzeugt werden können
    */
   @BeforeEach
-  public void setUp() throws Exception {
+  void setUp() throws Exception {
     setUpBefore();
 
     xmlTable = createXmlTable(numberOfRows, numberOfColumns);
@@ -79,7 +79,7 @@ public abstract class AbstractPerformanceTest {
    * Die Messung durchführen.
    */
   @Test
-  public void performance() throws Exception {
+  void performance() throws Exception {
     // Warmlaufen
     for (int i = 0; i < 10; i++) {
       runTestOverAllMappers(i);
@@ -116,7 +116,7 @@ public abstract class AbstractPerformanceTest {
    * @param mapper der aktuelle Mapper
    * @param run    der aktuelle Durchlauf
    */
-  protected void runTestWithMapper(TestBeansMapperBean mapper, int run) {
+  void runTestWithMapper(TestBeansMapperBean mapper, int run) {
     final String msg = "FEHLER im " + mapper.getMapperName() + " beim " + run + "ten Durchlauf";
 
     try {
@@ -141,12 +141,12 @@ public abstract class AbstractPerformanceTest {
   /**
    * Ermöglicht das Verändern der Parameter für diesen Test.
    */
-  protected void setUpAfter() {
+  void setUpAfter() {
     // Kann überschrieben werden
   }
 
   /**
    * Initialisiere die Einstellgrößen für diesen Test.
    */
-  protected abstract void setUpBefore();
+  abstract void setUpBefore();
 }
