@@ -45,7 +45,7 @@
           <option name="goals">
             <list>
               <option value="versions:set" />
-              <option value="-DnewVersion=1.7.0-SNAPSHOT" />
+              <option value="-DnewVersion=1.7.1-SNAPSHOT" />
             </list>
           </option>
           <option name="multimoduleDir" />

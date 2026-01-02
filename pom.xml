@@ -7,7 +7,7 @@
   <!-- The Basics & Project information -->
   <groupId>de.rahn.performance</groupId>
   <artifactId>performance</artifactId>
-  <version>1.7.0-SNAPSHOT</version>
+  <version>1.7.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Performance Maven Parent</name>
