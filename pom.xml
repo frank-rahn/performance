@@ -39,11 +39,11 @@
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
     <!-- Maven Plugins -->
-    <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
-    <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
-    <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
-    <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-    <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
+    <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
+    <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
+    <maven-jar-plugin.version>3.5.0</maven-jar-plugin.version>
+    <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
+    <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
 
     <!-- Jakarta EE 10 -->
     <!-- pkg:maven/jakarta.annotation/jakarta.annotation-api -->
@@ -51,7 +51,7 @@
     <!-- pkg:maven/jakarta.xml.ws/jakarta.xml.ws-api -->
     <jakarta.xml.ws-api.version>4.0.2</jakarta.xml.ws-api.version>
     <!-- pkg:maven/jakarta.persistence/jakarta.persistence-api -->
-    <jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
+    <jakarta.persistence-api.version>3.2.0</jakarta.persistence-api.version>
 
     <!-- Utilities -->
     <jdk.version>21</jdk.version>
@@ -62,7 +62,7 @@
     <!-- pkg:maven/commons-io/commons-io -->
     <commons-io.version>2.21.0</commons-io.version>
     <!-- pkg:maven/org.apache.poi/poi-ooxml -->
-    <poi-ooxml.version>5.5.0</poi-ooxml.version>
+    <poi-ooxml.version>5.5.1</poi-ooxml.version>
     <!-- pkg:maven/com.formdev/jide-oss -->
     <jide-oss.version>3.7.15</jide-oss.version>
     <!-- pkg:maven/joda-time/joda-time -->
@@ -70,13 +70,13 @@
     <!-- pkg:maven/org.slf4j/slf4j-api -->
     <slf4j.version>2.0.17</slf4j.version>
     <!-- pkg:maven/org.apache.logging.log4j/log4j-to-slf4j -->
-    <log4j-to-slf4j.version>2.25.2</log4j-to-slf4j.version>
+    <log4j-to-slf4j.version>2.25.3</log4j-to-slf4j.version>
     <!-- pkg:maven/org.junit.jupiter/junit-jupiter -->
-    <junit.version>5.14.1</junit.version>
+    <junit.version>6.0.3</junit.version>
     <!-- pkg:maven/org.junit.platform/junit-platform-launcher -->
-    <junit-platform-launcher.version>1.14.1</junit-platform-launcher.version>
+    <junit-platform-launcher.version>6.0.3</junit-platform-launcher.version>
     <!-- pkg:maven/org.assertj/assertj-core -->
-    <assertj.version>3.27.6</assertj.version>
+    <assertj.version>3.27.7</assertj.version>
 
     <!-- Mapper -->
     <!-- pkg:maven/commons-beanutils/commons-beanutils -->
