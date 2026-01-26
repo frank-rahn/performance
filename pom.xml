@@ -76,7 +76,7 @@
     <!-- pkg:maven/org.junit.platform/junit-platform-launcher -->
     <junit-platform-launcher.version>1.14.1</junit-platform-launcher.version>
     <!-- pkg:maven/org.assertj/assertj-core -->
-    <assertj.version>3.27.6</assertj.version>
+    <assertj.version>3.27.7</assertj.version>
 
     <!-- Mapper -->
     <!-- pkg:maven/commons-beanutils/commons-beanutils -->
