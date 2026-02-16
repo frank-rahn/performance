@@ -82,7 +82,7 @@
     <!-- pkg:maven/commons-beanutils/commons-beanutils -->
     <commons-beanutils.version>1.11.0</commons-beanutils.version>
     <!-- pkg:maven/org.springframework/spring-context -->
-    <spring.version>6.2.10</spring.version>
+    <spring.version>7.0.4</spring.version>
     <!-- EOL pkg:maven/com.github.dozermapper/dozer-core -->
     <dozer-core.version>7.0.0</dozer-core.version>
     <!-- pkg:maven/ma.glasnost.orika/orika-core -->
@@ -90,13 +90,13 @@
     <!-- pkg:maven/org.mapstruct/mapstruct -->
     <mapstruct.version>1.6.3</mapstruct.version>
     <!-- pkg:maven/org.modelmapper/modelmapper -->
-    <modelmapper.version>3.2.4</modelmapper.version>
+    <modelmapper.version>3.2.6</modelmapper.version>
     <!-- EOL pkg:maven/com.googlecode.jmapper-framework/jmapper-core -->
     <jmapper-core.version>1.6.1.CR2</jmapper-core.version>
     <!-- pkg:maven/fr.xebia.extras/selma -->
     <selma.version>1.0</selma.version>
     <!-- pkg:maven/com.remondis/remap -->
-    <remap.version>4.4.0</remap.version>
+    <remap.version>4.4.2</remap.version>
   </properties>
 
   <modules>
@@ -212,6 +212,7 @@
         <artifactId>log4j-to-slf4j</artifactId>
         <version>${log4j-to-slf4j.version}</version>
       </dependency>
+
       <!-- Die Mapper -->
       <dependency>
         <groupId>commons-beanutils</groupId>
